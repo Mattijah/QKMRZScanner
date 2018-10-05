@@ -8,6 +8,7 @@
 import UIKit
 import AVFoundation
 
+@IBDesignable
 class QKMRZScannerView: UIView {
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let photoOutput = AVCapturePhotoOutput()
@@ -31,6 +32,10 @@ class QKMRZScannerView: UIView {
     }
     
     // MARK: Overriden methods
+    override func prepareForInterfaceBuilder() {
+        addCutoutView()
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         adjustVideoPreviewLayerFrame()
