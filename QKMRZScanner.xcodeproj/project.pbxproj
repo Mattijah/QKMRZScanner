@@ -7,13 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124306302165512C000BE94A /* QKMRZScannerView.swift */; };
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		124306302165512C000BE94A /* QKMRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScannerView.swift; sourceTree = "<group>"; };
 		1277813E21653FB500070E1C /* QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1277814121653FB500070E1C /* QKMRZScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKMRZScanner.h; sourceTree = "<group>"; };
 		1277814221653FB500070E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -46,6 +50,8 @@
 		1277814021653FB500070E1C /* QKMRZScanner */ = {
 			isa = PBXGroup;
 			children = (
+				124306302165512C000BE94A /* QKMRZScannerView.swift */,
+				12832C222167491900D132D4 /* Extensions */,
 				1277816A2165484E00070E1C /* Supporting Files */,
 			);
 			path = QKMRZScanner;
@@ -58,6 +64,14 @@
 				1277814121653FB500070E1C /* QKMRZScanner.h */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		12832C222167491900D132D4 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +153,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */,
+				124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
