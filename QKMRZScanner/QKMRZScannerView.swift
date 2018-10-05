@@ -21,11 +21,13 @@ class QKMRZScannerView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupCaptureSession()
+        addCutoutView()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCaptureSession()
+        addCutoutView()
     }
     
     // MARK: Overriden methods
@@ -74,5 +76,19 @@ class QKMRZScannerView: UIView {
     fileprivate func adjustVideoPreviewLayerFrame() {
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.frame = bounds
+    }
+    
+    fileprivate func addCutoutView() {
+        let view = QKCutoutView()
+        
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        
+        NSLayoutConstraint.activate([
+            view.topAnchor.constraint(equalTo: topAnchor),
+            view.bottomAnchor.constraint(equalTo: bottomAnchor),
+            view.leftAnchor.constraint(equalTo: leftAnchor),
+            view.rightAnchor.constraint(equalTo: rightAnchor)
+        ])
     }
 }
