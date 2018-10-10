@@ -96,6 +96,7 @@ class QKMRZScannerView: UIView {
     
     fileprivate func capturePhoto() {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEG])
+        photoOutput.connection(with: .video)!.videoOrientation = videoPreviewLayer.connection!.videoOrientation
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
