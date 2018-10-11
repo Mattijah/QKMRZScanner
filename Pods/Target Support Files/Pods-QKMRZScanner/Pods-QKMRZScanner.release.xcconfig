@@ -1,9 +1,10 @@
+CLANG_CXX_LIBRARY = compiler-default
 CLANG_MODULES_AUTOLINK = YES
-FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/QKGPUImage2"
+FRAMEWORK_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/QKGPUImage2" "${PODS_CONFIGURATION_BUILD_DIR}/TesseractOCRiOS"
 GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
-OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/QKGPUImage2/QKGPUImage2.framework/Headers"
-OTHER_LDFLAGS = $(inherited) -framework "QKGPUImage2"
+OTHER_CFLAGS = $(inherited) -iquote "${PODS_CONFIGURATION_BUILD_DIR}/QKGPUImage2/QKGPUImage2.framework/Headers" -iquote "${PODS_CONFIGURATION_BUILD_DIR}/TesseractOCRiOS/TesseractOCR.framework/Headers"
+OTHER_LDFLAGS = $(inherited) -ObjC -weak_library /usr/lib/libstdc++.6.0.9.dylib -l"stdc++" -framework "QKGPUImage2" -framework "TesseractOCR"
 OTHER_SWIFT_FLAGS = $(inherited) -DGLES $(inherited) "-D" "COCOAPODS"
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121B535E216FBC72000F7123 /* CoreImage.framework */; };
+		121B5360216FBCED000F7123 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121B5361216FBCED000F7123 /* TesseractOCR.framework */; };
+		123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */; };
 		124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124306302165512C000BE94A /* QKMRZScannerView.swift */; };
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
@@ -27,6 +30,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		121B535C216FBC68000F7123 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		121B535E216FBC72000F7123 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		121B5361216FBCED000F7123 /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocrb.traineddata; sourceTree = "<group>"; };
 		124306302165512C000BE94A /* QKMRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScannerView.swift; sourceTree = "<group>"; };
 		1277813E21653FB500070E1C /* QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1277814121653FB500070E1C /* QKMRZScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKMRZScanner.h; sourceTree = "<group>"; };
@@ -43,6 +50,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				121B5360216FBCED000F7123 /* TesseractOCR.framework in Frameworks */,
+				121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */,
 				5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -50,9 +59,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		121B5359216FBBBF000F7123 /* tessdata */ = {
+			isa = PBXGroup;
+			children = (
+				123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */,
+			);
+			path = tessdata;
+			sourceTree = "<group>";
+		};
 		122C5896216D64620001DE90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				121B5361216FBCED000F7123 /* TesseractOCR.framework */,
+				121B535E216FBC72000F7123 /* CoreImage.framework */,
+				121B535C216FBC68000F7123 /* libstdc++.tbd */,
 				6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */,
 			);
 			name = Frameworks;
@@ -90,6 +110,7 @@
 		1277816A2165484E00070E1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				121B5359216FBBBF000F7123 /* tessdata */,
 				1277814221653FB500070E1C /* Info.plist */,
 				1277814121653FB500070E1C /* QKMRZScanner.h */,
 			);
@@ -185,6 +206,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +387,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "QKMRZScanner/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
@@ -391,6 +414,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = "QKMRZScanner/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
