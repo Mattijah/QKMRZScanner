@@ -7,9 +7,11 @@
 
 import UIKit
 import AVFoundation
+import TesseractOCR
 
 @IBDesignable
 class QKMRZScannerView: UIView {
+    fileprivate var tesseract: G8Tesseract!
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let photoOutput = AVCapturePhotoOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
@@ -26,12 +28,14 @@ class QKMRZScannerView: UIView {
         super.init(frame: frame)
         setupCaptureSession()
         addCutoutView()
+        initTesseract()
     }
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCaptureSession()
         addCutoutView()
+        initTesseract()
     }
     
     // MARK: Overriden methods
@@ -126,6 +130,37 @@ class QKMRZScannerView: UIView {
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
     }
+    
+    fileprivate func initTesseract() {
+        let bundlePath = Bundle(for: type(of: self)).bundlePath
+        let config = [
+            kG8ParamLoadSystemDawg: "F",
+            kG8ParamLoadFreqDawg: "F",
+            kG8ParamLoadNumberDawg: "F",
+            kG8ParamLoadPuncDawg: "F",
+            kG8ParamLoadUnambigDawg: "F",
+            kG8ParamLoadBigramDawg: "F",
+            kG8ParamWordrecEnableAssoc: "F",
+            kG8ParamTesseditCharWhitelist: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<"
+        ]
+        
+        tesseract = G8Tesseract(language: "ocrb", configDictionary: config, configFileNames: [], absoluteDataPath: bundlePath, engineMode: .tesseractOnly, copyFilesFromResources: false)!
+        tesseract.pageSegmentationMode = .singleBlock
+    }
+    
+    fileprivate func extractMRZ(from image: UIImage) -> String {
+        let cgImage = image.cgImage!
+        let imageWidth = CGFloat(cgImage.width)
+        let imageHeight = CGFloat(cgImage.height)
+        let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
+        let croppingRect = CGRect(origin: CGPoint(x: 0, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: imageWidth, height: mrzRegionHeight))
+        let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
+        
+        tesseract.image = mrzRegionImage.g8_blackAndWhite() // Tesseract will preprocess the image itself
+        tesseract.recognize()
+        
+        return tesseract.recognizedText
+    }
 }
 
 // MARK: - AVCapturePhotoCaptureDelegate
@@ -137,8 +172,9 @@ extension QKMRZScannerView: AVCapturePhotoCaptureDelegate {
         }
         
         let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)!
-        let image = cropCapturedPhotoToCutout(UIImage(data: imageData)!)
+        let documentPicture = cropCapturedPhotoToCutout(UIImage(data: imageData)!).normalize()
+        let mrzString = extractMRZ(from: documentPicture)
         
-        // TODO: Process the captured image
+        // TODO: Parse MRZ details
     }
 }

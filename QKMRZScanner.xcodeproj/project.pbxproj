@@ -10,6 +10,7 @@
 		121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121B535E216FBC72000F7123 /* CoreImage.framework */; };
 		121B5360216FBCED000F7123 /* TesseractOCR.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121B5361216FBCED000F7123 /* TesseractOCR.framework */; };
 		123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */; };
+		123BDF02216FFF18000CF6CF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123BDF01216FFF18000CF6CF /* UIImage.swift */; };
 		124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124306302165512C000BE94A /* QKMRZScannerView.swift */; };
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
@@ -17,23 +18,11 @@
 		5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; };
 /* End PBXBuildFile section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		122C5898216D64670001DE90 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		121B535C216FBC68000F7123 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		121B535E216FBC72000F7123 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		121B5361216FBCED000F7123 /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocrb.traineddata; sourceTree = "<group>"; };
+		123BDF01216FFF18000CF6CF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		124306302165512C000BE94A /* QKMRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScannerView.swift; sourceTree = "<group>"; };
 		1277813E21653FB500070E1C /* QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1277814121653FB500070E1C /* QKMRZScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKMRZScanner.h; sourceTree = "<group>"; };
@@ -72,7 +61,6 @@
 			children = (
 				121B5361216FBCED000F7123 /* TesseractOCR.framework */,
 				121B535E216FBC72000F7123 /* CoreImage.framework */,
-				121B535C216FBC68000F7123 /* libstdc++.tbd */,
 				6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */,
 			);
 			name = Frameworks;
@@ -121,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */,
+				123BDF01216FFF18000CF6CF /* UIImage.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -157,7 +146,6 @@
 				1277813A21653FB500070E1C /* Frameworks */,
 				1277813B21653FB500070E1C /* Headers */,
 				1277813C21653FB500070E1C /* Resources */,
-				122C5898216D64670001DE90 /* CopyFiles */,
 				0A94CD2A0A0DDC22D6BA3EE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -254,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */,
+				123BDF02216FFF18000CF6CF /* UIImage.swift in Sources */,
 				12832C282167519000D132D4 /* QKCutoutView.swift in Sources */,
 				124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */,
 			);
