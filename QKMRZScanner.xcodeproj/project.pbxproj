@@ -12,6 +12,7 @@
 		123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */; };
 		123BDF02216FFF18000CF6CF /* UIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 123BDF01216FFF18000CF6CF /* UIImage.swift */; };
 		124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124306302165512C000BE94A /* QKMRZScannerView.swift */; };
+		125C104F21767532009541D4 /* QKMRZScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C104E21767532009541D4 /* QKMRZScanResult.swift */; };
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
 		12832C282167519000D132D4 /* QKCutoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C272167519000D132D4 /* QKCutoutView.swift */; };
@@ -24,6 +25,7 @@
 		123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocrb.traineddata; sourceTree = "<group>"; };
 		123BDF01216FFF18000CF6CF /* UIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImage.swift; sourceTree = "<group>"; };
 		124306302165512C000BE94A /* QKMRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScannerView.swift; sourceTree = "<group>"; };
+		125C104E21767532009541D4 /* QKMRZScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScanResult.swift; sourceTree = "<group>"; };
 		1277813E21653FB500070E1C /* QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1277814121653FB500070E1C /* QKMRZScanner.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QKMRZScanner.h; sourceTree = "<group>"; };
 		1277814221653FB500070E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 			children = (
 				124306302165512C000BE94A /* QKMRZScannerView.swift */,
 				12832C272167519000D132D4 /* QKCutoutView.swift */,
+				125C104E21767532009541D4 /* QKMRZScanResult.swift */,
 				12832C222167491900D132D4 /* Extensions */,
 				1277816A2165484E00070E1C /* Supporting Files */,
 			);
@@ -244,6 +247,7 @@
 				12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */,
 				123BDF02216FFF18000CF6CF /* UIImage.swift in Sources */,
 				12832C282167519000D132D4 /* QKCutoutView.swift in Sources */,
+				125C104F21767532009541D4 /* QKMRZScanResult.swift in Sources */,
 				124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

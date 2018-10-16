@@ -10,8 +10,12 @@ import AVFoundation
 import TesseractOCR
 import QKMRZParser
 
+public protocol QKMRZScannerViewDelegate: class {
+    func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
+}
+
 @IBDesignable
-class QKMRZScannerView: UIView {
+public class QKMRZScannerView: UIView {
     fileprivate var tesseract: G8Tesseract!
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
@@ -19,6 +23,7 @@ class QKMRZScannerView: UIView {
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var observer: NSKeyValueObservation?
+    public weak var delegate: QKMRZScannerViewDelegate?
     @objc dynamic var isScanning = false
     
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
@@ -26,14 +31,14 @@ class QKMRZScannerView: UIView {
     }
     
     // MARK: Initializers
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         setupCaptureSession()
         addCutoutView()
         initTesseract()
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         setupCaptureSession()
         addCutoutView()
@@ -41,11 +46,11 @@ class QKMRZScannerView: UIView {
     }
     
     // MARK: Overriden methods
-    override func prepareForInterfaceBuilder() {
+    override public func prepareForInterfaceBuilder() {
         addCutoutView()
     }
     
-    override func layoutSubviews() {
+    override public func layoutSubviews() {
         super.layoutSubviews()
         adjustVideoPreviewLayerFrame()
     }
@@ -185,18 +190,18 @@ class QKMRZScannerView: UIView {
 
 // MARK: - AVCapturePhotoCaptureDelegate
 extension QKMRZScannerView: AVCapturePhotoCaptureDelegate {
-    func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
         guard error == nil, let photoSampleBuffer = photoSampleBuffer else {
             print("Error capturing photo: \(String(describing: error))")
             return
         }
         
         let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)!
-        let documentPicture = cropCapturedPhotoToCutout(UIImage(data: imageData)!).normalize()
+        let documentImage = cropCapturedPhotoToCutout(UIImage(data: imageData)!).normalize()
         
-        if let mrzResult = mrz(from: documentPicture), mrzResult.allCheckDigitsValid {
-            print(mrzResult)
-            // TODO: Report the result via delegate
+        if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
+            let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: documentImage)
+            delegate?.mrzScannerView(self, didFind: scanResult)
         }
         else {
             capturePhoto()
