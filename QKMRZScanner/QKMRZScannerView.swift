@@ -8,10 +8,12 @@
 import UIKit
 import AVFoundation
 import TesseractOCR
+import QKMRZParser
 
 @IBDesignable
 class QKMRZScannerView: UIView {
     fileprivate var tesseract: G8Tesseract!
+    fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let photoOutput = AVCapturePhotoOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
@@ -104,6 +106,38 @@ class QKMRZScannerView: UIView {
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
+    // MARK: MRZ
+    fileprivate func mrz(from image: UIImage) -> QKMRZResult? {
+        let cgImage = image.cgImage!
+        let imageWidth = CGFloat(cgImage.width)
+        let imageHeight = CGFloat(cgImage.height)
+        let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
+        let croppingRect = CGRect(origin: CGPoint(x: 0, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: imageWidth, height: mrzRegionHeight))
+        let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
+        
+        tesseract.image = mrzRegionImage.g8_blackAndWhite() // Tesseract will preprocess the image itself
+        tesseract.recognize()
+        
+        if let mrzLines = mrzLines(from: tesseract.recognizedText) {
+            return mrzParser.parse(mrzLines: mrzLines)
+        }
+        
+        return nil
+    }
+    
+    fileprivate func mrzLines(from recognizedText: String) -> [String]? {
+        let mrzString = recognizedText.replacingOccurrences(of: " ", with: "")
+        var mrzLines = mrzString.components(separatedBy: "\n").filter({ !$0.isEmpty })
+        
+        // Remove garbage strings located at the beginning and at the end of the result
+        if !mrzLines.isEmpty {
+            let averageLineLength = (mrzLines.reduce(0, { $0 + $1.count }) / mrzLines.count)
+            mrzLines = mrzLines.filter({ $0.count >= averageLineLength })
+        }
+        
+        return mrzLines.isEmpty ? nil : mrzLines
+    }
+    
     // MARK: Misc
     fileprivate func adjustVideoPreviewLayerFrame() {
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
@@ -147,20 +181,6 @@ class QKMRZScannerView: UIView {
         tesseract = G8Tesseract(language: "ocrb", configDictionary: config, configFileNames: [], absoluteDataPath: bundlePath, engineMode: .tesseractOnly, copyFilesFromResources: false)!
         tesseract.pageSegmentationMode = .singleBlock
     }
-    
-    fileprivate func extractMRZ(from image: UIImage) -> String {
-        let cgImage = image.cgImage!
-        let imageWidth = CGFloat(cgImage.width)
-        let imageHeight = CGFloat(cgImage.height)
-        let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
-        let croppingRect = CGRect(origin: CGPoint(x: 0, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: imageWidth, height: mrzRegionHeight))
-        let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
-        
-        tesseract.image = mrzRegionImage.g8_blackAndWhite() // Tesseract will preprocess the image itself
-        tesseract.recognize()
-        
-        return tesseract.recognizedText
-    }
 }
 
 // MARK: - AVCapturePhotoCaptureDelegate
@@ -173,8 +193,13 @@ extension QKMRZScannerView: AVCapturePhotoCaptureDelegate {
         
         let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)!
         let documentPicture = cropCapturedPhotoToCutout(UIImage(data: imageData)!).normalize()
-        let mrzString = extractMRZ(from: documentPicture)
         
-        // TODO: Parse MRZ details
+        if let mrzResult = mrz(from: documentPicture), mrzResult.allCheckDigitsValid {
+            print(mrzResult)
+            // TODO: Report the result via delegate
+        }
+        else {
+            capturePhoto()
+        }
     }
 }
