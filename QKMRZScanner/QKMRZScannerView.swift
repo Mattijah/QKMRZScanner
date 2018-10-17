@@ -9,6 +9,7 @@ import UIKit
 import AVFoundation
 import TesseractOCR
 import QKMRZParser
+import QKGPUImage2
 
 public protocol QKMRZScannerViewDelegate: class {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
@@ -62,6 +63,7 @@ public class QKMRZScannerView: UIView {
         }
         
         captureSession.sessionPreset = .high
+        photoOutput.isHighResolutionCaptureEnabled = true
         
         guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
             print("Camera not accessible")
@@ -107,6 +109,7 @@ public class QKMRZScannerView: UIView {
     
     fileprivate func capturePhoto() {
         let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEG])
+        settings.isHighResolutionPhotoEnabled = true
         photoOutput.connection(with: .video)!.videoOrientation = videoPreviewLayer.connection!.videoOrientation
         photoOutput.capturePhoto(with: settings, delegate: self)
     }
@@ -120,7 +123,7 @@ public class QKMRZScannerView: UIView {
         let croppingRect = CGRect(origin: CGPoint(x: 0, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: imageWidth, height: mrzRegionHeight))
         let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
         
-        tesseract.image = mrzRegionImage.g8_blackAndWhite() // Tesseract will preprocess the image itself
+        tesseract.image = mrzRegionImage
         tesseract.recognize()
         
         if let mrzLines = mrzLines(from: tesseract.recognizedText) {
@@ -185,6 +188,7 @@ public class QKMRZScannerView: UIView {
         
         tesseract = G8Tesseract(language: "ocrb", configDictionary: config, configFileNames: [], absoluteDataPath: bundlePath, engineMode: .tesseractOnly, copyFilesFromResources: false)!
         tesseract.pageSegmentationMode = .singleBlock
+        tesseract.delegate = self
     }
 }
 
@@ -206,5 +210,28 @@ extension QKMRZScannerView: AVCapturePhotoCaptureDelegate {
         else {
             capturePhoto()
         }
+    }
+}
+
+// MARK: - G8TesseractDelegate
+extension QKMRZScannerView: G8TesseractDelegate {
+    public func preprocessedImage(for tesseract: G8Tesseract, sourceImage: UIImage) -> UIImage {
+        let resampling = LanczosResampling()
+        let saturation = SaturationAdjustment()
+        let contrast = ContrastAdjustment()
+        let adaptiveThreshold = AdaptiveThreshold()
+        let medianFilter = MedianFilter()
+        let blur = GaussianBlur()
+        let imageSizeRatio = Float(sourceImage.size.height / sourceImage.size.width)
+        
+        resampling.overriddenOutputSize = Size(width: 1000, height: (imageSizeRatio * 1000))
+        saturation.saturation = 0
+        contrast.contrast = 2
+        adaptiveThreshold.blurRadiusInPixels = 4
+        blur.blurRadiusInPixels = 1
+        
+        return sourceImage.filterWithPipeline({ input, output in
+            input --> resampling --> saturation --> contrast --> adaptiveThreshold --> medianFilter --> blur --> output
+        })
     }
 }
