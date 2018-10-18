@@ -20,8 +20,9 @@ public class QKMRZScannerView: UIView {
     fileprivate var tesseract: G8Tesseract!
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
-    fileprivate let photoOutput = AVCapturePhotoOutput()
+    fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
+    fileprivate let ciContext = CIContext()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var observer: NSKeyValueObservation?
     public weak var delegate: QKMRZScannerViewDelegate?
@@ -63,7 +64,6 @@ public class QKMRZScannerView: UIView {
         }
         
         captureSession.sessionPreset = .high
-        photoOutput.isHighResolutionCaptureEnabled = true
         
         guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
             print("Camera not accessible")
@@ -75,12 +75,17 @@ public class QKMRZScannerView: UIView {
             return
         }
         
-        if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(photoOutput) {
+        if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(videoOutput) {
             captureSession.addInput(deviceInput)
-            captureSession.addOutput(photoOutput)
+            captureSession.addOutput(videoOutput)
+            
+            videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "video_frames_queue", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem))
+            videoOutput.alwaysDiscardsLateVideoFrames = true
+            videoOutput.connection(with: .video)!.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
             
             videoPreviewLayer.session = captureSession
             videoPreviewLayer.videoGravity = .resizeAspectFill
+            adjustVideoPreviewLayerFrame()
             
             layer.insertSublayer(videoPreviewLayer, at: 0)
             startCaptureSession()
@@ -93,25 +98,16 @@ public class QKMRZScannerView: UIView {
     fileprivate func startCaptureSession() {
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             self.captureSession.startRunning()
-            DispatchQueue.main.async { self.adjustVideoPreviewLayerFrame() }
         }
     }
     
     // MARK: Scanning
     fileprivate func startScanning() {
         isScanning = true
-        capturePhoto()
     }
     
     fileprivate func stopScanning() {
         isScanning = false
-    }
-    
-    fileprivate func capturePhoto() {
-        let settings = AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecJPEG])
-        settings.isHighResolutionPhotoEnabled = true
-        photoOutput.connection(with: .video)!.videoOrientation = videoPreviewLayer.connection!.videoOrientation
-        photoOutput.capturePhoto(with: settings, delegate: self)
     }
     
     // MARK: MRZ
@@ -148,6 +144,7 @@ public class QKMRZScannerView: UIView {
     
     // MARK: Misc
     fileprivate func adjustVideoPreviewLayerFrame() {
+        videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.frame = bounds
     }
@@ -157,8 +154,17 @@ public class QKMRZScannerView: UIView {
         let imageWidth = CGFloat(cgImage.width)
         let imageHeight = CGFloat(cgImage.height)
         let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutView.cutoutRect)
-        let croppingRect = CGRect(x: (rect.minX * imageWidth), y: (rect.minY * imageHeight), width: (rect.width * imageWidth), height: (rect.height * imageHeight))
-        return UIImage(cgImage: cgImage.cropping(to: croppingRect)!, scale: 1, orientation: image.imageOrientation)
+        let videoOrientation = videoPreviewLayer.connection!.videoOrientation
+        let croppingRect: CGRect
+        
+        if videoOrientation == .portrait || videoOrientation == .portraitUpsideDown {
+            croppingRect = CGRect(x: (rect.minY * imageWidth), y: (rect.minX * imageHeight), width: (rect.height * imageWidth), height: (rect.width * imageHeight))
+        }
+        else {
+            croppingRect = CGRect(x: (rect.minX * imageWidth), y: (rect.minY * imageHeight), width: (rect.width * imageWidth), height: (rect.height * imageHeight))
+        }
+        
+        return UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
     }
     
     fileprivate func addCutoutView() {
@@ -192,23 +198,24 @@ public class QKMRZScannerView: UIView {
     }
 }
 
-// MARK: - AVCapturePhotoCaptureDelegate
-extension QKMRZScannerView: AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photoSampleBuffer: CMSampleBuffer?, previewPhoto previewPhotoSampleBuffer: CMSampleBuffer?, resolvedSettings: AVCaptureResolvedPhotoSettings, bracketSettings: AVCaptureBracketedStillImageSettings?, error: Error?) {
-        guard error == nil, let photoSampleBuffer = photoSampleBuffer else {
-            print("Error capturing photo: \(String(describing: error))")
+// MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
+extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
+    public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
             return
         }
         
-        let imageData = AVCapturePhotoOutput.jpegPhotoDataRepresentation(forJPEGSampleBuffer: photoSampleBuffer, previewPhotoSampleBuffer: previewPhotoSampleBuffer)!
-        let documentImage = cropCapturedPhotoToCutout(UIImage(data: imageData)!).normalize()
+        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
+        let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
+        let documentImage = cropCapturedPhotoToCutout(UIImage(cgImage: cgImage))
         
         if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
-            let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: documentImage)
-            delegate?.mrzScannerView(self, didFind: scanResult)
-        }
-        else {
-            capturePhoto()
+            captureSession.stopRunning()
+            
+            DispatchQueue.main.async {
+                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: documentImage)
+                self.delegate?.mrzScannerView(self, didFind: scanResult)
+            }
         }
     }
 }
