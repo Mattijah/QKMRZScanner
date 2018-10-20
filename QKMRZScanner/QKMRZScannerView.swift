@@ -10,6 +10,7 @@ import AVFoundation
 import TesseractOCR
 import QKMRZParser
 import QKGPUImage2
+import AudioToolbox
 
 public protocol QKMRZScannerViewDelegate: class {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
@@ -216,6 +217,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
                 let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
                 let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                 self.delegate?.mrzScannerView(self, didFind: scanResult)
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
             }
         }
     }
