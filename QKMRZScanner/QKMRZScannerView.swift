@@ -96,8 +96,7 @@ public class QKMRZScannerView: UIView {
     }
     
     // MARK: MRZ
-    fileprivate func mrz(from image: UIImage) -> QKMRZResult? {
-        let cgImage = image.cgImage!
+    fileprivate func mrz(from cgImage: CGImage) -> QKMRZResult? {
         let imageWidth = CGFloat(cgImage.width)
         let imageHeight = CGFloat(cgImage.height)
         let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
@@ -128,9 +127,9 @@ public class QKMRZScannerView: UIView {
     }
     
     // MARK: Document Image from Photo cropping
-    fileprivate func cutoutRect(for image: UIImage) -> CGRect {
-        let imageWidth = (image.size.width * image.scale)
-        let imageHeight = (image.size.height * image.scale)
+    fileprivate func cutoutRect(for cgImage: CGImage) -> CGRect {
+        let imageWidth = CGFloat(cgImage.width)
+        let imageHeight = CGFloat(cgImage.height)
         let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutView.cutoutRect)
         let videoOrientation = videoPreviewLayer.connection!.videoOrientation
         
@@ -142,16 +141,16 @@ public class QKMRZScannerView: UIView {
         }
     }
     
-    fileprivate func documentImage(from image: UIImage) -> UIImage {
-        let croppingRect = cutoutRect(for: image)
-        return UIImage(cgImage: image.cgImage!.cropping(to: croppingRect)!)
+    fileprivate func documentImage(from cgImage: CGImage) -> CGImage {
+        let croppingRect = cutoutRect(for: cgImage)
+        return cgImage.cropping(to: croppingRect)!
     }
     
-    fileprivate func enlargedDocumentImage(from image: UIImage) -> UIImage {
-        var croppingRect = cutoutRect(for: image)
+    fileprivate func enlargedDocumentImage(from cgImage: CGImage) -> UIImage {
+        var croppingRect = cutoutRect(for: cgImage)
         let margin = (0.05 * croppingRect.height) // 5% of the height
         croppingRect = CGRect(x: (croppingRect.minX - margin), y: (croppingRect.minY - margin), width: croppingRect.width + (margin * 2), height: croppingRect.height + (margin * 2))
-        return UIImage(cgImage: image.cgImage!.cropping(to: croppingRect)!)
+        return UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
     }
     
     // MARK: Misc
@@ -201,13 +200,13 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
         let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
-        let documentImage = self.documentImage(from: UIImage(cgImage: cgImage))
+        let documentImage = self.documentImage(from: cgImage)
         
         if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
             captureSession.stopRunning()
             
             DispatchQueue.main.async {
-                let enlargedDocumentImage = self.enlargedDocumentImage(from: UIImage(cgImage: cgImage))
+                let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
                 let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                 self.delegate?.mrzScannerView(self, didFind: scanResult)
             }
