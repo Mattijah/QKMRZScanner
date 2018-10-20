@@ -29,7 +29,7 @@ class QKCutoutView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        backgroundColor = UIColor.black.withAlphaComponent(0.45)
         contentMode = .redraw
     }
     
