@@ -33,6 +33,7 @@ public class QKMRZScannerView: UIView {
     // MARK: Initializers
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        setViewStyle()
         setupCaptureSession()
         addCutoutView()
         initTesseract()
@@ -40,6 +41,7 @@ public class QKMRZScannerView: UIView {
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
+        setViewStyle()
         setupCaptureSession()
         addCutoutView()
         initTesseract()
@@ -47,6 +49,7 @@ public class QKMRZScannerView: UIView {
     
     // MARK: Overriden methods
     override public func prepareForInterfaceBuilder() {
+        setViewStyle()
         addCutoutView()
     }
     
@@ -154,6 +157,10 @@ public class QKMRZScannerView: UIView {
     }
     
     // MARK: Misc
+    fileprivate func setViewStyle() {
+        backgroundColor = .black
+    }
+    
     fileprivate func adjustVideoPreviewLayerFrame() {
         videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
