@@ -24,9 +24,7 @@ public class QKMRZScannerView: UIView {
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let ciContext = CIContext()
     fileprivate let cutoutView = QKCutoutView()
-    fileprivate var observer: NSKeyValueObservation?
     public weak var delegate: QKMRZScannerViewDelegate?
-    @objc dynamic var isScanning = false
     
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
@@ -59,10 +57,6 @@ public class QKMRZScannerView: UIView {
     
     // MARK: AVCaptureSession
     fileprivate func setupCaptureSession() {
-        observer = captureSession.observe(\.isRunning, options: [.new]) { [unowned self] (model, change) in
-            change.newValue! ? self.startScanning() : self.stopScanning()
-        }
-        
         captureSession.sessionPreset = .high
         
         guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
@@ -99,15 +93,6 @@ public class QKMRZScannerView: UIView {
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             self.captureSession.startRunning()
         }
-    }
-    
-    // MARK: Scanning
-    fileprivate func startScanning() {
-        isScanning = true
-    }
-    
-    fileprivate func stopScanning() {
-        isScanning = false
     }
     
     // MARK: MRZ
