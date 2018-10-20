@@ -79,7 +79,6 @@ public class QKMRZScannerView: UIView {
             
             videoPreviewLayer.session = captureSession
             videoPreviewLayer.videoGravity = .resizeAspectFill
-            adjustVideoPreviewLayerFrame()
             
             layer.insertSublayer(videoPreviewLayer, at: 0)
             startCaptureSession()
@@ -92,6 +91,7 @@ public class QKMRZScannerView: UIView {
     fileprivate func startCaptureSession() {
         DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
             self.captureSession.startRunning()
+            DispatchQueue.main.async { self.adjustVideoPreviewLayerFrame() }
         }
     }
     
