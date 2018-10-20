@@ -127,29 +127,38 @@ public class QKMRZScannerView: UIView {
         return mrzLines.isEmpty ? nil : mrzLines
     }
     
+    // MARK: Document Image from Photo cropping
+    fileprivate func cutoutRect(for image: UIImage) -> CGRect {
+        let imageWidth = (image.size.width * image.scale)
+        let imageHeight = (image.size.height * image.scale)
+        let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutView.cutoutRect)
+        let videoOrientation = videoPreviewLayer.connection!.videoOrientation
+        
+        if videoOrientation == .portrait || videoOrientation == .portraitUpsideDown {
+            return CGRect(x: (rect.minY * imageWidth), y: (rect.minX * imageHeight), width: (rect.height * imageWidth), height: (rect.width * imageHeight))
+        }
+        else {
+            return CGRect(x: (rect.minX * imageWidth), y: (rect.minY * imageHeight), width: (rect.width * imageWidth), height: (rect.height * imageHeight))
+        }
+    }
+    
+    fileprivate func documentImage(from image: UIImage) -> UIImage {
+        let croppingRect = cutoutRect(for: image)
+        return UIImage(cgImage: image.cgImage!.cropping(to: croppingRect)!)
+    }
+    
+    fileprivate func enlargedDocumentImage(from image: UIImage) -> UIImage {
+        var croppingRect = cutoutRect(for: image)
+        let margin = (0.05 * croppingRect.height) // 5% of the height
+        croppingRect = CGRect(x: (croppingRect.minX - margin), y: (croppingRect.minY - margin), width: croppingRect.width + (margin * 2), height: croppingRect.height + (margin * 2))
+        return UIImage(cgImage: image.cgImage!.cropping(to: croppingRect)!)
+    }
+    
     // MARK: Misc
     fileprivate func adjustVideoPreviewLayerFrame() {
         videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.frame = bounds
-    }
-    
-    fileprivate func cropCapturedPhotoToCutout(_ image: UIImage) -> UIImage {
-        let cgImage = image.cgImage!
-        let imageWidth = CGFloat(cgImage.width)
-        let imageHeight = CGFloat(cgImage.height)
-        let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutView.cutoutRect)
-        let videoOrientation = videoPreviewLayer.connection!.videoOrientation
-        let croppingRect: CGRect
-        
-        if videoOrientation == .portrait || videoOrientation == .portraitUpsideDown {
-            croppingRect = CGRect(x: (rect.minY * imageWidth), y: (rect.minX * imageHeight), width: (rect.height * imageWidth), height: (rect.width * imageHeight))
-        }
-        else {
-            croppingRect = CGRect(x: (rect.minX * imageWidth), y: (rect.minY * imageHeight), width: (rect.width * imageWidth), height: (rect.height * imageHeight))
-        }
-        
-        return UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
     }
     
     fileprivate func addCutoutView() {
@@ -192,13 +201,14 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         let ciImage = CIImage(cvPixelBuffer: imageBuffer)
         let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
-        let documentImage = cropCapturedPhotoToCutout(UIImage(cgImage: cgImage))
+        let documentImage = self.documentImage(from: UIImage(cgImage: cgImage))
         
         if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
             captureSession.stopRunning()
             
             DispatchQueue.main.async {
-                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: documentImage)
+                let enlargedDocumentImage = self.enlargedDocumentImage(from: UIImage(cgImage: cgImage))
+                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                 self.delegate?.mrzScannerView(self, didFind: scanResult)
             }
         }
