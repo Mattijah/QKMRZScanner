@@ -39,20 +39,12 @@ public class QKMRZScannerView: UIView {
     // MARK: Initializers
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        setViewStyle()
-        setupCaptureSession()
-        addCutoutView()
-        initTesseract()
-        setObservers()
+        initialize()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setViewStyle()
-        setupCaptureSession()
-        addCutoutView()
-        initTesseract()
-        setObservers()
+        initialize()
     }
     
     deinit {
@@ -68,38 +60,6 @@ public class QKMRZScannerView: UIView {
     override public func layoutSubviews() {
         super.layoutSubviews()
         adjustVideoPreviewLayerFrame()
-    }
-    
-    // MARK: AVCaptureSession
-    fileprivate func setupCaptureSession() {
-        captureSession.sessionPreset = .high
-        
-        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
-            print("Camera not accessible")
-            return
-        }
-        
-        guard let deviceInput = try? AVCaptureDeviceInput(device: camera) else {
-            print("Capture input could not be initialized")
-            return
-        }
-        
-        if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(videoOutput) {
-            captureSession.addInput(deviceInput)
-            captureSession.addOutput(videoOutput)
-            
-            videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "video_frames_queue", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem))
-            videoOutput.alwaysDiscardsLateVideoFrames = true
-            videoOutput.connection(with: .video)!.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
-            
-            videoPreviewLayer.session = captureSession
-            videoPreviewLayer.videoGravity = .resizeAspectFill
-            
-            layer.insertSublayer(videoPreviewLayer, at: 0)
-        }
-        else {
-            print("Input & Output could not be added to the session")
-        }
     }
     
     // MARK: Scanning
@@ -187,20 +147,17 @@ public class QKMRZScannerView: UIView {
         }
     }
     
-    // MARK: Misc
+    // MARK: Init methods
+    fileprivate func initialize() {
+        setViewStyle()
+        addCutoutView()
+        initCaptureSession()
+        initTesseract()
+        addAppObservers()
+    }
+    
     fileprivate func setViewStyle() {
         backgroundColor = .black
-    }
-    
-    fileprivate func setObservers() {
-        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
-    }
-    
-    fileprivate func adjustVideoPreviewLayerFrame() {
-        videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
-        videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
-        videoPreviewLayer.frame = bounds
     }
     
     fileprivate func addCutoutView() {
@@ -213,6 +170,42 @@ public class QKMRZScannerView: UIView {
             cutoutView.leftAnchor.constraint(equalTo: leftAnchor),
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
+    }
+    
+    fileprivate func initCaptureSession() {
+        captureSession.sessionPreset = .high
+        
+        guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
+            print("Camera not accessible")
+            return
+        }
+        
+        guard let deviceInput = try? AVCaptureDeviceInput(device: camera) else {
+            print("Capture input could not be initialized")
+            return
+        }
+        
+        if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(videoOutput) {
+            captureSession.addInput(deviceInput)
+            captureSession.addOutput(videoOutput)
+            
+            videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "video_frames_queue", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem))
+            videoOutput.alwaysDiscardsLateVideoFrames = true
+            videoOutput.connection(with: .video)!.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
+            
+            videoPreviewLayer.session = captureSession
+            videoPreviewLayer.videoGravity = .resizeAspectFill
+            
+            layer.insertSublayer(videoPreviewLayer, at: 0)
+        }
+        else {
+            print("Input & Output could not be added to the session")
+        }
+    }
+    
+    fileprivate func addAppObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     fileprivate func initTesseract() {
@@ -231,6 +224,13 @@ public class QKMRZScannerView: UIView {
         tesseract = G8Tesseract(language: "ocrb", configDictionary: config, configFileNames: [], absoluteDataPath: bundlePath, engineMode: .tesseractOnly, copyFilesFromResources: false)!
         tesseract.pageSegmentationMode = .singleBlock
         tesseract.delegate = self
+    }
+    
+    // MARK: Misc
+    fileprivate func adjustVideoPreviewLayerFrame() {
+        videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
+        videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
+        videoPreviewLayer.frame = bounds
     }
 }
 
