@@ -25,7 +25,12 @@ public class QKMRZScannerView: UIView {
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let ciContext = CIContext()
     fileprivate let cutoutView = QKCutoutView()
+    fileprivate var isScanningPaused = false
     public weak var delegate: QKMRZScannerViewDelegate?
+    
+    public var isScanning: Bool {
+        return captureSession.isRunning
+    }
     
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
@@ -91,22 +96,22 @@ public class QKMRZScannerView: UIView {
             videoPreviewLayer.videoGravity = .resizeAspectFill
             
             layer.insertSublayer(videoPreviewLayer, at: 0)
-            startCaptureSession()
         }
         else {
             print("Input & Output could not be added to the session")
         }
     }
     
-    fileprivate func startCaptureSession() {
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in
-            self.captureSession.startRunning()
-            DispatchQueue.main.async { self.adjustVideoPreviewLayerFrame() }
+    // MARK: Scanning
+    public func startScanning() {
+        DispatchQueue.global(qos: .userInitiated).async { [weak self] in
+            self?.captureSession.startRunning()
+            DispatchQueue.main.async { [weak self] in self?.adjustVideoPreviewLayerFrame() }
         }
     }
     
-    fileprivate func stopCaptureSession() {
-        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in self.captureSession.stopRunning() }
+    public func stopScanning() {
+        captureSession.stopRunning()
     }
     
     // MARK: MRZ
@@ -157,7 +162,7 @@ public class QKMRZScannerView: UIView {
     
     fileprivate func documentImage(from cgImage: CGImage) -> CGImage {
         let croppingRect = cutoutRect(for: cgImage)
-        return cgImage.cropping(to: croppingRect)!
+        return cgImage.cropping(to: croppingRect) ?? cgImage
     }
     
     fileprivate func enlargedDocumentImage(from cgImage: CGImage) -> UIImage {
@@ -169,11 +174,17 @@ public class QKMRZScannerView: UIView {
     
     // MARK: UIApplication Observers
     @objc fileprivate func appWillEnterForeground() {
-        startCaptureSession()
+        if isScanningPaused {
+            isScanningPaused = false
+            startScanning()
+        }
     }
     
     @objc fileprivate func appDidEnterBackground() {
-        stopCaptureSession()
+        if isScanning {
+            isScanningPaused = true
+            stopScanning()
+        }
     }
     
     // MARK: Misc
@@ -235,7 +246,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
         let documentImage = self.documentImage(from: cgImage)
         
         if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
-            captureSession.stopRunning()
+            stopScanning()
             
             DispatchQueue.main.async {
                 let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
