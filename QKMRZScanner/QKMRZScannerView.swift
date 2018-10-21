@@ -38,6 +38,7 @@ public class QKMRZScannerView: UIView {
         setupCaptureSession()
         addCutoutView()
         initTesseract()
+        setObservers()
     }
     
     required public init?(coder aDecoder: NSCoder) {
@@ -46,6 +47,11 @@ public class QKMRZScannerView: UIView {
         setupCaptureSession()
         addCutoutView()
         initTesseract()
+        setObservers()
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     // MARK: Overriden methods
@@ -97,6 +103,10 @@ public class QKMRZScannerView: UIView {
             self.captureSession.startRunning()
             DispatchQueue.main.async { self.adjustVideoPreviewLayerFrame() }
         }
+    }
+    
+    fileprivate func stopCaptureSession() {
+        DispatchQueue.global(qos: .userInitiated).async { [unowned self] in self.captureSession.stopRunning() }
     }
     
     // MARK: MRZ
@@ -157,9 +167,23 @@ public class QKMRZScannerView: UIView {
         return UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
     }
     
+    // MARK: UIApplication Observers
+    @objc fileprivate func appWillEnterForeground() {
+        startCaptureSession()
+    }
+    
+    @objc fileprivate func appDidEnterBackground() {
+        stopCaptureSession()
+    }
+    
     // MARK: Misc
     fileprivate func setViewStyle() {
         backgroundColor = .black
+    }
+    
+    fileprivate func setObservers() {
+        NotificationCenter.default.addObserver(self, selector: #selector(appDidEnterBackground), name: .UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
     fileprivate func adjustVideoPreviewLayerFrame() {
