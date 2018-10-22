@@ -79,7 +79,8 @@ public class QKMRZScannerView: UIView {
         let imageWidth = CGFloat(cgImage.width)
         let imageHeight = CGFloat(cgImage.height)
         let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
-        let croppingRect = CGRect(origin: CGPoint(x: 0, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: imageWidth, height: mrzRegionHeight))
+        let padding = (0.04 * imageHeight) // Try to make the mrz image as small as possible
+        let croppingRect = CGRect(origin: CGPoint(x: padding, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: (imageWidth - padding * 2), height: (mrzRegionHeight - padding)))
         let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
         
         tesseract.image = mrzRegionImage
@@ -173,7 +174,7 @@ public class QKMRZScannerView: UIView {
     }
     
     fileprivate func initCaptureSession() {
-        captureSession.sessionPreset = .high
+        captureSession.sessionPreset = .hd1920x1080
         
         guard let camera = AVCaptureDevice.default(.builtInWideAngleCamera, for: .video, position: .back) else {
             print("Camera not accessible")
@@ -261,22 +262,45 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
 // MARK: - G8TesseractDelegate
 extension QKMRZScannerView: G8TesseractDelegate {
     public func preprocessedImage(for tesseract: G8Tesseract, sourceImage: UIImage) -> UIImage {
+        let averageColor = AverageColorExtractor()
+        let exposure = ExposureAdjustment()
         let resampling = LanczosResampling()
-        let saturation = SaturationAdjustment()
-        let contrast = ContrastAdjustment()
         let adaptiveThreshold = AdaptiveThreshold()
-        let medianFilter = MedianFilter()
+        let sharpen = Sharpen()
         let blur = GaussianBlur()
+        let scaledImageWidth = Float((sourceImage.size.width * sourceImage.scale) * 2)
         let imageSizeRatio = Float(sourceImage.size.height / sourceImage.size.width)
         
-        resampling.overriddenOutputSize = Size(width: 1000, height: (imageSizeRatio * 1000))
-        saturation.saturation = 0
-        contrast.contrast = 2
-        adaptiveThreshold.blurRadiusInPixels = 4
+        resampling.overriddenOutputSize = Size(width: scaledImageWidth, height: (imageSizeRatio * scaledImageWidth))
+        exposure.exposure = 0.5
+        adaptiveThreshold.blurRadiusInPixels = 2
+        sharpen.sharpness = 2
         blur.blurRadiusInPixels = 1
         
+        averageColor.extractedColorCallback = { color in
+            let lighting = (color.blueComponent + color.greenComponent + color.redComponent)
+            
+            if lighting < 2.75 {
+                exposure.exposure += (2.80 - lighting) * 2
+            }
+            
+            if lighting > 2.85 {
+                exposure.exposure -= (lighting - 2.80) * 2
+            }
+            
+            if exposure.exposure > 2 {
+                exposure.exposure = 2
+            }
+            
+            if exposure.exposure < -2 {
+                exposure.exposure = -2
+            }
+        }
+        
+        let _ = sourceImage.filterWithPipeline({ $0 --> adaptiveThreshold --> averageColor --> $1 })
+        
         return sourceImage.filterWithPipeline({ input, output in
-            input --> resampling --> saturation --> contrast --> adaptiveThreshold --> medianFilter --> blur --> output
+            input --> exposure --> resampling --> adaptiveThreshold --> sharpen --> blur --> output
         })
     }
 }
