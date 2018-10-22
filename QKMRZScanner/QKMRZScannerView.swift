@@ -25,6 +25,7 @@ public class QKMRZScannerView: UIView {
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let ciContext = CIContext()
     fileprivate let cutoutView = QKCutoutView()
+    fileprivate var isScanningTD1Format = false
     fileprivate var isScanningPaused = false
     public weak var delegate: QKMRZScannerViewDelegate?
     
@@ -78,7 +79,7 @@ public class QKMRZScannerView: UIView {
     fileprivate func mrz(from cgImage: CGImage) -> QKMRZResult? {
         let imageWidth = CGFloat(cgImage.width)
         let imageHeight = CGFloat(cgImage.height)
-        let mrzRegionHeight = (imageHeight * 0.25) // MRZ occupies roughly 25% of the document's height
+        let mrzRegionHeight = isScanningTD1Format ? (imageHeight * 0.28) : (imageHeight * 0.25) // TD1 has 3 lines so expand the area a bit
         let padding = (0.04 * imageHeight) // Try to make the mrz image as small as possible
         let croppingRect = CGRect(origin: CGPoint(x: padding, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: (imageWidth - padding * 2), height: (mrzRegionHeight - padding)))
         let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
@@ -87,6 +88,7 @@ public class QKMRZScannerView: UIView {
         tesseract.recognize()
         
         if let mrzLines = mrzLines(from: tesseract.recognizedText) {
+            isScanningTD1Format = (mrzLines.last!.count == 30) // TD1 lines are 30 chars long
             return mrzParser.parse(mrzLines: mrzLines)
         }
         
