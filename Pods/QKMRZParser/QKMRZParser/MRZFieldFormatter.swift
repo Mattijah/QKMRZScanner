@@ -14,6 +14,7 @@ class MRZFieldFormatter {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyyMMdd"
         formatter.locale = Locale(identifier: "en_US_POSIX")
+        formatter.timeZone = TimeZone(abbreviation: "GMT+0:00")
         return formatter
     }()
     
