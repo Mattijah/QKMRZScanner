@@ -27,11 +27,9 @@ public class QKMRZScannerView: UIView {
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningTD1Format = false
     fileprivate var isScanningPaused = false
+    fileprivate var observer: NSKeyValueObservation?
+    @objc public dynamic var isScanning = false
     public weak var delegate: QKMRZScannerViewDelegate?
-    
-    public var isScanning: Bool {
-        return captureSession.isRunning
-    }
     
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
@@ -186,6 +184,10 @@ public class QKMRZScannerView: UIView {
         guard let deviceInput = try? AVCaptureDeviceInput(device: camera) else {
             print("Capture input could not be initialized")
             return
+        }
+        
+        observer = captureSession.observe(\.isRunning, options: [.new]) { [unowned self] (model, change) in
+            self.isScanning = change.newValue!
         }
         
         if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(videoOutput) {
