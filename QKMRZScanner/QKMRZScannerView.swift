@@ -31,6 +31,10 @@ public class QKMRZScannerView: UIView {
     @objc public dynamic var isScanning = false
     public weak var delegate: QKMRZScannerViewDelegate?
     
+    public var cutoutRect: CGRect {
+        return cutoutView.cutoutRect
+    }
+    
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
     }
@@ -110,7 +114,7 @@ public class QKMRZScannerView: UIView {
     fileprivate func cutoutRect(for cgImage: CGImage) -> CGRect {
         let imageWidth = CGFloat(cgImage.width)
         let imageHeight = CGFloat(cgImage.height)
-        let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutView.cutoutRect)
+        let rect = videoPreviewLayer.metadataOutputRectConverted(fromLayerRect: cutoutRect)
         let videoOrientation = videoPreviewLayer.connection!.videoOrientation
         
         if videoOrientation == .portrait || videoOrientation == .portraitUpsideDown {
