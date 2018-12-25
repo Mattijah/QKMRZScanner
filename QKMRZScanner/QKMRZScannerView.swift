@@ -67,6 +67,10 @@ public class QKMRZScannerView: UIView {
     
     // MARK: Scanning
     public func startScanning() {
+        guard (!captureSession.inputs.isEmpty && !captureSession.inputs.isEmpty) else {
+            return
+        }
+        
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
             DispatchQueue.main.async { [weak self] in self?.adjustVideoPreviewLayerFrame() }
