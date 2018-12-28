@@ -7,9 +7,9 @@
 
 import UIKit
 import AVFoundation
-import TesseractOCR
+import SwiftyTesseract
 import QKMRZParser
-import QKGPUImage2
+import EVGPUImage2
 import AudioToolbox
 
 public protocol QKMRZScannerViewDelegate: class {
@@ -18,7 +18,7 @@ public protocol QKMRZScannerViewDelegate: class {
 
 @IBDesignable
 public class QKMRZScannerView: UIView {
-    fileprivate var tesseract: G8Tesseract!
+    fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), bundle: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractLstmCombined)
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
@@ -89,11 +89,11 @@ public class QKMRZScannerView: UIView {
         let padding = (0.04 * imageHeight) // Try to make the mrz image as small as possible
         let croppingRect = CGRect(origin: CGPoint(x: padding, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: (imageWidth - padding * 2), height: (mrzRegionHeight - padding)))
         let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
+        var recognizedString: String?
         
-        tesseract.image = mrzRegionImage
-        tesseract.recognize()
+        tesseract.performOCR(on: preprocessImage(mrzRegionImage)) { recognizedString = $0 }
         
-        if let mrzLines = mrzLines(from: tesseract.recognizedText) {
+        if let string = recognizedString, let mrzLines = mrzLines(from: string) {
             isScanningTD1Format = (mrzLines.last!.count == 30) // TD1 lines are 30 chars long
             return mrzParser.parse(mrzLines: mrzLines)
         }
@@ -161,7 +161,6 @@ public class QKMRZScannerView: UIView {
         setViewStyle()
         addCutoutView()
         initCaptureSession()
-        initTesseract()
         addAppObservers()
     }
     
@@ -223,67 +222,22 @@ public class QKMRZScannerView: UIView {
         NotificationCenter.default.addObserver(self, selector: #selector(appWillEnterForeground), name: .UIApplicationWillEnterForeground, object: nil)
     }
     
-    fileprivate func initTesseract() {
-        let bundlePath = Bundle(for: type(of: self)).bundlePath
-        let config = [
-            kG8ParamLoadSystemDawg: "F",
-            kG8ParamLoadFreqDawg: "F",
-            kG8ParamLoadNumberDawg: "F",
-            kG8ParamLoadPuncDawg: "F",
-            kG8ParamLoadUnambigDawg: "F",
-            kG8ParamLoadBigramDawg: "F",
-            kG8ParamWordrecEnableAssoc: "F",
-            kG8ParamTesseditCharWhitelist: "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ<"
-        ]
-        
-        tesseract = G8Tesseract(language: "ocrb", configDictionary: config, configFileNames: [], absoluteDataPath: bundlePath, engineMode: .tesseractOnly, copyFilesFromResources: false)!
-        tesseract.pageSegmentationMode = .singleBlock
-        tesseract.delegate = self
-    }
-    
     // MARK: Misc
     fileprivate func adjustVideoPreviewLayerFrame() {
         videoOutput.connection(with: .video)?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.connection?.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
         videoPreviewLayer.frame = bounds
     }
-}
-
-// MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
-extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
-    public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
-            return
-        }
-        
-        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-        let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
-        let documentImage = self.documentImage(from: cgImage)
-        
-        if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
-            stopScanning()
-            
-            DispatchQueue.main.async {
-                let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
-                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
-                self.delegate?.mrzScannerView(self, didFind: scanResult)
-                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-            }
-        }
-    }
-}
-
-// MARK: - G8TesseractDelegate
-extension QKMRZScannerView: G8TesseractDelegate {
-    public func preprocessedImage(for tesseract: G8Tesseract, sourceImage: UIImage) -> UIImage {
+    
+    public func preprocessImage(_ image: UIImage) -> UIImage {
         let averageColor = AverageColorExtractor()
         let exposure = ExposureAdjustment()
         let resampling = LanczosResampling()
         let adaptiveThreshold = AdaptiveThreshold()
         let sharpen = Sharpen()
         let blur = GaussianBlur()
-        let scaledImageWidth = Float((sourceImage.size.width * sourceImage.scale) * 2)
-        let imageSizeRatio = Float(sourceImage.size.height / sourceImage.size.width)
+        let scaledImageWidth = Float((image.size.width * image.scale) * 2)
+        let imageSizeRatio = Float(image.size.height / image.size.width)
         
         resampling.overriddenOutputSize = Size(width: scaledImageWidth, height: (imageSizeRatio * scaledImageWidth))
         exposure.exposure = 0.5
@@ -311,10 +265,34 @@ extension QKMRZScannerView: G8TesseractDelegate {
             }
         }
         
-        let _ = sourceImage.filterWithPipeline({ $0 --> adaptiveThreshold --> averageColor --> $1 })
+        let _ = image.filterWithPipeline({ $0 --> adaptiveThreshold --> averageColor --> $1 })
         
-        return sourceImage.filterWithPipeline({ input, output in
+        return image.filterWithPipeline({ input, output in
             input --> exposure --> resampling --> adaptiveThreshold --> sharpen --> blur --> output
         })
+    }
+}
+
+// MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
+extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
+    public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+            return
+        }
+        
+        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
+        let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
+        let documentImage = self.documentImage(from: cgImage)
+        
+        if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
+            stopScanning()
+            
+            DispatchQueue.main.async {
+                let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
+                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
+                self.delegate?.mrzScannerView(self, didFind: scanResult)
+                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            }
+        }
     }
 }

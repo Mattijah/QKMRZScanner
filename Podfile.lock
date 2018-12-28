@@ -1,22 +1,18 @@
 PODS:
-  - QKGPUImage2 (0.1.0)
+  - EVGPUImage2 (0.2.0)
   - QKMRZParser (1.0.1)
-  - TesseractOCRiOS (4.0.0)
+  - SwiftyTesseract (2.0.1)
 
 DEPENDENCIES:
-  - QKGPUImage2 (from `./QKGPUImage2.podspec`)
+  - EVGPUImage2 (~> 0.2)
   - QKMRZParser (~> 1.0.1)
-  - TesseractOCRiOS (~> 4.0.0)
-
-EXTERNAL SOURCES:
-  QKGPUImage2:
-    :podspec: ./QKGPUImage2.podspec
+  - SwiftyTesseract (~> 2.0.1)
 
 SPEC CHECKSUMS:
-  QKGPUImage2: 5f3cab0f9ca84908d69c03dc0cee2b30d0dd71d5
+  EVGPUImage2: 1e057f25fbab811b8a9e98d19f96bbd5eb434913
   QKMRZParser: 07921dbffa7e4064406113731bc0f1f5e6210bce
-  TesseractOCRiOS: 90638afbe43d082433f2e76b384c7901d23956df
+  SwiftyTesseract: f0e6b1b3036af44c01b9ba488463305b196106a6
 
-PODFILE CHECKSUM: 912e5e41bb05e5648e3137f9d35e5275210bb70e
+PODFILE CHECKSUM: 109ddf44f4fc7e233b03f8977ec554350428adaf
 
 COCOAPODS: 1.4.0

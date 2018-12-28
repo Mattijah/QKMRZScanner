@@ -1,6 +1,0 @@
-framework module QKGPUImage2 {
-  umbrella header "QKGPUImage2-umbrella.h"
-
-  export *
-  module * { export * }
-}

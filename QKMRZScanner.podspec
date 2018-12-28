@@ -12,9 +12,9 @@ Pod::Spec.new do |s|
   s.source   = { :git => '.', :tag => "v#{s.version}" }
   s.source_files = 'QKMRZScanner/**/*.{swift}'
   s.resources    = 'QKMRZScanner/Supporting Files/tessdata'
-  s.frameworks   =  'Foundation', 'UIKit', 'AVFoundation', 'CoreImage', 'AudioToolbox', 'TesseractOCR'
+  s.frameworks   =  'Foundation', 'UIKit', 'AVFoundation', 'CoreImage', 'AudioToolbox'
   
-  s.dependency 'QKGPUImage2'
+  s.dependency 'EVGPUImage2'
   s.dependency 'QKMRZParser'
-  s.dependency 'TesseractOCRiOS'
+  s.dependency 'SwiftyTesseract'
 end

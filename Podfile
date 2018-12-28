@@ -3,16 +3,17 @@ source 'https://github.com/CocoaPods/Specs.git'
 use_frameworks!
 
 target 'QKMRZScanner' do
-    pod 'QKGPUImage2', :podspec => './QKGPUImage2.podspec'
+    pod 'EVGPUImage2', '~> 0.2.0'
     pod 'QKMRZParser', '~> 1.0.1'
-    pod 'TesseractOCRiOS', '~> 4.0.0'
+    pod 'SwiftyTesseract', '~> 2.0.1'
 end
 
-#TesseractOCR requires disabled bitcode
 post_install do |installer|
     installer.pods_project.targets.each do |target|
-        target.build_configurations.each do |config|
-            config.build_settings['ENABLE_BITCODE'] = 'NO'
+        if target.name == 'SwiftyTesseract'
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '4.2'
+            end
         end
     end
 end
