@@ -2,7 +2,7 @@
 //  QKMRZScanResult.swift
 //  QKMRZScanner
 //
-//  Created by S on 16/10/2018.
+//  Created by Matej Dorcak on 16/10/2018.
 //
 
 import Foundation

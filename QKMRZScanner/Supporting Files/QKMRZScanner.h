@@ -2,7 +2,7 @@
 //  QKMRZScanner.h
 //  QKMRZScanner
 //
-//  Created by S on 03/10/2018.
+//  Created by Matej Dorcak on 03/10/2018.
 //
 
 #import <UIKit/UIKit.h>

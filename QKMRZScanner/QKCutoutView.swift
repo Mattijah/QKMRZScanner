@@ -2,7 +2,7 @@
 //  QKCutoutView.swift
 //  QKMRZScanner
 //
-//  Created by S on 05/10/2018.
+//  Created by Matej Dorcak on 05/10/2018.
 //
 
 import UIKit
