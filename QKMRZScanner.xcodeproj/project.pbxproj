@@ -144,7 +144,6 @@
 				1277813A21653FB500070E1C /* Frameworks */,
 				1277813B21653FB500070E1C /* Headers */,
 				1277813C21653FB500070E1C /* Resources */,
-				0A94CD2A0A0DDC22D6BA3EE7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,21 +198,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		0A94CD2A0A0DDC22D6BA3EE7 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QKMRZScanner/Pods-QKMRZScanner-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		9143F24341060E1EC9EEDCA9 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
