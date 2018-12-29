@@ -51,7 +51,7 @@ class QKCutoutView: UIView {
         path.addRect(bounds)
         
         maskLayer.path = path
-        maskLayer.fillRule = kCAFillRuleEvenOdd
+        maskLayer.fillRule = CAShapeLayerFillRule.evenOdd
         
         layer.mask = maskLayer
         
