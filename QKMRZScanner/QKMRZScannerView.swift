@@ -229,7 +229,7 @@ public class QKMRZScannerView: UIView {
         videoPreviewLayer.frame = bounds
     }
     
-    public func preprocessImage(_ image: UIImage) -> UIImage {
+    fileprivate func preprocessImage(_ image: UIImage) -> UIImage {
         let averageColor = AverageColorExtractor()
         let exposure = ExposureAdjustment()
         let resampling = LanczosResampling()
