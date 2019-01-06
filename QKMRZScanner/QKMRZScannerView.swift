@@ -23,7 +23,6 @@ public class QKMRZScannerView: UIView {
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
-    fileprivate let ciContext = CIContext()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningTD1Format = false
     fileprivate var isScanningPaused = false
@@ -205,6 +204,7 @@ public class QKMRZScannerView: UIView {
             
             videoOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "video_frames_queue", qos: .userInteractive, attributes: [], autoreleaseFrequency: .workItem))
             videoOutput.alwaysDiscardsLateVideoFrames = true
+            videoOutput.videoSettings = [kCVPixelBufferPixelFormatTypeKey: kCVPixelFormatType_32BGRA] as [String : Any]
             videoOutput.connection(with: .video)!.videoOrientation = AVCaptureVideoOrientation(orientation: interfaceOrientation)
             
             videoPreviewLayer.session = captureSession
@@ -271,6 +271,22 @@ public class QKMRZScannerView: UIView {
             input --> exposure --> resampling --> adaptiveThreshold --> sharpen --> blur --> output
         })
     }
+    
+    fileprivate func cgImage(from imageBuffer: CVImageBuffer) -> CGImage {
+        CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
+        
+        let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
+        let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
+        let width = CVPixelBufferGetWidth(imageBuffer)
+        let height = CVPixelBufferGetHeight(imageBuffer)
+        let bitmapInfo = CGBitmapInfo(rawValue: (CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue))
+        let context = CGContext.init(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: bitmapInfo.rawValue)
+        let cgImage = context!.makeImage()!
+        
+        CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
+        
+        return cgImage
+    }
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
@@ -280,8 +296,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             return
         }
         
-        let ciImage = CIImage(cvPixelBuffer: imageBuffer)
-        let cgImage = ciContext.createCGImage(ciImage, from: ciImage.extent)!
+        let cgImage = self.cgImage(from: imageBuffer)
         let documentImage = self.documentImage(from: cgImage)
         
         if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
