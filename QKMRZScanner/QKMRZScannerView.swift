@@ -195,7 +195,7 @@ public class QKMRZScannerView: UIView {
         observer = captureSession.observe(\.isRunning, options: [.new]) { [unowned self] (model, change) in
             // CaptureSession is started from the global queue (background). Change the `isScanning` on the main
             // queue to avoid triggering the change handler also from the global queue as it may affect the UI.
-            DispatchQueue.main.async { self.isScanning = change.newValue! }
+            DispatchQueue.main.async { [weak self] in self?.isScanning = change.newValue! }
         }
         
         if captureSession.canAddInput(deviceInput) && captureSession.canAddOutput(videoOutput) {
