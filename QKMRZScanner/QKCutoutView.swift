@@ -8,29 +8,12 @@
 import UIKit
 
 class QKCutoutView: UIView {
-    var cutoutRect: CGRect {
-        let documentFrameRatio = CGFloat(1.42) // Passport's size (ISO/IEC 7810 ID-3) is 125mm × 88mm
-        let (width, height): (CGFloat, CGFloat)
-        
-        if frame.height > frame.width {
-            width = (frame.width * 0.9) // Fill 90% of the width
-            height = (width / documentFrameRatio)
-        }
-        else {
-            height = (frame.height * 0.75) // Fill 75% of the height
-            width = (height * documentFrameRatio)
-        }
-        
-        let topOffset = (frame.height - height) / 2
-        let leftOffset = (frame.width - width) / 2
-        
-        return CGRect(x: leftOffset, y: topOffset, width: width, height: height)
-    }
+    fileprivate(set) var cutoutRect: CGRect!
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.black.withAlphaComponent(0.45)
-        contentMode = .redraw
+        contentMode = .redraw // Redraws everytime the bounds (orientation) changes
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,6 +23,7 @@ class QKCutoutView: UIView {
     override func draw(_ rect: CGRect) {
         super.draw(rect)
         
+        cutoutRect = calculateCutoutRect() // Orientation or the view's size could change
         layer.sublayers?.removeAll()
         
         // Make rectangle cutout
@@ -64,5 +48,24 @@ class QKCutoutView: UIView {
         borderLayer.frame = bounds
         
         layer.addSublayer(borderLayer)
+    }
+    
+    fileprivate func calculateCutoutRect() -> CGRect {
+        let documentFrameRatio = CGFloat(1.42) // Passport's size (ISO/IEC 7810 ID-3) is 125mm × 88mm
+        let (width, height): (CGFloat, CGFloat)
+        
+        if bounds.height > bounds.width {
+            width = (bounds.width * 0.9) // Fill 90% of the width
+            height = (width / documentFrameRatio)
+        }
+        else {
+            height = (bounds.height * 0.75) // Fill 75% of the height
+            width = (height * documentFrameRatio)
+        }
+        
+        let topOffset = (bounds.height - height) / 2
+        let leftOffset = (bounds.width - width) / 2
+        
+        return CGRect(x: leftOffset, y: topOffset, width: width, height: height)
     }
 }
