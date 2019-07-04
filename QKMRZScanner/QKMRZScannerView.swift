@@ -93,7 +93,7 @@ public class QKMRZScannerView: UIView {
         tesseract.performOCR(on: preprocessImage(mrzRegionImage)) { recognizedString = $0 }
         
         if let string = recognizedString, let mrzLines = mrzLines(from: string) {
-            isScanningTD1Format = (mrzLines.last!.count ~= 29...31) // TD1 lines are 30 chars long
+            isScanningTD1Format = (29...31 ~= mrzLines.last!.count) // TD1 lines are 30 chars long
             return mrzParser.parse(mrzLines: mrzLines)
         }
         

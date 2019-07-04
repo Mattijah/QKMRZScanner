@@ -21,12 +21,13 @@ class QKCutoutView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        super.draw(rect)
-        
         cutoutRect = calculateCutoutRect() // Orientation or the view's size could change
         layer.sublayers?.removeAll()
-        
-        // Make rectangle cutout
+        drawRectangleCutout()
+    }
+    
+    // MARK: Misc
+    fileprivate func drawRectangleCutout() {
         let maskLayer = CAShapeLayer()
         let path = CGMutablePath()
         let cornerRadius = CGFloat(3)
