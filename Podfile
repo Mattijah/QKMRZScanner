@@ -5,5 +5,5 @@ use_frameworks!
 target 'QKMRZScanner' do
     pod 'EVGPUImage2', '~> 0.2.0'
     pod 'QKMRZParser', '~> 1.0.1'
-    pod 'SwiftyTesseract', '~> 2.0.1'
+    pod 'SwiftyTesseract', '~> 2.2.0'
 end

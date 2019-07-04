@@ -4,7 +4,7 @@ GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
 HEADER_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/EVGPUImage2/EVGPUImage2.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/QKMRZParser/QKMRZParser.framework/Headers" "${PODS_CONFIGURATION_BUILD_DIR}/SwiftyTesseract/SwiftyTesseract.framework/Headers"
 LD_RUNPATH_SEARCH_PATHS = $(inherited) '@executable_path/Frameworks' '@loader_path/Frameworks' '@executable_path/../../Frameworks'
 LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/SwiftyTesseract/SwiftyTesseract/SwiftyTesseract/dependencies/lib"
-OTHER_LDFLAGS = $(inherited) -ObjC -l"jpeg" -l"lept" -l"png" -l"tesseract" -l"tiff" -l"tiffxx" -framework "AVFoundation" -framework "CoreMedia" -framework "EVGPUImage2" -framework "Foundation" -framework "OpenGLES" -framework "QKMRZParser" -framework "QuartzCore" -framework "SwiftyTesseract" -framework "UIKit"
+OTHER_LDFLAGS = $(inherited) -ObjC -framework "AVFoundation" -framework "CoreMedia" -framework "EVGPUImage2" -framework "Foundation" -framework "OpenGLES" -framework "QKMRZParser" -framework "QuartzCore" -framework "SwiftyTesseract" -framework "UIKit"
 OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS $(inherited) -DGLES
 PODS_BUILD_DIR = ${BUILD_DIR}
 PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
