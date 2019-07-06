@@ -11,6 +11,7 @@ import SwiftyTesseract
 import QKMRZParser
 import EVGPUImage2
 import AudioToolbox
+import Vision
 
 public protocol QKMRZScannerViewDelegate: class {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
@@ -24,7 +25,6 @@ public class QKMRZScannerView: UIView {
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let cutoutView = QKCutoutView()
-    fileprivate var isScanningTD1Format = false
     fileprivate var isScanningPaused = false
     fileprivate var observer: NSKeyValueObservation?
     @objc public dynamic var isScanning = false
@@ -82,18 +82,12 @@ public class QKMRZScannerView: UIView {
     
     // MARK: MRZ
     fileprivate func mrz(from cgImage: CGImage) -> QKMRZResult? {
-        let imageWidth = CGFloat(cgImage.width)
-        let imageHeight = CGFloat(cgImage.height)
-        let mrzRegionHeight = isScanningTD1Format ? (imageHeight * 0.38) : (imageHeight * 0.25) // TD1 has 3 lines so expand the area a bit
-        let padding = (0.04 * imageHeight) // Try to make the mrz image as small as possible
-        let croppingRect = CGRect(origin: CGPoint(x: padding, y: (imageHeight - mrzRegionHeight)), size: CGSize(width: (imageWidth - padding * 2), height: (mrzRegionHeight - padding)))
-        let mrzRegionImage = UIImage(cgImage: cgImage.cropping(to: croppingRect)!)
+        let mrzTextImage = UIImage(cgImage: cgImage)
         var recognizedString: String?
         
-        tesseract.performOCR(on: preprocessImage(mrzRegionImage)) { recognizedString = $0 }
+        tesseract.performOCR(on: preprocessImage(mrzTextImage)) { recognizedString = $0 }
         
         if let string = recognizedString, let mrzLines = mrzLines(from: string) {
-            isScanningTD1Format = (29...31 ~= mrzLines.last!.count) // TD1 lines are 30 chars long
             return mrzParser.parse(mrzLines: mrzLines)
         }
         
@@ -298,16 +292,41 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         let cgImage = self.cgImage(from: imageBuffer)
         let documentImage = self.documentImage(from: cgImage)
+        let imageRequestHandler = VNImageRequestHandler(cgImage: documentImage, options: [:])
         
-        if let mrzResult = mrz(from: documentImage), mrzResult.allCheckDigitsValid {
-            stopScanning()
+        let detectTextRectangles = VNDetectTextRectanglesRequest { [unowned self] request, error in
+            guard error == nil else {
+                return
+            }
             
-            DispatchQueue.main.async {
-                let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
-                let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
-                self.delegate?.mrzScannerView(self, didFind: scanResult)
-                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            guard let results = request.results as? [VNTextObservation] else {
+                return
+            }
+            
+            let imageWidth = CGFloat(documentImage.width)
+            let imageHeight = CGFloat(documentImage.height)
+            let transform = CGAffineTransform.identity.scaledBy(x: imageWidth, y: -imageHeight).translatedBy(x: 0, y: -1)
+            let mrzTextRectangles = results.map({ $0.boundingBox.applying(transform) }).filter({ $0.width > (imageWidth * 0.8) })
+            let mrzRegionRect = mrzTextRectangles.reduce(into: CGRect.null, { $0 = $0.union($1) })
+            
+            guard mrzRegionRect.height <= (imageHeight * 0.4) else { // Avoid processing the full image (can occur if there is a long text in the header)
+                return
+            }
+            
+            if let mrzTextImage = documentImage.cropping(to: mrzRegionRect) {
+                if let mrzResult = self.mrz(from: mrzTextImage), mrzResult.allCheckDigitsValid {
+                    self.stopScanning()
+                    
+                    DispatchQueue.main.async {
+                        let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
+                        let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
+                        self.delegate?.mrzScannerView(self, didFind: scanResult)
+                        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                    }
+                }
             }
         }
+        
+        try? imageRequestHandler.perform([detectTextRectangles])
     }
 }
