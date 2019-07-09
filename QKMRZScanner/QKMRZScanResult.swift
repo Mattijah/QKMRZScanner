@@ -22,6 +22,28 @@ public class QKMRZScanResult {
     public let personalNumber: String
     public let personalNumber2: String?
     
+    public lazy fileprivate(set) var faceImage: UIImage? = {
+        guard let documentImage = CIImage(image: documentImage) else {
+            return nil
+        }
+        
+        let context = CIContext(options: nil)
+        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: context, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        
+        guard let face = faceDetector.features(in: documentImage).first else {
+            return nil
+        }
+        
+        let increasedFaceBounds = face.bounds.insetBy(dx: -30, dy: -85).offsetBy(dx: 0, dy: 50)
+        let faceImage = documentImage.cropped(to: increasedFaceBounds)
+        
+        guard let cgImage = context.createCGImage(faceImage, from: faceImage.extent) else {
+            return nil
+        }
+        
+        return UIImage(cgImage: cgImage)
+    }()
+    
     init(mrzResult: QKMRZResult, documentImage image: UIImage) {
         documentImage = image
         documentType = mrzResult.documentType
