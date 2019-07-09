@@ -14,7 +14,6 @@ Pod::Spec.new do |s|
   s.resources    = "QKMRZScanner/Supporting Files/tessdata"
   s.frameworks   =  "Foundation", "UIKit", "AVFoundation", "CoreImage", "AudioToolbox"
   
-  s.dependency "EVGPUImage2"
   s.dependency "QKMRZParser"
   s.dependency "SwiftyTesseract"
 end

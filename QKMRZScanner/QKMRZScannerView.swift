@@ -9,7 +9,6 @@ import UIKit
 import AVFoundation
 import SwiftyTesseract
 import QKMRZParser
-import EVGPUImage2
 import AudioToolbox
 import Vision
 
@@ -21,6 +20,7 @@ public protocol QKMRZScannerViewDelegate: class {
 public class QKMRZScannerView: UIView {
     fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), bundle: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractLstmCombined)
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
+    fileprivate let context = CIContext(options: nil)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
@@ -82,10 +82,10 @@ public class QKMRZScannerView: UIView {
     
     // MARK: MRZ
     fileprivate func mrz(from cgImage: CGImage) -> QKMRZResult? {
-        let mrzTextImage = UIImage(cgImage: cgImage)
+        let mrzTextImage = UIImage(cgImage: preprocessImage(cgImage))
         var recognizedString: String?
         
-        tesseract.performOCR(on: preprocessImage(mrzTextImage)) { recognizedString = $0 }
+        tesseract.performOCR(on: mrzTextImage) { recognizedString = $0 }
         
         if let string = recognizedString, let mrzLines = mrzLines(from: string) {
             return mrzParser.parse(mrzLines: mrzLines)
@@ -151,6 +151,7 @@ public class QKMRZScannerView: UIView {
     
     // MARK: Init methods
     fileprivate func initialize() {
+        FilterVendor.registerFilters()
         setViewStyle()
         addCutoutView()
         initCaptureSession()
@@ -223,47 +224,25 @@ public class QKMRZScannerView: UIView {
         videoPreviewLayer.frame = bounds
     }
     
-    fileprivate func preprocessImage(_ image: UIImage) -> UIImage {
-        let averageColor = AverageColorExtractor()
-        let exposure = ExposureAdjustment()
-        let resampling = LanczosResampling()
-        let adaptiveThreshold = AdaptiveThreshold()
-        let sharpen = Sharpen()
-        let blur = GaussianBlur()
-        let scaledImageWidth = Float((image.size.width * image.scale) * 2)
-        let imageSizeRatio = Float(image.size.height / image.size.width)
+    fileprivate func preprocessImage(_ image: CGImage) -> CGImage {
+        var inputImage = CIImage(cgImage: image)
+        let averageLuminance = inputImage.averageLuminance
+        var exposure = 0.5
         
-        resampling.overriddenOutputSize = Size(width: scaledImageWidth, height: (imageSizeRatio * scaledImageWidth))
-        exposure.exposure = 0.5
-        adaptiveThreshold.blurRadiusInPixels = 2
-        sharpen.sharpness = 2
-        blur.blurRadiusInPixels = 1
-        
-        averageColor.extractedColorCallback = { color in
-            let lighting = (color.blueComponent + color.greenComponent + color.redComponent)
-            
-            if lighting < 2.75 {
-                exposure.exposure += (2.80 - lighting) * 2
-            }
-            
-            if lighting > 2.85 {
-                exposure.exposure -= (lighting - 2.80) * 2
-            }
-            
-            if exposure.exposure > 2 {
-                exposure.exposure = 2
-            }
-            
-            if exposure.exposure < -2 {
-                exposure.exposure = -2
-            }
+        if averageLuminance > 0.85 {
+            exposure -= ((averageLuminance - 0.5) * 2)
         }
         
-        let _ = image.filterWithPipeline({ $0 --> adaptiveThreshold --> averageColor --> $1 })
+        if averageLuminance < 0.25 {
+            exposure += (0.5 - averageLuminance) * 3
+        }
         
-        return image.filterWithPipeline({ input, output in
-            input --> exposure --> resampling --> adaptiveThreshold --> sharpen --> blur --> output
-        })
+        inputImage = inputImage.applyingFilter("CIExposureAdjust", parameters: ["inputEV": exposure])
+                               .applyingFilter("CIGammaAdjust", parameters: ["inputPower": 2])
+                               .applyingFilter("CILanczosScaleTransform", parameters: [kCIInputScaleKey: 2])
+                               .applyingFilter("LuminanceThresholdFilter", parameters: ["inputThreshold": 0.025])
+        
+        return context.createCGImage(inputImage, from: inputImage.extent)!
     }
     
     fileprivate func cgImage(from imageBuffer: CVImageBuffer) -> CGImage {
