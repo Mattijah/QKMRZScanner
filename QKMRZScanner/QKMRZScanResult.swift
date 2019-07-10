@@ -27,8 +27,7 @@ public class QKMRZScanResult {
             return nil
         }
         
-        let context = CIContext(options: nil)
-        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: context, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: CIContext.shared, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
         
         guard let face = faceDetector.features(in: documentImage).first else {
             return nil
@@ -37,7 +36,7 @@ public class QKMRZScanResult {
         let increasedFaceBounds = face.bounds.insetBy(dx: -30, dy: -85).offsetBy(dx: 0, dy: 50)
         let faceImage = documentImage.cropped(to: increasedFaceBounds)
         
-        guard let cgImage = context.createCGImage(faceImage, from: faceImage.extent) else {
+        guard let cgImage = CIContext.shared.createCGImage(faceImage, from: faceImage.extent) else {
             return nil
         }
         

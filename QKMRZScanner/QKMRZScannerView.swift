@@ -20,7 +20,6 @@ public protocol QKMRZScannerViewDelegate: class {
 public class QKMRZScannerView: UIView {
     fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), bundle: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractLstmCombined)
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
-    fileprivate let context = CIContext(options: nil)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
@@ -242,7 +241,7 @@ public class QKMRZScannerView: UIView {
                                .applyingFilter("CILanczosScaleTransform", parameters: [kCIInputScaleKey: 2])
                                .applyingFilter("LuminanceThresholdFilter", parameters: ["inputThreshold": 0.025])
         
-        return context.createCGImage(inputImage, from: inputImage.extent)!
+        return CIContext.shared.createCGImage(inputImage, from: inputImage.extent)!
     }
 }
 

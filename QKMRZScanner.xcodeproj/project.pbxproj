@@ -16,6 +16,7 @@
 		12832C282167519000D132D4 /* QKCutoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C272167519000D132D4 /* QKCutoutView.swift */; };
 		12C0055122D536AC0086FDBC /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055022D536AC0086FDBC /* CIImage.swift */; };
 		12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055222D562CE0086FDBC /* CVImageBuffer.swift */; };
+		12C0055522D5643F0086FDBC /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055422D5643F0086FDBC /* CIContext.swift */; };
 		12E298AD22D52A6700A9AFBB /* LuminanceThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */; };
 		5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; };
 /* End PBXBuildFile section */
@@ -33,6 +34,7 @@
 		12832C272167519000D132D4 /* QKCutoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKCutoutView.swift; sourceTree = "<group>"; };
 		12C0055022D536AC0086FDBC /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		12C0055222D562CE0086FDBC /* CVImageBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVImageBuffer.swift; sourceTree = "<group>"; };
+		12C0055422D5643F0086FDBC /* CIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminanceThresholdFilter.swift; sourceTree = "<group>"; };
 		6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA7784BC05891FFB8A38C353 /* Pods-QKMRZScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QKMRZScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-QKMRZScanner/Pods-QKMRZScanner.release.xcconfig"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 			children = (
 				12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */,
 				12C0055022D536AC0086FDBC /* CIImage.swift */,
+				12C0055422D5643F0086FDBC /* CIContext.swift */,
 				12C0055222D562CE0086FDBC /* CVImageBuffer.swift */,
 			);
 			path = Extensions;
@@ -236,6 +239,7 @@
 				12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */,
 				12E298AD22D52A6700A9AFBB /* LuminanceThresholdFilter.swift in Sources */,
 				12C0055122D536AC0086FDBC /* CIImage.swift in Sources */,
+				12C0055522D5643F0086FDBC /* CIContext.swift in Sources */,
 				12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */,
 				12832C282167519000D132D4 /* QKCutoutView.swift in Sources */,
 				125C104F21767532009541D4 /* QKMRZScanResult.swift in Sources */,
