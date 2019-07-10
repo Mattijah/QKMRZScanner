@@ -244,32 +244,15 @@ public class QKMRZScannerView: UIView {
         
         return context.createCGImage(inputImage, from: inputImage.extent)!
     }
-    
-    fileprivate func cgImage(from imageBuffer: CVImageBuffer) -> CGImage {
-        CVPixelBufferLockBaseAddress(imageBuffer, .readOnly)
-        
-        let baseAddress = CVPixelBufferGetBaseAddress(imageBuffer)
-        let bytesPerRow = CVPixelBufferGetBytesPerRow(imageBuffer)
-        let width = CVPixelBufferGetWidth(imageBuffer)
-        let height = CVPixelBufferGetHeight(imageBuffer)
-        let bitmapInfo = CGBitmapInfo(rawValue: (CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue))
-        let context = CGContext.init(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: bitmapInfo.rawValue)
-        let cgImage = context!.makeImage()!
-        
-        CVPixelBufferUnlockBaseAddress(imageBuffer, .readOnly)
-        
-        return cgImage
-    }
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-        guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+        guard let cgImage = CMSampleBufferGetImageBuffer(sampleBuffer)?.cgImage else {
             return
         }
         
-        let cgImage = self.cgImage(from: imageBuffer)
         let documentImage = self.documentImage(from: cgImage)
         let imageRequestHandler = VNImageRequestHandler(cgImage: documentImage, options: [:])
         
