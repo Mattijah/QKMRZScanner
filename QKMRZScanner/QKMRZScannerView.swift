@@ -227,19 +227,19 @@ public class QKMRZScannerView: UIView {
         var inputImage = CIImage(cgImage: image)
         let averageLuminance = inputImage.averageLuminance
         var exposure = 0.5
+        let threshold = (1 - pow(1 - averageLuminance, 0.2))
         
-        if averageLuminance > 0.85 {
+        if averageLuminance > 0.8 {
             exposure -= ((averageLuminance - 0.5) * 2)
         }
         
-        if averageLuminance < 0.25 {
-            exposure += (0.5 - averageLuminance) * 3
+        if averageLuminance < 0.35 {
+            exposure += pow(2, (0.5 - averageLuminance))
         }
         
         inputImage = inputImage.applyingFilter("CIExposureAdjust", parameters: ["inputEV": exposure])
-                               .applyingFilter("CIGammaAdjust", parameters: ["inputPower": 2])
                                .applyingFilter("CILanczosScaleTransform", parameters: [kCIInputScaleKey: 2])
-                               .applyingFilter("LuminanceThresholdFilter", parameters: ["inputThreshold": 0.025])
+                               .applyingFilter("LuminanceThresholdFilter", parameters: ["inputThreshold": threshold])
         
         return CIContext.shared.createCGImage(inputImage, from: inputImage.extent)!
     }
