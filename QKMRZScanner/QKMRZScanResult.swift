@@ -27,7 +27,7 @@ public class QKMRZScanResult {
             return nil
         }
         
-        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: CIContext.shared, options: [CIDetectorAccuracy: CIDetectorAccuracyHigh])!
+        let faceDetector = CIDetector(ofType: CIDetectorTypeFace, context: CIContext.shared, options: [CIDetectorAccuracy: CIDetectorAccuracyLow])!
         
         guard let face = faceDetector.features(in: documentImage).first else {
             return nil
