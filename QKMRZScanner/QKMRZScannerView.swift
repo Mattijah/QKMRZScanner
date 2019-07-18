@@ -65,7 +65,7 @@ public class QKMRZScannerView: UIView {
     
     // MARK: Scanning
     public func startScanning() {
-        guard (!captureSession.inputs.isEmpty && !captureSession.inputs.isEmpty) else {
+        guard !captureSession.inputs.isEmpty else {
             return
         }
         
