@@ -29,6 +29,9 @@ public class QKMRZScannerView: UIView {
     @objc public dynamic var isScanning = false
     public weak var delegate: QKMRZScannerViewDelegate?
     
+    /// If true device will vibrate on a successful scan
+    public var hapticsOnSuccess: Bool = true
+    
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
     }
@@ -282,7 +285,9 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
                         let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
                         let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                         self.delegate?.mrzScannerView(self, didFind: scanResult)
-                        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                        if self.hapticsOnSuccess {
+                            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                        }
                     }
                 }
             }
