@@ -27,6 +27,7 @@ public class QKMRZScannerView: UIView {
     fileprivate var isScanningPaused = false
     fileprivate var observer: NSKeyValueObservation?
     @objc public dynamic var isScanning = false
+    public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
     
     public var cutoutRect: CGRect {
@@ -282,7 +283,9 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
                         let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
                         let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                         self.delegate?.mrzScannerView(self, didFind: scanResult)
-                        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                        if self.vibrateOnResult {
+                            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                        }
                     }
                 }
             }
