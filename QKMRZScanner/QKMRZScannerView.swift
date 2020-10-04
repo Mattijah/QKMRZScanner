@@ -18,7 +18,7 @@ public protocol QKMRZScannerViewDelegate: class {
 
 @IBDesignable
 public class QKMRZScannerView: UIView {
-    fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), bundle: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractLstmCombined)
+    fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), dataSource: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractLstmCombined)
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
@@ -83,9 +83,7 @@ public class QKMRZScannerView: UIView {
     // MARK: MRZ
     fileprivate func mrz(from cgImage: CGImage) -> QKMRZResult? {
         let mrzTextImage = UIImage(cgImage: preprocessImage(cgImage))
-        var recognizedString: String?
-        
-        tesseract.performOCR(on: mrzTextImage) { recognizedString = $0 }
+        let recognizedString = try? tesseract.performOCR(on: mrzTextImage).get()
         
         if let string = recognizedString, let mrzLines = mrzLines(from: string) {
             return mrzParser.parse(mrzLines: mrzLines)
