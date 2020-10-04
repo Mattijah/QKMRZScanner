@@ -2,7 +2,7 @@ Pod::Spec.new do |s|
   s.name     = "QKMRZScanner"
   s.version  = "2.1.2"
   s.platform = :ios, "11"
-  s.swift_version = "4.2"
+  s.swift_version = "5.0"
 
   s.summary  = "Scans MRZ (Machine Readable Zone) from identity documents (passport, id, visa)."
   s.author   = { "Matej Dorcak" => "sss.mado@gmail.com" }
