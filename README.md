@@ -16,6 +16,9 @@ QKMRZScanner is available through CocoaPods. To install it, simply add the follo
 pod 'QKMRZScanner'
 ```
 
+### Note
+**Xcode 12** and **CocoaPods** >= 1.10.0.rc.1 is recommended. More info [here](https://github.com/SwiftyTesseract/SwiftyTesseract/tree/support/3.x.x#note-on-cocoapods).
+
 ## Setup
 
 Assign `QKMRZScannerView` to the component responsible for displaying the camera view.
