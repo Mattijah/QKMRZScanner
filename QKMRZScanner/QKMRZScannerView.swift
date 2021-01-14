@@ -29,6 +29,11 @@ public class QKMRZScannerView: UIView {
     @objc public dynamic var isScanning = false
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
+    public var isCutoutViewHidden = false {
+        didSet {
+            cutoutView.isHidden = isCutoutViewHidden
+        }
+    }
     
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
@@ -170,6 +175,8 @@ public class QKMRZScannerView: UIView {
             cutoutView.leftAnchor.constraint(equalTo: leftAnchor),
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
+        
+        cutoutView.isHidden = isCutoutViewHidden
     }
     
     fileprivate func initCaptureSession() {
