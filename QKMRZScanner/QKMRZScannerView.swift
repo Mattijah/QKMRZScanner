@@ -29,7 +29,7 @@ public class QKMRZScannerView: UIView {
     @objc public dynamic var isScanning = false
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
-    
+     
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
     }
