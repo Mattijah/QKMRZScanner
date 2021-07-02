@@ -12,7 +12,7 @@ class QKCutoutView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.black.withAlphaComponent(0.45)
+        backgroundColor = UIColor.red
         contentMode = .redraw // Redraws everytime the bounds (orientation) changes
     }
     
