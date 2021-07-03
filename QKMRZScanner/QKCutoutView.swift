@@ -12,7 +12,7 @@ class QKCutoutView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = UIColor.red
+        backgroundColor = UIColor.black.withAlphaComponent(0.45)
         contentMode = .redraw // Redraws everytime the bounds (orientation) changes
     }
     
@@ -45,7 +45,7 @@ class QKCutoutView: UIView {
         
         borderLayer.path = UIBezierPath(roundedRect: cutoutRect, cornerRadius: cornerRadius).cgPath
         borderLayer.lineWidth = 3
-        borderLayer.strokeColor = UIColor.brown.cgColor
+        borderLayer.strokeColor = UIColor.white.cgColor
         borderLayer.frame = bounds
         
         layer.addSublayer(borderLayer)
