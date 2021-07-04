@@ -164,6 +164,7 @@ public class QKMRZScannerView: UIView {
     
     fileprivate func addCutoutView() {
         cutoutView.translatesAutoresizingMaskIntoConstraints = false
+        cutoutView.isScanPasssport = self.isScanPasssport
         addSubview(cutoutView)
         
         NSLayoutConstraint.activate([

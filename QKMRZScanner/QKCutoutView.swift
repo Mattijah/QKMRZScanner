@@ -10,7 +10,7 @@ import UIKit
 class QKCutoutView: UIView {
     fileprivate(set) var cutoutRect: CGRect!
     
-//    var docType: DOCUMENT_TYPE = .PASSPORT
+    public var isScanPasssport: Bool = true
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -55,7 +55,7 @@ class QKCutoutView: UIView {
     
     fileprivate func calculateCutoutRect() -> CGRect {
         let documentFrameRatio = CGFloat(1.42) // Passport's size (ISO/IEC 7810 ID-3) is 125mm × 88mm
-        let (width, height): (CGFloat, CGFloat)
+        var (width, height): (CGFloat, CGFloat)
         
         if bounds.height > bounds.width {
             width = (bounds.width * 0.9) // Fill 90% of the width
@@ -64,6 +64,12 @@ class QKCutoutView: UIView {
         else {
             height = (bounds.height * 0.75) // Fill 75% of the height
             width = (height * documentFrameRatio)
+        }
+        
+        if isScanPasssport {
+            height = (bounds.height * 0.8)
+        }else {
+            height = (bounds.width * 0.9)
         }
         
         let topOffset = (bounds.height - height) / 2
