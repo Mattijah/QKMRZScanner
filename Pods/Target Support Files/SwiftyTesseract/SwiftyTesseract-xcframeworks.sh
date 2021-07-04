@@ -144,14 +144,10 @@ install_xcframework() {
     mkdir -p "$destination"
   fi
 
-  if [[ "$package_type" == "library" ]]; then
-    # Libraries can contain headers, module maps, and a binary, so we'll copy everything in the folder over
-    copy_dir "$source/" "$destination"
-  elif [[ "$package_type" == "framework" ]]; then
-    copy_dir "$source" "$destination"
-  fi
+  copy_dir "$source/" "$destination"
+
   echo "Copied $source to $destination"
 }
 
-install_xcframework "${PODS_ROOT}/SwiftyTesseract/SwiftyTesseract/libtesseract.xcframework" "libtesseract" "framework" "ios-arm64/libtesseract.framework" "ios-x86_64-maccatalyst/libtesseract.framework" "ios-x86_64-simulator/libtesseract.framework"
+install_xcframework "${PODS_ROOT}/SwiftyTesseract/SwiftyTesseract/libtesseract.xcframework" "libtesseract" "framework" "ios-arm64" "ios-x86_64-maccatalyst" "ios-x86_64-simulator"
 

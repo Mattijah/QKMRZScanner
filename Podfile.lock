@@ -1,20 +1,28 @@
 PODS:
+  - Cupcake (1.3.1)
   - QKMRZParser (1.0.1)
+  - SnapKit (4.0.1)
   - SwiftyTesseract (3.1.3)
 
 DEPENDENCIES:
+  - Cupcake
   - QKMRZParser (~> 1.0.1)
+  - SnapKit (~> 4.0.0)
   - SwiftyTesseract (~> 3.1.3)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - Cupcake
     - QKMRZParser
+    - SnapKit
     - SwiftyTesseract
 
 SPEC CHECKSUMS:
+  Cupcake: d258b6c0c289f7072340990107892aeb20d3fe98
   QKMRZParser: 07921dbffa7e4064406113731bc0f1f5e6210bce
+  SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   SwiftyTesseract: 1f3d96668ae92dc2208d9842c8a59bea9fad2cbb
 
-PODFILE CHECKSUM: 9f8f7dc59dac4dfe370b9daf705aa9d2e17b937e
+PODFILE CHECKSUM: c9b716b75e840cee202c5cac81fdd6ee4b73e40e
 
-COCOAPODS: 1.10.0.rc.1
+COCOAPODS: 1.10.1
