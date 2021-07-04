@@ -12,7 +12,12 @@ import QKMRZParser
 import AudioToolbox
 import Vision
 
-public protocol QKMRZScannerViewDelegate: class {
+enum DOCUMENT_TYPE {
+    case PASSPORT
+    case ID_CARD
+}
+
+public protocol QKMRZScannerViewDelegate: AnyObject {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
 }
 
@@ -30,6 +35,8 @@ public class QKMRZScannerView: UIView {
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
      
+    var docType: DOCUMENT_TYPE = .PASSPORT
+    
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
     }
