@@ -17,7 +17,6 @@ public protocol QKMRZScannerViewDelegate: AnyObject {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
 }
 
-@IBDesignable
 public class QKMRZScannerView: UIView {
     fileprivate let tesseract = SwiftyTesseract(language: .custom("ocrb"), dataSource: Bundle(for: QKMRZScannerView.self), engineMode: .tesseractOnly)
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
@@ -31,7 +30,7 @@ public class QKMRZScannerView: UIView {
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
      
-    @objc public dynamic var isScanPasssport: Bool = true
+    public var isScanPasssport: Bool = true
     
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect

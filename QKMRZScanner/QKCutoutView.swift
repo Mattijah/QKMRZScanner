@@ -10,7 +10,7 @@ import UIKit
 class QKCutoutView: UIView {
     fileprivate(set) var cutoutRect: CGRect!
     
-    var docType: DOCUMENT_TYPE = .PASSPORT
+//    var docType: DOCUMENT_TYPE = .PASSPORT
     
     override init(frame: CGRect) {
         super.init(frame: frame)
