@@ -11,13 +11,9 @@ import SwiftyTesseract
 import QKMRZParser
 import AudioToolbox
 import Vision
-import SnapKit
-import Cupcake
-
 
 public protocol QKMRZScannerViewDelegate: AnyObject {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
-    func cancelView()
 }
 
 public class QKMRZScannerView: UIView {
@@ -35,8 +31,6 @@ public class QKMRZScannerView: UIView {
     
     // my changed
     public var isScanPasssport: Bool = true
-    
-    public let cancelButton = UIButton()
     
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
@@ -179,19 +173,6 @@ public class QKMRZScannerView: UIView {
             cutoutView.leftAnchor.constraint(equalTo: leftAnchor),
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
-        
-        self.addSubview(cancelButton)
-        cancelButton.setTitle("Cancel", for: .normal)
-        cancelButton.setTitleColor(UIColor.white, for: .normal)
-        cancelButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
-        cancelButton.snp.makeConstraints{make in
-            make.top.equalToSuperview().offset(50)
-            make.right.equalToSuperview().offset(-30)
-            make.height.equalTo(50)
-        }
-        cancelButton.onClick{_ in
-            self.delegate?.cancelView()
-        }
         
     }
     

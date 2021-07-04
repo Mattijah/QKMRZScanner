@@ -7,280 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02CB543829DF8A8BED68AECB2FCA2128 /* Pods-QKMRZScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		04B510608262404DA08688B89DFF5DD5 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6412597BB1F74061C862355EBD308F21 /* Color.swift */; };
 		0637711CC432FC84B361AB01027F744F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		0895BD0F32401CBD152A493B8619EE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		095547A88EE037F12395713A469C9B60 /* ConstraintLayoutSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55671DB93FFB3A4F0BF6E4533CEE348E /* ConstraintLayoutSupport.swift */; };
-		0B90D4E67E64B752E415C0227FBB8BAA /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD9FA57322D158CCB32F765445A12E9 /* Bundle+pathToTrainedData.swift */; };
-		0D7A7F3919AE48736753181756DE8AE8 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19920A612B84532E63A63EFFCB8C37A7 /* Typealiases.swift */; };
-		0F3130208A6ED2E3D56B4C13F877BE31 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		0FA8E62C7A4A6DA9BB841007B5E16CD4 /* ConstraintMakerFinalizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31396CAEEFA8B37DD00BFC8A2C65605B /* ConstraintMakerFinalizable.swift */; };
-		14E9ACC5796C5E35C84DD6659BEB788F /* ConstraintPriorityTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6B1D5C3996ED20CE3FDBA6EFC83C422 /* ConstraintPriorityTarget.swift */; };
-		257A49434C8BDE3C9A9D09B0329ADEB8 /* Cupcake-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 388338452383B95B04285DC9372BDC8E /* Cupcake-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		258F97D25D4210D19DEC0118C50BBEE3 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76E57088DC37B38A5EF8BCF262E5B1E7 /* ResultIteratorLevel.swift */; };
-		276EE563D9B688173DBBF47DB80D72D8 /* ConstraintLayoutGuideDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C47DCF23E5C07926F5D31390BD0D87D /* ConstraintLayoutGuideDSL.swift */; };
-		28400157B63F40AA135BF16780AB4B96 /* SnapKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D1B93900B508B70604353FF61CD7277F /* SnapKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		30B63ABB31D31B203ECF577A4B613F65 /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53C314BCD4733832894471D19C75D7EE /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		35CDFA197D8219EB8DEFC227259A5C03 /* ConstraintMakerRelatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC0A816FD7F686353C784AD43D543EA /* ConstraintMakerRelatable.swift */; };
-		3F0AC8DA2FF52961DFBA9B995A094AB8 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6318FFFFC43A7307D2E8E30DF30E1FAA /* QKMRZParser-dummy.m */; };
-		41BA6E81F80EEF15FAD6BF55DADBFFE1 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F2D6B3FB7CA68C1C775A1BD6347E731E /* MRZFieldFormatter.swift */; };
-		4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B5C0EA5CA766A3A1BEF8D10D1214C4 /* ConstraintMakerEditable.swift */; };
-		459369743D5C5DC3D14F9A3D4BA46DA4 /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8745B5272B6029005C659BA7C27C91B /* RecognizedBlock.swift */; };
-		47D859E65A7F529E0D00DAC941F4C8A3 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95C86DFFED1CBC08EB54195D09D68F53 /* BoundingBox.swift */; };
-		4933C8DCD0A1958CAD07333EF82C0011 /* td3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA7597318F5BEDDD68C60997BD4EE917 /* td3.swift */; };
-		4EE0D8D1F4032EC2FD6801C9979EDAF4 /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3E9DB0D83384268C25F4793C213205A /* RecognitionLanguage.swift */; };
-		54D1686EFA926E23C4BED5EEE7A19C08 /* ConstraintInsets.swift in Sources */ = {isa = PBXBuildFile; fileRef = D80AC958454320DE975FE188504C3FB0 /* ConstraintInsets.swift */; };
-		5544BDD6A14E06C7FB3A878BC3E96299 /* ConstraintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F649C8B12EA590A7E71AFDF76FB6FB42 /* ConstraintView.swift */; };
-		5C376607904258A10F4DDD6D42EFC491 /* ConstraintMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2B7B0042B03A0CBABB3A79042B2D798 /* ConstraintMaker.swift */; };
-		5DBFB9A0499F04CBE806486211A4ABD0 /* SnapKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 53559BF772B8F952D1A473CD95A9EB02 /* SnapKit-dummy.m */; };
-		633BD5D93A364F4404EED5243BF70596 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B6DB4071E1042BC43636B69222C21C /* LanguageModelDataSource.swift */; };
-		663B33BE7C0EB10D050CE48F6094F06C /* CPKStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8BF9580F6F76EAD7C0E45314167753F8 /* CPKStackView.swift */; };
-		69C5698A9BD00D06CEBFB85506990AF9 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AEC1CC173C82C900957CAEB593A840 /* Font.swift */; };
-		6AF6F812803A66EE13956BB5A5B22F4E /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF146A9F86BAF24FB5B7614939794D8D /* SwiftyTesseract.swift */; };
-		6B43F2F53DD6C161CF414A9BF67550C5 /* ConstraintDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = A52BEB5FEBE615B4E9F1AC1AE77DE555 /* ConstraintDSL.swift */; };
-		6B47DC7B0BB820FB64AC372007D77BA9 /* td1.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAF7FAA0D98872CA3048BBF992143EBD /* td1.swift */; };
-		72C2B5D60A24B4B663C8994276A962B6 /* ConstraintOffsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9842461E722FC0C95CEC1A285CF2C44D /* ConstraintOffsetTarget.swift */; };
-		77A618FE4FF299682F776C974300EBA1 /* ConstraintView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADB589E19258585BBC1F57ECA0F4EC2 /* ConstraintView+Extensions.swift */; };
-		79337712716FDFF6C75CA49DC7F975DC /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6773194EA13FBC8A9A32C9ADFB73D6CB /* TextField.swift */; };
-		79E091828D48103D3A2AEAABE2D34827 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBA245F422CAD3CCCF7504A35946CE5A /* Alert.swift */; };
-		7B04001F7553AC363B7872ACCC6F6E02 /* __Private__Implementations__.swift in Sources */ = {isa = PBXBuildFile; fileRef = A154B528A50FEFE7CDE4BBC76627CF6E /* __Private__Implementations__.swift */; };
-		7D571BD1E936FC8FCB5C907EB0EDA8EA /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEF762451474146EE0342986BC1BAC0B /* EngineMode.swift */; };
-		7ED12926E82C9D1DE457504DA75B80A9 /* LayoutConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4EB33681A16FDF5C3550FD96022B23B /* LayoutConstraintItem.swift */; };
-		837F942AAB4A37F4E2AC7EA5062DE4CB /* Stack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7FA96EB44E477BA7E339696E3FCCFF43 /* Stack.swift */; };
+		0B90D4E67E64B752E415C0227FBB8BAA /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */; };
+		258F97D25D4210D19DEC0118C50BBEE3 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */; };
+		30B63ABB31D31B203ECF577A4B613F65 /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F0AC8DA2FF52961DFBA9B995A094AB8 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */; };
+		41BA6E81F80EEF15FAD6BF55DADBFFE1 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */; };
+		459369743D5C5DC3D14F9A3D4BA46DA4 /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */; };
+		47D859E65A7F529E0D00DAC941F4C8A3 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */; };
+		4933C8DCD0A1958CAD07333EF82C0011 /* td3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */; };
+		4EE0D8D1F4032EC2FD6801C9979EDAF4 /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */; };
+		5FFE815EE35488A8BBBC467A98F4184E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		61941FB89FAAF5872CF98CC7789C288B /* Pods-QKMRZScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */; };
+		633BD5D93A364F4404EED5243BF70596 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */; };
+		6AF6F812803A66EE13956BB5A5B22F4E /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */; };
+		6B47DC7B0BB820FB64AC372007D77BA9 /* td1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */; };
+		7D571BD1E936FC8FCB5C907EB0EDA8EA /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */; };
 		8845022AF994AC16FE422609A00E7FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		8B8BE709B46663F60DB6A661A3B2A28A /* ConstraintMakerPriortizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A337062B9EB1DEA07A44AE2169BA948 /* ConstraintMakerPriortizable.swift */; };
-		8BFDCC92AA945E802B2FD7FBCBEFD18B /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CE81B3ED48F38C4A0C34A87323B41CA /* TesseractVariableName.swift */; };
-		8DA15CF2046FD2E428EF270C0F1CF0B6 /* Cons.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF0B6F7DB10EBB7C11E8C89D8DFBE5B /* Cons.swift */; };
-		918C8AB48E41509EA3F8A312D93F0A85 /* Pods-QKMRZScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */; };
-		9432185152350A4A90F6DD19C33AC057 /* Debugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99941D5A1FE59D18BFC83A59064D7293 /* Debugging.swift */; };
-		98AE4E2F24A858A47B5A1B405CEAD8FD /* UILayoutSupport+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADC1D620CEB6C7A1FE430B13D764D35 /* UILayoutSupport+Extensions.swift */; };
-		9A0656310B41A98642EAFE57BA8EB21D /* Button.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C17E725CC041ED9E4C1CEA6F1BBC36 /* Button.swift */; };
-		9C7F15FA7D7B94637138BCC65307BD7F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24E7825D979BB72EB88FB91B318DC57 /* String+Extensions.swift */; };
-		9E6184458532BFF2E3E3F804C54BD0E7 /* ConstraintDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DB826C097684429DEA11EBCF51706F /* ConstraintDescription.swift */; };
-		9EE2D363A721ACFA89B5B899E1987633 /* ConstraintConstantTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E672D40140221FAA4C30B7FBEE23BBC /* ConstraintConstantTarget.swift */; };
-		A04D46C4C48247D004BAE5C7AD6E05A3 /* ConstraintConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6058A4AA7D13430F9713BD92CC2A6A5D /* ConstraintConfig.swift */; };
-		A302D7801C2A8507FCA9504F032C924D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		A362B77FBCFCAD79E93757315CE39B36 /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 636315BF25249116AB26EF20693B8341 /* LanguageStringConverter.swift */; };
-		A3DEA82F229FDF7C9444CEFEE3D9AB84 /* ConstraintMultiplierTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8E177B985C5861EAD371D674FCC4EF /* ConstraintMultiplierTarget.swift */; };
-		A4070B8C9BD30965648B2876CD3C1C43 /* ConstraintAttributes.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82200CAE262924CD8905E386E43F34E /* ConstraintAttributes.swift */; };
-		A482F623A133B7E947C01456C779622A /* ConstraintPriority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E3A12310827C0B6F6E3F2D3135E0DAB /* ConstraintPriority.swift */; };
-		A4E704A1CFA5F68A3C9B112EC749032F /* BarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C1A63E64802C77A4867E2D0E8F76E2 /* BarButton.swift */; };
-		AA9C15B6E7948C86B61700E8C4821E36 /* Str.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D90E7A88C29465CF0DB7E52B1222FFC /* Str.swift */; };
-		ADB57E490D09267ED50E152AB2215B7E /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA5E452BE9164104F9C99CAA9682B668 /* String-Ext.swift */; };
-		B3FEA99DEF08A1A72B0D194926043801 /* SwiftyTesseract-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64A595640F93814530057993DAC91FDA /* SwiftyTesseract-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B586A32221BA51D37840F63E667214B0 /* SwiftyTesseract-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A86859D9B9EB4441D4D61859CF59A629 /* SwiftyTesseract-dummy.m */; };
-		BBCE6A0FCE9FF896FA5290FAE4664FDC /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4874777F7336326BBB3CF9BB0420A154 /* View.swift */; };
-		BD3801D42D32AEB197D2E5814788102B /* StaticTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ACB45506E8C12CDA5701C06863AEDB2 /* StaticTable.swift */; };
-		BF7843175A0FB0180B6F4C0249B8874A /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49AB6453F1190A44CED589FD9B98106B /* LayoutConstraint.swift */; };
-		C1C2B61E08DAD3B59BA5D82964D39C3C /* ConstraintRelation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05420E50A10D198CF7A8BB0DBE3BC64 /* ConstraintRelation.swift */; };
-		C2463803524E4A5B6E60B5D5B6DC625B /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 390C44F8A39D3E1E86F36501F16AA4ED /* Styles.swift */; };
-		C2D1BF80E4C61C349575766AA3CE64CD /* ImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CB52CAF2B5153585B21A36BB319FE91 /* ImageView.swift */; };
-		C3A978B4634C8A40CAB5834D45C6D943 /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B2DCBD566ABCAB5EE36196C0658AED /* QKMRZResult.swift */; };
-		C89096F27EB7CAE5D2E2ADB1755A9E22 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		CA0FAE669FAB7067D09F7007AD838E19 /* ConstraintItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9956183D5B0F7523EDF0742E86DFFAC /* ConstraintItem.swift */; };
-		CF9D5BAD7E5A49EF9DDF02B332A7D4F1 /* Img.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E81D35FF3DB96BC3A5D27DB49CEE5D4 /* Img.swift */; };
-		D239D71BC2E941918A52D239FA7300B7 /* TextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB5DC74077DC163FC397F124498C3244 /* TextView.swift */; };
-		DBB93D3827327B8FB4CFA164C03357E5 /* ConstraintLayoutGuide+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 885F8F60A11C5BD390ACC812ADA33951 /* ConstraintLayoutGuide+Extensions.swift */; };
-		DCCEFF1B52226DE5ABB2D0043442FE61 /* Constraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFF93445C4781BDD3FDCC25BF6003B0B /* Constraint.swift */; };
-		DEC3E541DB551729EC407FA6566CEE54 /* ConstraintViewDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BAB128428925F7ACEC04AE1F93D8228 /* ConstraintViewDSL.swift */; };
-		E01F8645990D3FA9D78A58B56CFCA4DD /* Cupcake-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1BE39D24209FA1FFE4D18FDA9CC24866 /* Cupcake-dummy.m */; };
-		E60306AC47675AB65AF2F2C614A81DEE /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2A5B6E0B48FFF231EDFB49F67727821 /* SwiftyTesseractError.swift */; };
-		E6C28E5CB16A16EC986B790C1A1A5B64 /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6B3C24F0FC635AF67DF574B756E3493 /* QKMRZParser.swift */; };
-		E85BBB972867783044ADCD772438150F /* ConstraintRelatableTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73D949E9CCEA86851BA93F6B0402F23C /* ConstraintRelatableTarget.swift */; };
-		E92132C26E232103A5C02432263C255A /* AttStr.swift in Sources */ = {isa = PBXBuildFile; fileRef = 752599C5A276997FFEFB76CB08EFF2CA /* AttStr.swift */; };
-		F1645F6BD6B1A5647F7F4F40802FAA05 /* td2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1697022F585B8F2146E976EFD586957B /* td2.swift */; };
-		F41CA723E31884664B9C032D90EAEF1A /* ConstraintInsetTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = E04CC1492A17BD5701E41792FF716463 /* ConstraintInsetTarget.swift */; };
-		F50798429B75117D4FEDA66D60D5E5F1 /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C1842D22BAC45CFAF458C40376903DA4 /* MRZField.swift */; };
-		F6C7F81AA5BBC4042A3A78D5EA8E62A4 /* ConstraintLayoutSupportDSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C38BEB08911B873D437EE8D3DF1907B /* ConstraintLayoutSupportDSL.swift */; };
-		F97D6C55B2AAB396EBD3ACBB7445B3A2 /* Label.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36306B9604F8EA8452150538FB5358A9 /* Label.swift */; };
-		FF0E3F8B3FB568ACBB1BC433D67ED093 /* ConstraintMakerExtendable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF18D568EB2E646A44AC34D6324B32FE /* ConstraintMakerExtendable.swift */; };
-		FFE7A02118B5288BC94F7422D6CFEB3F /* ConstraintLayoutGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795A9937B152E3B52A4BDCCBC0AC1953 /* ConstraintLayoutGuide.swift */; };
+		8BFDCC92AA945E802B2FD7FBCBEFD18B /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */; };
+		9C7F15FA7D7B94637138BCC65307BD7F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */; };
+		A362B77FBCFCAD79E93757315CE39B36 /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */; };
+		ADB57E490D09267ED50E152AB2215B7E /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */; };
+		B3FEA99DEF08A1A72B0D194926043801 /* SwiftyTesseract-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B586A32221BA51D37840F63E667214B0 /* SwiftyTesseract-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */; };
+		C3A978B4634C8A40CAB5834D45C6D943 /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */; };
+		E60306AC47675AB65AF2F2C614A81DEE /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */; };
+		E6C28E5CB16A16EC986B790C1A1A5B64 /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */; };
+		F1645F6BD6B1A5647F7F4F40802FAA05 /* td2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE969423F57B1E3B27088C482873F00 /* td2.swift */; };
+		F50798429B75117D4FEDA66D60D5E5F1 /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */; };
+		F7776EAF6ABC6311DC992F54214FE26C /* Pods-QKMRZScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		7CFF69F500AB59C1A9F0FAE1D616F994 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E89F93611343BBF21AB3504BDFCAE334;
-			remoteInfo = Cupcake;
-		};
-		8EEDDF24BBD5AB63A7FF68F933A8C7F9 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 19622742EBA51E823D6DAE3F8CDBFAD4;
-			remoteInfo = SnapKit;
-		};
-		9C3E980B18E53E83A4148B7226AC420E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FDA8701204211983085669C4E12E6FE;
-			remoteInfo = SwiftyTesseract;
-		};
-		AA668F5E5E1F41C88917CC16E2AA6324 /* PBXContainerItemProxy */ = {
+		BCF341A85B4794658B71F7B010F0FEAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 44846E5E2172F853B4F70588F8115052;
 			remoteInfo = QKMRZParser;
 		};
+		EA9D72521CF34A52CDD784F9D53BB64E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5FDA8701204211983085669C4E12E6FE;
+			remoteInfo = SwiftyTesseract;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01C1A63E64802C77A4867E2D0E8F76E2 /* BarButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarButton.swift; path = Cupcake/BarButton.swift; sourceTree = "<group>"; };
-		05422BB8BC5EC4045AC267A0CBC1E216 /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
-		05B2DCBD566ABCAB5EE36196C0658AED /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
-		0CB52CAF2B5153585B21A36BB319FE91 /* ImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageView.swift; path = Cupcake/ImageView.swift; sourceTree = "<group>"; };
-		0EF6AB09BD7DB6412761BC27C01E7E66 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
-		1697022F585B8F2146E976EFD586957B /* td2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td2.swift; path = QKMRZParser/Parsers/td2.swift; sourceTree = "<group>"; };
-		19920A612B84532E63A63EFFCB8C37A7 /* Typealiases.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Typealiases.swift; path = Source/Typealiases.swift; sourceTree = "<group>"; };
-		19B6DB4071E1042BC43636B69222C21C /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageModelDataSource.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageModelDataSource.swift; sourceTree = "<group>"; };
-		1BE39D24209FA1FFE4D18FDA9CC24866 /* Cupcake-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Cupcake-dummy.m"; sourceTree = "<group>"; };
-		20B5C0EA5CA766A3A1BEF8D10D1214C4 /* ConstraintMakerEditable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerEditable.swift; path = Source/ConstraintMakerEditable.swift; sourceTree = "<group>"; };
-		26563B494099DB3DCE43A5029E450EBD /* SwiftyTesseract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.debug.xcconfig; sourceTree = "<group>"; };
-		269BBD762831798CA30A2A53F7210F3B /* Cupcake.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Cupcake.framework; path = Cupcake.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07A3A1FF3DF769F0B93A1783B8B780AA /* SwiftyTesseract-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SwiftyTesseract-xcframeworks.sh"; sourceTree = "<group>"; };
+		085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognizedBlock.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/RecognizedBlock.swift; sourceTree = "<group>"; };
+		0B841BAAB7C1406DEDAFBE646AAB1DDD /* libtesseract.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = libtesseract.xcframework; path = SwiftyTesseract/libtesseract.xcframework; sourceTree = "<group>"; };
+		0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		0DE969423F57B1E3B27088C482873F00 /* td2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td2.swift; path = QKMRZParser/Parsers/td2.swift; sourceTree = "<group>"; };
+		0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageStringConverter.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageStringConverter.swift; sourceTree = "<group>"; };
+		1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EngineMode.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/EngineMode.swift; sourceTree = "<group>"; };
+		1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
+		1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
 		28325BB70560DB246AB3AE5D24A53B18 /* Pods-QKMRZScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_QKMRZScanner.framework; path = "Pods-QKMRZScanner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
+		29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
 		2F8880A6D4DB469AA47147A0522BD530 /* Pods-QKMRZScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-Info.plist"; sourceTree = "<group>"; };
-		31396CAEEFA8B37DD00BFC8A2C65605B /* ConstraintMakerFinalizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerFinalizable.swift; path = Source/ConstraintMakerFinalizable.swift; sourceTree = "<group>"; };
-		31DB826C097684429DEA11EBCF51706F /* ConstraintDescription.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDescription.swift; path = Source/ConstraintDescription.swift; sourceTree = "<group>"; };
-		36306B9604F8EA8452150538FB5358A9 /* Label.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Label.swift; path = Cupcake/Label.swift; sourceTree = "<group>"; };
-		388338452383B95B04285DC9372BDC8E /* Cupcake-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cupcake-umbrella.h"; sourceTree = "<group>"; };
-		390C44F8A39D3E1E86F36501F16AA4ED /* Styles.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Styles.swift; path = Cupcake/Styles.swift; sourceTree = "<group>"; };
-		3ADB589E19258585BBC1F57ECA0F4EC2 /* ConstraintView+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintView+Extensions.swift"; path = "Source/ConstraintView+Extensions.swift"; sourceTree = "<group>"; };
-		3BAB128428925F7ACEC04AE1F93D8228 /* ConstraintViewDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintViewDSL.swift; path = Source/ConstraintViewDSL.swift; sourceTree = "<group>"; };
-		3E3A12310827C0B6F6E3F2D3135E0DAB /* ConstraintPriority.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriority.swift; path = Source/ConstraintPriority.swift; sourceTree = "<group>"; };
+		3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
+		459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
 		470B0D69F320CB4435997C818298027D /* Pods-QKMRZScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QKMRZScanner.modulemap"; sourceTree = "<group>"; };
-		4874777F7336326BBB3CF9BB0420A154 /* View.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = View.swift; path = Cupcake/View.swift; sourceTree = "<group>"; };
-		49AB6453F1190A44CED589FD9B98106B /* LayoutConstraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraint.swift; path = Source/LayoutConstraint.swift; sourceTree = "<group>"; };
-		4A4499778A57EB97E8BC90F142DFF355 /* SnapKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-prefix.pch"; sourceTree = "<group>"; };
-		4D90E7A88C29465CF0DB7E52B1222FFC /* Str.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Str.swift; path = Cupcake/Str.swift; sourceTree = "<group>"; };
-		4E3C2D3F4EC9BF9A90BF5B8DD2932C83 /* Cupcake.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cupcake.debug.xcconfig; sourceTree = "<group>"; };
-		51C714D725EA4E66B8F2A312791B6746 /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
-		53559BF772B8F952D1A473CD95A9EB02 /* SnapKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SnapKit-dummy.m"; sourceTree = "<group>"; };
-		53C314BCD4733832894471D19C75D7EE /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
-		55671DB93FFB3A4F0BF6E4533CEE348E /* ConstraintLayoutSupport.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupport.swift; path = Source/ConstraintLayoutSupport.swift; sourceTree = "<group>"; };
-		5718FF1021C005D018645BD63AC47C47 /* SnapKit.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.debug.xcconfig; sourceTree = "<group>"; };
-		5ADC1D620CEB6C7A1FE430B13D764D35 /* UILayoutSupport+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UILayoutSupport+Extensions.swift"; path = "Source/UILayoutSupport+Extensions.swift"; sourceTree = "<group>"; };
-		5DA3F7DFA112F3E18A4909CE48EB7F25 /* SwiftyTesseract.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTesseract.modulemap; sourceTree = "<group>"; };
-		5E81D35FF3DB96BC3A5D27DB49CEE5D4 /* Img.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Img.swift; path = Cupcake/Img.swift; sourceTree = "<group>"; };
-		6058A4AA7D13430F9713BD92CC2A6A5D /* ConstraintConfig.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConfig.swift; path = Source/ConstraintConfig.swift; sourceTree = "<group>"; };
-		6318FFFFC43A7307D2E8E30DF30E1FAA /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
-		636315BF25249116AB26EF20693B8341 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageStringConverter.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageStringConverter.swift; sourceTree = "<group>"; };
-		6412597BB1F74061C862355EBD308F21 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = Cupcake/Color.swift; sourceTree = "<group>"; };
-		64A595640F93814530057993DAC91FDA /* SwiftyTesseract-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-umbrella.h"; sourceTree = "<group>"; };
-		6773194EA13FBC8A9A32C9ADFB73D6CB /* TextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextField.swift; path = Cupcake/TextField.swift; sourceTree = "<group>"; };
-		6FD9FA57322D158CCB32F765445A12E9 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+pathToTrainedData.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
-		73D949E9CCEA86851BA93F6B0402F23C /* ConstraintRelatableTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelatableTarget.swift; path = Source/ConstraintRelatableTarget.swift; sourceTree = "<group>"; };
-		752599C5A276997FFEFB76CB08EFF2CA /* AttStr.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AttStr.swift; path = Cupcake/AttStr.swift; sourceTree = "<group>"; };
-		76E57088DC37B38A5EF8BCF262E5B1E7 /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultIteratorLevel.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/ResultIteratorLevel.swift; sourceTree = "<group>"; };
-		795A9937B152E3B52A4BDCCBC0AC1953 /* ConstraintLayoutGuide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuide.swift; path = Source/ConstraintLayoutGuide.swift; sourceTree = "<group>"; };
-		7C47DCF23E5C07926F5D31390BD0D87D /* ConstraintLayoutGuideDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutGuideDSL.swift; path = Source/ConstraintLayoutGuideDSL.swift; sourceTree = "<group>"; };
-		7CD9B2F7C18308CAB7F6174F245ECC21 /* SwiftyTesseract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.release.xcconfig; sourceTree = "<group>"; };
-		7CE81B3ED48F38C4A0C34A87323B41CA /* TesseractVariableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TesseractVariableName.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/TesseractVariableName.swift; sourceTree = "<group>"; };
-		7FA96EB44E477BA7E339696E3FCCFF43 /* Stack.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stack.swift; path = Cupcake/Stack.swift; sourceTree = "<group>"; };
+		4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognitionLanguage.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/RecognitionLanguage.swift; sourceTree = "<group>"; };
+		4FDDE51DA8A0D8AC8B4B2CEFE578F1A9 /* SwiftyTesseract-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTesseract-Info.plist"; sourceTree = "<group>"; };
+		513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
+		5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseract.swift; path = SwiftyTesseract/SwiftyTesseract/SwiftyTesseract.swift; sourceTree = "<group>"; };
+		5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
+		63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageModelDataSource.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageModelDataSource.swift; sourceTree = "<group>"; };
+		64FAA583FC1A227218662750DF532813 /* SwiftyTesseract-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-prefix.pch"; sourceTree = "<group>"; };
+		6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.debug.xcconfig; sourceTree = "<group>"; };
+		74AECDB56EC95C1AD5C27D11EF1156CB /* SwiftyTesseract.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTesseract.modulemap; sourceTree = "<group>"; };
+		76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-umbrella.h"; sourceTree = "<group>"; };
+		775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+pathToTrainedData.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
+		81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td3.swift; path = QKMRZParser/Parsers/td3.swift; sourceTree = "<group>"; };
 		8208C69518782F5498D1D7980C9FAA98 /* Pods-QKMRZScanner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QKMRZScanner-acknowledgements.markdown"; sourceTree = "<group>"; };
-		885F8F60A11C5BD390ACC812ADA33951 /* ConstraintLayoutGuide+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "ConstraintLayoutGuide+Extensions.swift"; path = "Source/ConstraintLayoutGuide+Extensions.swift"; sourceTree = "<group>"; };
-		8943738C37FA0E067CAE5DCE92944751 /* SwiftyTesseract-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-prefix.pch"; sourceTree = "<group>"; };
-		8A337062B9EB1DEA07A44AE2169BA948 /* ConstraintMakerPriortizable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerPriortizable.swift; path = Source/ConstraintMakerPriortizable.swift; sourceTree = "<group>"; };
-		8BF9580F6F76EAD7C0E45314167753F8 /* CPKStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CPKStackView.swift; path = Cupcake/CPKStackView.swift; sourceTree = "<group>"; };
-		8C38BEB08911B873D437EE8D3DF1907B /* ConstraintLayoutSupportDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintLayoutSupportDSL.swift; path = Source/ConstraintLayoutSupportDSL.swift; sourceTree = "<group>"; };
-		8F2B035BCC0B6E49FF05B2AB1D961E8B /* SwiftyTesseract-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTesseract-Info.plist"; sourceTree = "<group>"; };
-		95C86DFFED1CBC08EB54195D09D68F53 /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/BoundingBox.swift; sourceTree = "<group>"; };
-		96D240A5DF49F12FCAB249BE99A7C6C8 /* SwiftyTesseract-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SwiftyTesseract-xcframeworks.sh"; sourceTree = "<group>"; };
-		972BBE53E6B6ACAC5B9CD43DF35CBB76 /* SnapKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SnapKit.modulemap; sourceTree = "<group>"; };
-		979486118B3E90C08386079D57962701 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SnapKit.framework; path = SnapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		9842461E722FC0C95CEC1A285CF2C44D /* ConstraintOffsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintOffsetTarget.swift; path = Source/ConstraintOffsetTarget.swift; sourceTree = "<group>"; };
-		99941D5A1FE59D18BFC83A59064D7293 /* Debugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Debugging.swift; path = Source/Debugging.swift; sourceTree = "<group>"; };
-		9ACB45506E8C12CDA5701C06863AEDB2 /* StaticTable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StaticTable.swift; path = Cupcake/StaticTable.swift; sourceTree = "<group>"; };
-		9B8E177B985C5861EAD371D674FCC4EF /* ConstraintMultiplierTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMultiplierTarget.swift; path = Source/ConstraintMultiplierTarget.swift; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9E672D40140221FAA4C30B7FBEE23BBC /* ConstraintConstantTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintConstantTarget.swift; path = Source/ConstraintConstantTarget.swift; sourceTree = "<group>"; };
-		A154B528A50FEFE7CDE4BBC76627CF6E /* __Private__Implementations__.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = __Private__Implementations__.swift; path = Cupcake/__Private__Implementations__.swift; sourceTree = "<group>"; };
-		A52BEB5FEBE615B4E9F1AC1AE77DE555 /* ConstraintDSL.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintDSL.swift; path = Source/ConstraintDSL.swift; sourceTree = "<group>"; };
-		A86859D9B9EB4441D4D61859CF59A629 /* SwiftyTesseract-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTesseract-dummy.m"; sourceTree = "<group>"; };
-		ACC0A816FD7F686353C784AD43D543EA /* ConstraintMakerRelatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerRelatable.swift; path = Source/ConstraintMakerRelatable.swift; sourceTree = "<group>"; };
-		AF8D7E6F98945BA7E5EA458E66901C4E /* Cupcake-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Cupcake-Info.plist"; sourceTree = "<group>"; };
-		B05420E50A10D198CF7A8BB0DBE3BC64 /* ConstraintRelation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintRelation.swift; path = Source/ConstraintRelation.swift; sourceTree = "<group>"; };
-		B14C076030CC9B232DA3D14139F8AC66 /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
-		B21AF9EE1552A57F05FAA91EC1A317EF /* SnapKit.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapKit.release.xcconfig; sourceTree = "<group>"; };
-		B2A5B6E0B48FFF231EDFB49F67727821 /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseractError.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/SwiftyTesseractError.swift; sourceTree = "<group>"; };
-		B2B7B0042B03A0CBABB3A79042B2D798 /* ConstraintMaker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMaker.swift; path = Source/ConstraintMaker.swift; sourceTree = "<group>"; };
-		B6B3C24F0FC635AF67DF574B756E3493 /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
-		B7985A383A250421E125E3843A312D2F /* libtesseract.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = libtesseract.xcframework; path = SwiftyTesseract/libtesseract.xcframework; sourceTree = "<group>"; };
-		B8DD3BF9C6579DE0E516806B78D6654A /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
-		BB5DC74077DC163FC397F124498C3244 /* TextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextView.swift; path = Cupcake/TextView.swift; sourceTree = "<group>"; };
-		BB6CDF1C55833BF21074D44544A6FE9E /* SnapKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SnapKit-Info.plist"; sourceTree = "<group>"; };
-		BFF93445C4781BDD3FDCC25BF6003B0B /* Constraint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constraint.swift; path = Source/Constraint.swift; sourceTree = "<group>"; };
-		C1842D22BAC45CFAF458C40376903DA4 /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
-		C24E7825D979BB72EB88FB91B318DC57 /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
-		C6B1D5C3996ED20CE3FDBA6EFC83C422 /* ConstraintPriorityTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintPriorityTarget.swift; path = Source/ConstraintPriorityTarget.swift; sourceTree = "<group>"; };
+		A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
+		AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.release.xcconfig; sourceTree = "<group>"; };
+		B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseractError.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/SwiftyTesseractError.swift; sourceTree = "<group>"; };
 		C7ECC162FF7E57C6E878AC9C03CCEFEB /* Pods-QKMRZScanner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-acknowledgements.plist"; sourceTree = "<group>"; };
-		CAF0B6F7DB10EBB7C11E8C89D8DFBE5B /* Cons.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Cons.swift; path = Cupcake/Cons.swift; sourceTree = "<group>"; };
+		CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/BoundingBox.swift; sourceTree = "<group>"; };
 		CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QKMRZScanner-dummy.m"; sourceTree = "<group>"; };
 		D0579590D0C93205406E0F132CC75E5C /* Pods-QKMRZScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.release.xcconfig"; sourceTree = "<group>"; };
-		D1B93900B508B70604353FF61CD7277F /* SnapKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SnapKit-umbrella.h"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		D4FA740E679D6B7C30361744A2712541 /* Cupcake.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Cupcake.modulemap; sourceTree = "<group>"; };
-		D80AC958454320DE975FE188504C3FB0 /* ConstraintInsets.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsets.swift; path = Source/ConstraintInsets.swift; sourceTree = "<group>"; };
-		D8C17E725CC041ED9E4C1CEA6F1BBC36 /* Button.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Button.swift; path = Cupcake/Button.swift; sourceTree = "<group>"; };
-		DAF7FAA0D98872CA3048BBF992143EBD /* td1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td1.swift; path = QKMRZParser/Parsers/td1.swift; sourceTree = "<group>"; };
-		DBA245F422CAD3CCCF7504A35946CE5A /* Alert.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Alert.swift; path = Cupcake/Alert.swift; sourceTree = "<group>"; };
-		DD5F09078345C3790CD56A25EE7C81B5 /* Cupcake-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Cupcake-prefix.pch"; sourceTree = "<group>"; };
-		DEF762451474146EE0342986BC1BAC0B /* EngineMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EngineMode.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/EngineMode.swift; sourceTree = "<group>"; };
-		E04CC1492A17BD5701E41792FF716463 /* ConstraintInsetTarget.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintInsetTarget.swift; path = Source/ConstraintInsetTarget.swift; sourceTree = "<group>"; };
+		D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TesseractVariableName.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/TesseractVariableName.swift; sourceTree = "<group>"; };
+		D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultIteratorLevel.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/ResultIteratorLevel.swift; sourceTree = "<group>"; };
+		D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
 		E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QKMRZScanner-umbrella.h"; sourceTree = "<group>"; };
-		E4AEC1CC173C82C900957CAEB593A840 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = Cupcake/Font.swift; sourceTree = "<group>"; };
 		E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QKMRZParser.framework; path = QKMRZParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E82200CAE262924CD8905E386E43F34E /* ConstraintAttributes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintAttributes.swift; path = Source/ConstraintAttributes.swift; sourceTree = "<group>"; };
-		E8745B5272B6029005C659BA7C27C91B /* RecognizedBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognizedBlock.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/RecognizedBlock.swift; sourceTree = "<group>"; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		EF146A9F86BAF24FB5B7614939794D8D /* SwiftyTesseract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseract.swift; path = SwiftyTesseract/SwiftyTesseract/SwiftyTesseract.swift; sourceTree = "<group>"; };
-		F293DF5ECC8AB5CE8F23A482718BFCDC /* Cupcake.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Cupcake.release.xcconfig; sourceTree = "<group>"; };
-		F2D6B3FB7CA68C1C775A1BD6347E731E /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
-		F3E9DB0D83384268C25F4793C213205A /* RecognitionLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognitionLanguage.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/RecognitionLanguage.swift; sourceTree = "<group>"; };
-		F4EB33681A16FDF5C3550FD96022B23B /* LayoutConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayoutConstraintItem.swift; path = Source/LayoutConstraintItem.swift; sourceTree = "<group>"; };
-		F649C8B12EA590A7E71AFDF76FB6FB42 /* ConstraintView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintView.swift; path = Source/ConstraintView.swift; sourceTree = "<group>"; };
+		F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
+		F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
 		F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyTesseract.framework; path = SwiftyTesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F9956183D5B0F7523EDF0742E86DFFAC /* ConstraintItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintItem.swift; path = Source/ConstraintItem.swift; sourceTree = "<group>"; };
-		FA5E452BE9164104F9C99CAA9682B668 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
-		FA7597318F5BEDDD68C60997BD4EE917 /* td3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td3.swift; path = QKMRZParser/Parsers/td3.swift; sourceTree = "<group>"; };
-		FF18D568EB2E646A44AC34D6324B32FE /* ConstraintMakerExtendable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConstraintMakerExtendable.swift; path = Source/ConstraintMakerExtendable.swift; sourceTree = "<group>"; };
+		F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTesseract-dummy.m"; sourceTree = "<group>"; };
+		FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td1.swift; path = QKMRZParser/Parsers/td1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		4325DE5CC950F4C0425EA6FB91480919 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0F3130208A6ED2E3D56B4C13F877BE31 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		688008128AAB70A1681583600983EF8C /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A302D7801C2A8507FCA9504F032C924D /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		723B530F814076C10689DC7AE567A4B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0895BD0F32401CBD152A493B8619EE4E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		73A173863657894A01CB54BA862DDBBA /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C89096F27EB7CAE5D2E2ADB1755A9E22 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,46 +127,49 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F332E7FF020194C7479394B348F99BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FFE815EE35488A8BBBC467A98F4184E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0FC5607056B64C1C7A264607B1D46F36 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */,
+				E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser.framework */,
+				F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1045FBB312C2C528F5F1F44ECAAC0657 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				74AECDB56EC95C1AD5C27D11EF1156CB /* SwiftyTesseract.modulemap */,
+				F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */,
+				4FDDE51DA8A0D8AC8B4B2CEFE578F1A9 /* SwiftyTesseract-Info.plist */,
+				64FAA583FC1A227218662750DF532813 /* SwiftyTesseract-prefix.pch */,
+				76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */,
+				07A3A1FF3DF769F0B93A1783B8B780AA /* SwiftyTesseract-xcframeworks.sh */,
+				6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */,
+				AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SwiftyTesseract";
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		3E5BCB540CF779DEE727D363A4757DB1 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				5DA3F7DFA112F3E18A4909CE48EB7F25 /* SwiftyTesseract.modulemap */,
-				A86859D9B9EB4441D4D61859CF59A629 /* SwiftyTesseract-dummy.m */,
-				8F2B035BCC0B6E49FF05B2AB1D961E8B /* SwiftyTesseract-Info.plist */,
-				8943738C37FA0E067CAE5DCE92944751 /* SwiftyTesseract-prefix.pch */,
-				64A595640F93814530057993DAC91FDA /* SwiftyTesseract-umbrella.h */,
-				96D240A5DF49F12FCAB249BE99A7C6C8 /* SwiftyTesseract-xcframeworks.sh */,
-				26563B494099DB3DCE43A5029E450EBD /* SwiftyTesseract.debug.xcconfig */,
-				7CD9B2F7C18308CAB7F6174F245ECC21 /* SwiftyTesseract.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/SwiftyTesseract";
-			sourceTree = "<group>";
-		};
-		540C749B1F075EAA539CB25C9FA8EC91 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				B14C076030CC9B232DA3D14139F8AC66 /* QKMRZParser.modulemap */,
-				6318FFFFC43A7307D2E8E30DF30E1FAA /* QKMRZParser-dummy.m */,
-				51C714D725EA4E66B8F2A312791B6746 /* QKMRZParser-Info.plist */,
-				05422BB8BC5EC4045AC267A0CBC1E216 /* QKMRZParser-prefix.pch */,
-				53C314BCD4733832894471D19C75D7EE /* QKMRZParser-umbrella.h */,
-				0EF6AB09BD7DB6412761BC27C01E7E66 /* QKMRZParser.debug.xcconfig */,
-				B8DD3BF9C6579DE0E516806B78D6654A /* QKMRZParser.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QKMRZParser";
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -342,29 +179,6 @@
 				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
 			);
 			name = iOS;
-			sourceTree = "<group>";
-		};
-		5A0209C2361B93BCD7A4FB00AC00CE00 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				B7985A383A250421E125E3843A312D2F /* libtesseract.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		5BF03CDA8F2508A3911956523CAA6B64 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				D4FA740E679D6B7C30361744A2712541 /* Cupcake.modulemap */,
-				1BE39D24209FA1FFE4D18FDA9CC24866 /* Cupcake-dummy.m */,
-				AF8D7E6F98945BA7E5EA458E66901C4E /* Cupcake-Info.plist */,
-				DD5F09078345C3790CD56A25EE7C81B5 /* Cupcake-prefix.pch */,
-				388338452383B95B04285DC9372BDC8E /* Cupcake-umbrella.h */,
-				4E3C2D3F4EC9BF9A90BF5B8DD2932C83 /* Cupcake.debug.xcconfig */,
-				F293DF5ECC8AB5CE8F23A482718BFCDC /* Cupcake.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/Cupcake";
 			sourceTree = "<group>";
 		};
 		5ECEAEFA59DC20BDF84F5307D6D47AB6 /* Pods-QKMRZScanner */ = {
@@ -383,54 +197,41 @@
 			path = "Target Support Files/Pods-QKMRZScanner";
 			sourceTree = "<group>";
 		};
-		6968DEAA99F26BA05C54CE8710153409 /* QKMRZParser */ = {
+		67CAFA9982095848019CC347E5D93773 /* SwiftyTesseract */ = {
 			isa = PBXGroup;
 			children = (
-				C1842D22BAC45CFAF458C40376903DA4 /* MRZField.swift */,
-				F2D6B3FB7CA68C1C775A1BD6347E731E /* MRZFieldFormatter.swift */,
-				B6B3C24F0FC635AF67DF574B756E3493 /* QKMRZParser.swift */,
-				05B2DCBD566ABCAB5EE36196C0658AED /* QKMRZResult.swift */,
-				FA5E452BE9164104F9C99CAA9682B668 /* String-Ext.swift */,
-				DAF7FAA0D98872CA3048BBF992143EBD /* td1.swift */,
-				1697022F585B8F2146E976EFD586957B /* td2.swift */,
-				FA7597318F5BEDDD68C60997BD4EE917 /* td3.swift */,
-				540C749B1F075EAA539CB25C9FA8EC91 /* Support Files */,
-			);
-			name = QKMRZParser;
-			path = QKMRZParser;
-			sourceTree = "<group>";
-		};
-		82A3509F66E01FEE955110FC529E064B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F8280C11DB0C883B1EBF6C784E387C2B /* Cupcake */,
-				6968DEAA99F26BA05C54CE8710153409 /* QKMRZParser */,
-				ED0C92930FFD6BDBF4A4F76247B0B93A /* SnapKit */,
-				8D86024B9E9C672E6581436FB349BB06 /* SwiftyTesseract */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		8D86024B9E9C672E6581436FB349BB06 /* SwiftyTesseract */ = {
-			isa = PBXGroup;
-			children = (
-				95C86DFFED1CBC08EB54195D09D68F53 /* BoundingBox.swift */,
-				6FD9FA57322D158CCB32F765445A12E9 /* Bundle+pathToTrainedData.swift */,
-				DEF762451474146EE0342986BC1BAC0B /* EngineMode.swift */,
-				19B6DB4071E1042BC43636B69222C21C /* LanguageModelDataSource.swift */,
-				636315BF25249116AB26EF20693B8341 /* LanguageStringConverter.swift */,
-				F3E9DB0D83384268C25F4793C213205A /* RecognitionLanguage.swift */,
-				E8745B5272B6029005C659BA7C27C91B /* RecognizedBlock.swift */,
-				76E57088DC37B38A5EF8BCF262E5B1E7 /* ResultIteratorLevel.swift */,
-				C24E7825D979BB72EB88FB91B318DC57 /* String+Extensions.swift */,
-				EF146A9F86BAF24FB5B7614939794D8D /* SwiftyTesseract.swift */,
-				B2A5B6E0B48FFF231EDFB49F67727821 /* SwiftyTesseractError.swift */,
-				7CE81B3ED48F38C4A0C34A87323B41CA /* TesseractVariableName.swift */,
-				5A0209C2361B93BCD7A4FB00AC00CE00 /* Frameworks */,
-				3E5BCB540CF779DEE727D363A4757DB1 /* Support Files */,
+				CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */,
+				775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */,
+				1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */,
+				63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */,
+				0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */,
+				4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */,
+				085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */,
+				D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */,
+				0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */,
+				5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */,
+				B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */,
+				D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */,
+				BE6119ACF001181D8195957D2C13CDEC /* Frameworks */,
+				1045FBB312C2C528F5F1F44ECAAC0657 /* Support Files */,
 			);
 			name = SwiftyTesseract;
 			path = SwiftyTesseract;
+			sourceTree = "<group>";
+		};
+		82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */,
+				F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */,
+				5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */,
+				3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */,
+				A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */,
+				F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */,
+				459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QKMRZParser";
 			sourceTree = "<group>";
 		};
 		95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */ = {
@@ -441,31 +242,21 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		A8C8D85F2BD89D3B7BB26410131690E7 /* Products */ = {
+		A3750814BB6632E7E30A0274B3200B6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				269BBD762831798CA30A2A53F7210F3B /* Cupcake.framework */,
-				28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */,
-				E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser.framework */,
-				979486118B3E90C08386079D57962701 /* SnapKit.framework */,
-				F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */,
+				F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */,
+				67CAFA9982095848019CC347E5D93773 /* SwiftyTesseract */,
 			);
-			name = Products;
+			name = Pods;
 			sourceTree = "<group>";
 		};
-		BDC92FD28CB958109731F37AA47C20C5 /* Support Files */ = {
+		BE6119ACF001181D8195957D2C13CDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				972BBE53E6B6ACAC5B9CD43DF35CBB76 /* SnapKit.modulemap */,
-				53559BF772B8F952D1A473CD95A9EB02 /* SnapKit-dummy.m */,
-				BB6CDF1C55833BF21074D44544A6FE9E /* SnapKit-Info.plist */,
-				4A4499778A57EB97E8BC90F142DFF355 /* SnapKit-prefix.pch */,
-				D1B93900B508B70604353FF61CD7277F /* SnapKit-umbrella.h */,
-				5718FF1021C005D018645BD63AC47C47 /* SnapKit.debug.xcconfig */,
-				B21AF9EE1552A57F05FAA91EC1A317EF /* SnapKit.release.xcconfig */,
+				0B841BAAB7C1406DEDAFBE646AAB1DDD /* libtesseract.xcframework */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/SnapKit";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -473,107 +264,37 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
-				82A3509F66E01FEE955110FC529E064B /* Pods */,
-				A8C8D85F2BD89D3B7BB26410131690E7 /* Products */,
+				A3750814BB6632E7E30A0274B3200B6C /* Pods */,
+				0FC5607056B64C1C7A264607B1D46F36 /* Products */,
 				95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		ED0C92930FFD6BDBF4A4F76247B0B93A /* SnapKit */ = {
+		F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */ = {
 			isa = PBXGroup;
 			children = (
-				BFF93445C4781BDD3FDCC25BF6003B0B /* Constraint.swift */,
-				E82200CAE262924CD8905E386E43F34E /* ConstraintAttributes.swift */,
-				6058A4AA7D13430F9713BD92CC2A6A5D /* ConstraintConfig.swift */,
-				9E672D40140221FAA4C30B7FBEE23BBC /* ConstraintConstantTarget.swift */,
-				31DB826C097684429DEA11EBCF51706F /* ConstraintDescription.swift */,
-				A52BEB5FEBE615B4E9F1AC1AE77DE555 /* ConstraintDSL.swift */,
-				D80AC958454320DE975FE188504C3FB0 /* ConstraintInsets.swift */,
-				E04CC1492A17BD5701E41792FF716463 /* ConstraintInsetTarget.swift */,
-				F9956183D5B0F7523EDF0742E86DFFAC /* ConstraintItem.swift */,
-				795A9937B152E3B52A4BDCCBC0AC1953 /* ConstraintLayoutGuide.swift */,
-				885F8F60A11C5BD390ACC812ADA33951 /* ConstraintLayoutGuide+Extensions.swift */,
-				7C47DCF23E5C07926F5D31390BD0D87D /* ConstraintLayoutGuideDSL.swift */,
-				55671DB93FFB3A4F0BF6E4533CEE348E /* ConstraintLayoutSupport.swift */,
-				8C38BEB08911B873D437EE8D3DF1907B /* ConstraintLayoutSupportDSL.swift */,
-				B2B7B0042B03A0CBABB3A79042B2D798 /* ConstraintMaker.swift */,
-				20B5C0EA5CA766A3A1BEF8D10D1214C4 /* ConstraintMakerEditable.swift */,
-				FF18D568EB2E646A44AC34D6324B32FE /* ConstraintMakerExtendable.swift */,
-				31396CAEEFA8B37DD00BFC8A2C65605B /* ConstraintMakerFinalizable.swift */,
-				8A337062B9EB1DEA07A44AE2169BA948 /* ConstraintMakerPriortizable.swift */,
-				ACC0A816FD7F686353C784AD43D543EA /* ConstraintMakerRelatable.swift */,
-				9B8E177B985C5861EAD371D674FCC4EF /* ConstraintMultiplierTarget.swift */,
-				9842461E722FC0C95CEC1A285CF2C44D /* ConstraintOffsetTarget.swift */,
-				3E3A12310827C0B6F6E3F2D3135E0DAB /* ConstraintPriority.swift */,
-				C6B1D5C3996ED20CE3FDBA6EFC83C422 /* ConstraintPriorityTarget.swift */,
-				73D949E9CCEA86851BA93F6B0402F23C /* ConstraintRelatableTarget.swift */,
-				B05420E50A10D198CF7A8BB0DBE3BC64 /* ConstraintRelation.swift */,
-				F649C8B12EA590A7E71AFDF76FB6FB42 /* ConstraintView.swift */,
-				3ADB589E19258585BBC1F57ECA0F4EC2 /* ConstraintView+Extensions.swift */,
-				3BAB128428925F7ACEC04AE1F93D8228 /* ConstraintViewDSL.swift */,
-				99941D5A1FE59D18BFC83A59064D7293 /* Debugging.swift */,
-				49AB6453F1190A44CED589FD9B98106B /* LayoutConstraint.swift */,
-				F4EB33681A16FDF5C3550FD96022B23B /* LayoutConstraintItem.swift */,
-				19920A612B84532E63A63EFFCB8C37A7 /* Typealiases.swift */,
-				5ADC1D620CEB6C7A1FE430B13D764D35 /* UILayoutSupport+Extensions.swift */,
-				BDC92FD28CB958109731F37AA47C20C5 /* Support Files */,
+				D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */,
+				28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */,
+				29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */,
+				1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */,
+				1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */,
+				FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */,
+				0DE969423F57B1E3B27088C482873F00 /* td2.swift */,
+				81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */,
+				82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */,
 			);
-			name = SnapKit;
-			path = SnapKit;
-			sourceTree = "<group>";
-		};
-		F8280C11DB0C883B1EBF6C784E387C2B /* Cupcake */ = {
-			isa = PBXGroup;
-			children = (
-				A154B528A50FEFE7CDE4BBC76627CF6E /* __Private__Implementations__.swift */,
-				DBA245F422CAD3CCCF7504A35946CE5A /* Alert.swift */,
-				752599C5A276997FFEFB76CB08EFF2CA /* AttStr.swift */,
-				01C1A63E64802C77A4867E2D0E8F76E2 /* BarButton.swift */,
-				D8C17E725CC041ED9E4C1CEA6F1BBC36 /* Button.swift */,
-				6412597BB1F74061C862355EBD308F21 /* Color.swift */,
-				CAF0B6F7DB10EBB7C11E8C89D8DFBE5B /* Cons.swift */,
-				8BF9580F6F76EAD7C0E45314167753F8 /* CPKStackView.swift */,
-				E4AEC1CC173C82C900957CAEB593A840 /* Font.swift */,
-				0CB52CAF2B5153585B21A36BB319FE91 /* ImageView.swift */,
-				5E81D35FF3DB96BC3A5D27DB49CEE5D4 /* Img.swift */,
-				36306B9604F8EA8452150538FB5358A9 /* Label.swift */,
-				7FA96EB44E477BA7E339696E3FCCFF43 /* Stack.swift */,
-				9ACB45506E8C12CDA5701C06863AEDB2 /* StaticTable.swift */,
-				4D90E7A88C29465CF0DB7E52B1222FFC /* Str.swift */,
-				390C44F8A39D3E1E86F36501F16AA4ED /* Styles.swift */,
-				6773194EA13FBC8A9A32C9ADFB73D6CB /* TextField.swift */,
-				BB5DC74077DC163FC397F124498C3244 /* TextView.swift */,
-				4874777F7336326BBB3CF9BB0420A154 /* View.swift */,
-				5BF03CDA8F2508A3911956523CAA6B64 /* Support Files */,
-			);
-			name = Cupcake;
-			path = Cupcake;
+			name = QKMRZParser;
+			path = QKMRZParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		23C2655B2C362AA1C5CDA01FAF23E09E /* Headers */ = {
+		E9C5D6B5B6BEE160486E9F7A2EF4992F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				257A49434C8BDE3C9A9D09B0329ADEB8 /* Cupcake-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		36DDD3F658A2B775F8B39BBFA6561635 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28400157B63F40AA135BF16780AB4B96 /* SnapKit-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C84349BF73D998D4830823721D3792AC /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				02CB543829DF8A8BED68AECB2FCA2128 /* Pods-QKMRZScanner-umbrella.h in Headers */,
+				F7776EAF6ABC6311DC992F54214FE26C /* Pods-QKMRZScanner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -598,42 +319,22 @@
 /* Begin PBXNativeTarget section */
 		02AF989565A12ECBC4DF73E132D043A6 /* Pods-QKMRZScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B1A3DD29D3ECBC0A9A399BF8E6B05094 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */;
+			buildConfigurationList = 92AF16508354BFD4BC3AA0B682ADCEC3 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */;
 			buildPhases = (
-				C84349BF73D998D4830823721D3792AC /* Headers */,
-				64692FBEEA88E4F070D0801C5F88AF9B /* Sources */,
-				4325DE5CC950F4C0425EA6FB91480919 /* Frameworks */,
-				0D01F4048FB95407BF1F22FC4ED628EB /* Resources */,
+				E9C5D6B5B6BEE160486E9F7A2EF4992F /* Headers */,
+				9B35C125CCC365C246BCEE91AF31E722 /* Sources */,
+				F332E7FF020194C7479394B348F99BAE /* Frameworks */,
+				77DA723E8FC408C1D5A35976FD5F6F6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9B55E4949BF17046E4F10E237C42FBFD /* PBXTargetDependency */,
-				5147A2E637AE0F02B798E2995553D13B /* PBXTargetDependency */,
-				3C8C598D56D8AB41C1E39B0E22714F6D /* PBXTargetDependency */,
-				C78619796A2F8BB58F7D5D35F6D13BA5 /* PBXTargetDependency */,
+				132A19044011D4F328CD170376569372 /* PBXTargetDependency */,
+				09104E6946DBF0462900C735E7E60930 /* PBXTargetDependency */,
 			);
 			name = "Pods-QKMRZScanner";
 			productName = "Pods-QKMRZScanner";
 			productReference = 28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 31C2F67A24EFF2D5F6410E6A9D00BB2A /* Build configuration list for PBXNativeTarget "SnapKit" */;
-			buildPhases = (
-				36DDD3F658A2B775F8B39BBFA6561635 /* Headers */,
-				948D48E19F2A3CAC37461E0DA4FF9A87 /* Sources */,
-				73A173863657894A01CB54BA862DDBBA /* Frameworks */,
-				1FA6EE6BB1452EE8D40646CF50CA9922 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = SnapKit;
-			productName = SnapKit;
-			productReference = 979486118B3E90C08386079D57962701 /* SnapKit.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		44846E5E2172F853B4F70588F8115052 /* QKMRZParser */ = {
@@ -673,24 +374,6 @@
 			productReference = F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E89F93611343BBF21AB3504BDFCAE334 /* Cupcake */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FB30D3B2E29189B2A023135B57ECAA2D /* Build configuration list for PBXNativeTarget "Cupcake" */;
-			buildPhases = (
-				23C2655B2C362AA1C5CDA01FAF23E09E /* Headers */,
-				A952B95F9255C4C0FF6F69D68D321C34 /* Sources */,
-				688008128AAB70A1681583600983EF8C /* Frameworks */,
-				28DF8F3D54DEA2C0E20E9A7D224C62F8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Cupcake;
-			productName = Cupcake;
-			productReference = 269BBD762831798CA30A2A53F7210F3B /* Cupcake.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -709,35 +392,19 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = A8C8D85F2BD89D3B7BB26410131690E7 /* Products */;
+			productRefGroup = 0FC5607056B64C1C7A264607B1D46F36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E89F93611343BBF21AB3504BDFCAE334 /* Cupcake */,
 				02AF989565A12ECBC4DF73E132D043A6 /* Pods-QKMRZScanner */,
 				44846E5E2172F853B4F70588F8115052 /* QKMRZParser */,
-				19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */,
 				5FDA8701204211983085669C4E12E6FE /* SwiftyTesseract */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0D01F4048FB95407BF1F22FC4ED628EB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1FA6EE6BB1452EE8D40646CF50CA9922 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		28DF8F3D54DEA2C0E20E9A7D224C62F8 /* Resources */ = {
+		77DA723E8FC408C1D5A35976FD5F6F6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -818,109 +485,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		64692FBEEA88E4F070D0801C5F88AF9B /* Sources */ = {
+		9B35C125CCC365C246BCEE91AF31E722 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918C8AB48E41509EA3F8A312D93F0A85 /* Pods-QKMRZScanner-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		948D48E19F2A3CAC37461E0DA4FF9A87 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				DCCEFF1B52226DE5ABB2D0043442FE61 /* Constraint.swift in Sources */,
-				A4070B8C9BD30965648B2876CD3C1C43 /* ConstraintAttributes.swift in Sources */,
-				A04D46C4C48247D004BAE5C7AD6E05A3 /* ConstraintConfig.swift in Sources */,
-				9EE2D363A721ACFA89B5B899E1987633 /* ConstraintConstantTarget.swift in Sources */,
-				9E6184458532BFF2E3E3F804C54BD0E7 /* ConstraintDescription.swift in Sources */,
-				6B43F2F53DD6C161CF414A9BF67550C5 /* ConstraintDSL.swift in Sources */,
-				54D1686EFA926E23C4BED5EEE7A19C08 /* ConstraintInsets.swift in Sources */,
-				F41CA723E31884664B9C032D90EAEF1A /* ConstraintInsetTarget.swift in Sources */,
-				CA0FAE669FAB7067D09F7007AD838E19 /* ConstraintItem.swift in Sources */,
-				DBB93D3827327B8FB4CFA164C03357E5 /* ConstraintLayoutGuide+Extensions.swift in Sources */,
-				FFE7A02118B5288BC94F7422D6CFEB3F /* ConstraintLayoutGuide.swift in Sources */,
-				276EE563D9B688173DBBF47DB80D72D8 /* ConstraintLayoutGuideDSL.swift in Sources */,
-				095547A88EE037F12395713A469C9B60 /* ConstraintLayoutSupport.swift in Sources */,
-				F6C7F81AA5BBC4042A3A78D5EA8E62A4 /* ConstraintLayoutSupportDSL.swift in Sources */,
-				5C376607904258A10F4DDD6D42EFC491 /* ConstraintMaker.swift in Sources */,
-				4268E348E6D5E9037A640ADC8E065009 /* ConstraintMakerEditable.swift in Sources */,
-				FF0E3F8B3FB568ACBB1BC433D67ED093 /* ConstraintMakerExtendable.swift in Sources */,
-				0FA8E62C7A4A6DA9BB841007B5E16CD4 /* ConstraintMakerFinalizable.swift in Sources */,
-				8B8BE709B46663F60DB6A661A3B2A28A /* ConstraintMakerPriortizable.swift in Sources */,
-				35CDFA197D8219EB8DEFC227259A5C03 /* ConstraintMakerRelatable.swift in Sources */,
-				A3DEA82F229FDF7C9444CEFEE3D9AB84 /* ConstraintMultiplierTarget.swift in Sources */,
-				72C2B5D60A24B4B663C8994276A962B6 /* ConstraintOffsetTarget.swift in Sources */,
-				A482F623A133B7E947C01456C779622A /* ConstraintPriority.swift in Sources */,
-				14E9ACC5796C5E35C84DD6659BEB788F /* ConstraintPriorityTarget.swift in Sources */,
-				E85BBB972867783044ADCD772438150F /* ConstraintRelatableTarget.swift in Sources */,
-				C1C2B61E08DAD3B59BA5D82964D39C3C /* ConstraintRelation.swift in Sources */,
-				77A618FE4FF299682F776C974300EBA1 /* ConstraintView+Extensions.swift in Sources */,
-				5544BDD6A14E06C7FB3A878BC3E96299 /* ConstraintView.swift in Sources */,
-				DEC3E541DB551729EC407FA6566CEE54 /* ConstraintViewDSL.swift in Sources */,
-				9432185152350A4A90F6DD19C33AC057 /* Debugging.swift in Sources */,
-				BF7843175A0FB0180B6F4C0249B8874A /* LayoutConstraint.swift in Sources */,
-				7ED12926E82C9D1DE457504DA75B80A9 /* LayoutConstraintItem.swift in Sources */,
-				5DBFB9A0499F04CBE806486211A4ABD0 /* SnapKit-dummy.m in Sources */,
-				0D7A7F3919AE48736753181756DE8AE8 /* Typealiases.swift in Sources */,
-				98AE4E2F24A858A47B5A1B405CEAD8FD /* UILayoutSupport+Extensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		A952B95F9255C4C0FF6F69D68D321C34 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7B04001F7553AC363B7872ACCC6F6E02 /* __Private__Implementations__.swift in Sources */,
-				79E091828D48103D3A2AEAABE2D34827 /* Alert.swift in Sources */,
-				E92132C26E232103A5C02432263C255A /* AttStr.swift in Sources */,
-				A4E704A1CFA5F68A3C9B112EC749032F /* BarButton.swift in Sources */,
-				9A0656310B41A98642EAFE57BA8EB21D /* Button.swift in Sources */,
-				04B510608262404DA08688B89DFF5DD5 /* Color.swift in Sources */,
-				8DA15CF2046FD2E428EF270C0F1CF0B6 /* Cons.swift in Sources */,
-				663B33BE7C0EB10D050CE48F6094F06C /* CPKStackView.swift in Sources */,
-				E01F8645990D3FA9D78A58B56CFCA4DD /* Cupcake-dummy.m in Sources */,
-				69C5698A9BD00D06CEBFB85506990AF9 /* Font.swift in Sources */,
-				C2D1BF80E4C61C349575766AA3CE64CD /* ImageView.swift in Sources */,
-				CF9D5BAD7E5A49EF9DDF02B332A7D4F1 /* Img.swift in Sources */,
-				F97D6C55B2AAB396EBD3ACBB7445B3A2 /* Label.swift in Sources */,
-				837F942AAB4A37F4E2AC7EA5062DE4CB /* Stack.swift in Sources */,
-				BD3801D42D32AEB197D2E5814788102B /* StaticTable.swift in Sources */,
-				AA9C15B6E7948C86B61700E8C4821E36 /* Str.swift in Sources */,
-				C2463803524E4A5B6E60B5D5B6DC625B /* Styles.swift in Sources */,
-				79337712716FDFF6C75CA49DC7F975DC /* TextField.swift in Sources */,
-				D239D71BC2E941918A52D239FA7300B7 /* TextView.swift in Sources */,
-				BBCE6A0FCE9FF896FA5290FAE4664FDC /* View.swift in Sources */,
+				61941FB89FAAF5872CF98CC7789C288B /* Pods-QKMRZScanner-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		3C8C598D56D8AB41C1E39B0E22714F6D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SnapKit;
-			target = 19622742EBA51E823D6DAE3F8CDBFAD4 /* SnapKit */;
-			targetProxy = 8EEDDF24BBD5AB63A7FF68F933A8C7F9 /* PBXContainerItemProxy */;
-		};
-		5147A2E637AE0F02B798E2995553D13B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = QKMRZParser;
-			target = 44846E5E2172F853B4F70588F8115052 /* QKMRZParser */;
-			targetProxy = AA668F5E5E1F41C88917CC16E2AA6324 /* PBXContainerItemProxy */;
-		};
-		9B55E4949BF17046E4F10E237C42FBFD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = Cupcake;
-			target = E89F93611343BBF21AB3504BDFCAE334 /* Cupcake */;
-			targetProxy = 7CFF69F500AB59C1A9F0FAE1D616F994 /* PBXContainerItemProxy */;
-		};
-		C78619796A2F8BB58F7D5D35F6D13BA5 /* PBXTargetDependency */ = {
+		09104E6946DBF0462900C735E7E60930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyTesseract;
 			target = 5FDA8701204211983085669C4E12E6FE /* SwiftyTesseract */;
-			targetProxy = 9C3E980B18E53E83A4148B7226AC420E /* PBXContainerItemProxy */;
+			targetProxy = EA9D72521CF34A52CDD784F9D53BB64E /* PBXContainerItemProxy */;
+		};
+		132A19044011D4F328CD170376569372 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = QKMRZParser;
+			target = 44846E5E2172F853B4F70588F8115052 /* QKMRZParser */;
+			targetProxy = BCF341A85B4794658B71F7B010F0FEAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -991,7 +577,7 @@
 			};
 			name = Debug;
 		};
-		2F90BFD25D96DB5CF9C7FF1D8952F0CD /* Debug */ = {
+		484DCEBE36724DC4439E2CF3F29E168D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28325BB70560DB246AB3AE5D24A53B18 /* Pods-QKMRZScanner.debug.xcconfig */;
 			buildSettings = {
@@ -1027,7 +613,7 @@
 		};
 		4B5715DD03ACEBFFB58DCDA33D6D4C9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7CD9B2F7C18308CAB7F6174F245ECC21 /* SwiftyTesseract.release.xcconfig */;
+			baseConfigurationReference = AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1058,9 +644,9 @@
 			};
 			name = Release;
 		};
-		4E4DDD94A393DA5F75814C0DEFD3EE60 /* Release */ = {
+		7F9CAD7634EBECCE71494C50110C82E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B21AF9EE1552A57F05FAA91EC1A317EF /* SnapKit.release.xcconfig */;
+			baseConfigurationReference = 459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1071,14 +657,14 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				PRODUCT_MODULE_NAME = SnapKit;
-				PRODUCT_NAME = SnapKit;
+				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
+				PRODUCT_MODULE_NAME = QKMRZParser;
+				PRODUCT_NAME = QKMRZParser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
@@ -1090,7 +676,70 @@
 			};
 			name = Release;
 		};
-		7DAADC8172ECD3C11ACBB185607DF289 /* Release */ = {
+		D0E80E828C4B7EF573793A312D2AA927 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTesseract/SwiftyTesseract-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyTesseract;
+				PRODUCT_NAME = SwiftyTesseract;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		DA7633052FEF8E5EB3B4F7F3958A973B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
+				PRODUCT_MODULE_NAME = QKMRZParser;
+				PRODUCT_NAME = QKMRZParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EAE18172C2D85C17C1A88D6E5FECD9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0579590D0C93205406E0F132CC75E5C /* Pods-QKMRZScanner.release.xcconfig */;
 			buildSettings = {
@@ -1124,195 +773,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		7F9CAD7634EBECCE71494C50110C82E6 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = B8DD3BF9C6579DE0E516806B78D6654A /* QKMRZParser.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
-				PRODUCT_MODULE_NAME = QKMRZParser;
-				PRODUCT_NAME = QKMRZParser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		AB35DE8966611B2765D91FC5C5E33729 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E3C2D3F4EC9BF9A90BF5B8DD2932C83 /* Cupcake.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cupcake/Cupcake-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cupcake/Cupcake-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cupcake/Cupcake.modulemap";
-				PRODUCT_MODULE_NAME = Cupcake;
-				PRODUCT_NAME = Cupcake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D0E80E828C4B7EF573793A312D2AA927 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 26563B494099DB3DCE43A5029E450EBD /* SwiftyTesseract.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTesseract/SwiftyTesseract-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyTesseract;
-				PRODUCT_NAME = SwiftyTesseract;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		D1C07D97D334F3DCD58F0538DACB5855 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F293DF5ECC8AB5CE8F23A482718BFCDC /* Cupcake.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/Cupcake/Cupcake-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Cupcake/Cupcake-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Cupcake/Cupcake.modulemap";
-				PRODUCT_MODULE_NAME = Cupcake;
-				PRODUCT_NAME = Cupcake;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		D49C9B1EB0D5285F94CBF8A557F754F7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5718FF1021C005D018645BD63AC47C47 /* SnapKit.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SnapKit/SnapKit-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SnapKit/SnapKit-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SnapKit/SnapKit.modulemap";
-				PRODUCT_MODULE_NAME = SnapKit;
-				PRODUCT_NAME = SnapKit;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DA7633052FEF8E5EB3B4F7F3958A973B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EF6AB09BD7DB6412761BC27C01E7E66 /* QKMRZParser.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
-				PRODUCT_MODULE_NAME = QKMRZParser;
-				PRODUCT_NAME = QKMRZParser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		F5ECF10F20E087973F0918B3F0B20FFC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1388,15 +848,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31C2F67A24EFF2D5F6410E6A9D00BB2A /* Build configuration list for PBXNativeTarget "SnapKit" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D49C9B1EB0D5285F94CBF8A557F754F7 /* Debug */,
-				4E4DDD94A393DA5F75814C0DEFD3EE60 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1415,20 +866,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B1A3DD29D3ECBC0A9A399BF8E6B05094 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */ = {
+		92AF16508354BFD4BC3AA0B682ADCEC3 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2F90BFD25D96DB5CF9C7FF1D8952F0CD /* Debug */,
-				7DAADC8172ECD3C11ACBB185607DF289 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		FB30D3B2E29189B2A023135B57ECAA2D /* Build configuration list for PBXNativeTarget "Cupcake" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				AB35DE8966611B2765D91FC5C5E33729 /* Debug */,
-				D1C07D97D334F3DCD58F0538DACB5855 /* Release */,
+				484DCEBE36724DC4439E2CF3F29E168D /* Debug */,
+				EAE18172C2D85C17C1A88D6E5FECD9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
