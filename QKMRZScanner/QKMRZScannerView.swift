@@ -31,7 +31,7 @@ public class QKMRZScannerView: UIView {
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
      
-    public var isScanPasssport: Bool = true
+    @objc public dynamic var isScanPasssport: Bool = true
     
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
