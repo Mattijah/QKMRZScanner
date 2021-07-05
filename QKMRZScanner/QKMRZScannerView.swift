@@ -11,7 +11,6 @@ import SwiftyTesseract
 import QKMRZParser
 import AudioToolbox
 import Vision
-import Lottie
 
 public protocol QKMRZScannerViewDelegate: AnyObject {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
