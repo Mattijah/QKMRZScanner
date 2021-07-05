@@ -4,6 +4,6 @@ use_frameworks!
 
 target 'QKMRZScanner' do
     pod 'QKMRZParser', '~> 1.0.1'
-    pod 'SwiftyTesseract', '~> 2.2.3'
+    pod 'SwiftyTesseract', '~> 3.1.3'
     
 end
