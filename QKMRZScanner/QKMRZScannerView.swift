@@ -21,7 +21,6 @@ public class QKMRZScannerView: UIView {
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
-    fileprivate let photoOutput = AVCapturePhotoOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningPaused = false
@@ -212,13 +211,12 @@ public class QKMRZScannerView: UIView {
                                          y: (parentRect.height - getBottomMargin() - cameraSize - 20),
                                          width: cameraSize, height: cameraSize)
         
-        let imageHeight: CGFloat = 100
-        let imageWidth: CGFloat = 80
+        let imageHeight: CGFloat = 150
+        let imageWidth: CGFloat = 100
         self.addSubview(showSaveImage)
         showSaveImage.image = UIImage.init(named: "")
-        showSaveImage.contentMode = .scaleAspectFill
-        showSaveImage.layer.cornerRadius = 10
-        showSaveImage.clipsToBounds = true
+        showSaveImage.contentMode = .scaleAspectFit
+        showSaveImage.layer.cornerRadius = 8
         showSaveImage.frame = CGRect.init(x: (parentRect.width - imageWidth - 30),
                                           y: (parentRect.height - getBottomMargin() - imageHeight - 20),
                                           width: imageWidth, height: imageHeight)
@@ -262,13 +260,6 @@ public class QKMRZScannerView: UIView {
             print("Input & Output could not be added to the session")
         }
         
-        //my changed
-        photoOutput.isHighResolutionCaptureEnabled = true
-        if captureSession.canAddOutput(photoOutput) {
-            captureSession.sessionPreset = .hd1280x720
-            captureSession.addOutput(photoOutput)
-        }
-        
     }
     
     fileprivate func addAppObservers() {
@@ -306,41 +297,28 @@ public class QKMRZScannerView: UIView {
     
     
     //my changed
+    var isSaveImage = false
     @objc func savePhoto() {
-        let photoSettings = AVCapturePhotoSettings()
-        photoSettings.isAutoStillImageStabilizationEnabled = true
-        photoSettings.isHighResolutionPhotoEnabled = true
-        
-        photoOutput.capturePhoto(with: photoSettings, delegate: self)
+        isSaveImage = true
     }
     
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
-extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
-    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
-        if let error = error {
-            print("error occured : \(error.localizedDescription)")
-        }
-        
-        if let dataImage = photo.fileDataRepresentation() {
-            print(UIImage(data: dataImage)?.size as Any)
-            
-            let dataProvider = CGDataProvider(data: dataImage as CFData)
-            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
-            let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.right)
-            
-            showSaveImage.image = image
-            
-        } else {
-            print("some error here")
-        }
-    }
-    
+extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let cgImage = CMSampleBufferGetImageBuffer(sampleBuffer)?.cgImage else {
             return
         }
+        
+        if isSaveImage {
+            isSaveImage = false
+            let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
+            DispatchQueue.main.async {
+                self.showSaveImage.image = enlargedDocumentImage
+            }
+        }
+        
         
         let documentImage = self.documentImage(from: cgImage)
         let imageRequestHandler = VNImageRequestHandler(cgImage: documentImage, options: [:])
