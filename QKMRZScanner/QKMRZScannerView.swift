@@ -34,6 +34,7 @@ public class QKMRZScannerView: UIView {
     fileprivate let parentRect = UIScreen.main.bounds
     
     let cameraButton = UIButton()
+    let showSaveImage = UIImageView()
     
     public var isScanPasssport: Bool = true
     
@@ -211,6 +212,17 @@ public class QKMRZScannerView: UIView {
                                          y: (parentRect.height - getBottomMargin() - cameraSize - 20),
                                          width: cameraSize, height: cameraSize)
         
+        let imageHeight: CGFloat = 100
+        let imageWidth: CGFloat = 80
+        self.addSubview(showSaveImage)
+        showSaveImage.image = UIImage.init(named: "")
+        showSaveImage.contentMode = .scaleAspectFill
+        showSaveImage.layer.cornerRadius = 10
+        showSaveImage.clipsToBounds = true
+        showSaveImage.frame = CGRect.init(x: (parentRect.width - imageWidth - 30),
+                                          y: (parentRect.height - getBottomMargin() - imageHeight - 20),
+                                          width: imageWidth, height: imageHeight)
+        
     }
     
     fileprivate func initCaptureSession() {
@@ -318,6 +330,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapt
             let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
             let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.up)
             
+            showSaveImage.image = image
             
         } else {
             print("some error here")
