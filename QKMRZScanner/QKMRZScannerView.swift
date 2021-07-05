@@ -202,8 +202,9 @@ public class QKMRZScannerView: UIView {
         cameraButton.setTitleColor(UIColor.white, for: .normal)
         cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
         cameraButton.layer.cornerRadius = 25
+        cameraButton.isHidden = self.isScanPasssport
         cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - 25),
-                                         y: (parentRect.height - getBottomMargin() - 20),
+                                         y: (parentRect.height - getBottomMargin() - 45),
                                          width: 50, height: 50)
         
     }
