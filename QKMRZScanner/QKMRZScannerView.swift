@@ -30,6 +30,10 @@ public class QKMRZScannerView: UIView {
     public weak var delegate: QKMRZScannerViewDelegate?
     
     // my changed
+    fileprivate let parentRect = UIScreen.main.bounds
+    
+    let cameraButton = UIButton()
+    
     public var isScanPasssport: Bool = true
     
     public init(isScanPasssport: Bool) {
@@ -192,6 +196,15 @@ public class QKMRZScannerView: UIView {
                                                 x: (UIScreen.main.bounds.width - (UIScreen.main.bounds.width * 0.9)) / 2,
                                                 y: UIScreen.main.bounds.height / 2 - 0.5,
                                                 width: UIScreen.main.bounds.width * 0.9, height: 1)).cgPath
+        
+        self.addSubview(cameraButton)
+        cameraButton.setImage(UIImage.init(named: ""), for: .normal)
+        cameraButton.setTitleColor(UIColor.white, for: .normal)
+        cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
+        cameraButton.layer.cornerRadius = 25
+        cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - 25),
+                                         y: (parentRect.height - getBottomMargin() - 20),
+                                         width: 50, height: 50)
         
     }
     
