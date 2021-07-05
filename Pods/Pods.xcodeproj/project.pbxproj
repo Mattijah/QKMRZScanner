@@ -7,416 +7,114 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		009CB881035B85E694EDE43F7F32AB6B /* FillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CD352D3BD2B5742D7E531FBE5BC6658 /* FillNode.swift */; };
-		02216B580F40908071EC21B96D67E9D9 /* GradientStrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93CEFB9F6751B5662F23191E0208820 /* GradientStrokeNode.swift */; };
-		02295D78802AA44A08CC4D151AB3754F /* PolygonNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E7615F67750941D80C523249A507A99 /* PolygonNode.swift */; };
-		02625B5BFE249E69FB44FDC74093E4DB /* AnimationTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = A99FAA642A5026A46A6FB886957DABA1 /* AnimationTime.swift */; };
-		04691E6969AC548F927B70E462F08B00 /* ShapeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B58FFDF2CDE14ACD9E270DE6FEAE2D45 /* ShapeNode.swift */; };
-		0637711CC432FC84B361AB01027F744F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		0653A2C5607C749695E268E4E6C2F021 /* AnimationKeypathExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA0AC5F55BCFDFA7C44CC12CB28AB7DD /* AnimationKeypathExtension.swift */; };
-		06AFEBE3AECF87F127B004715517E6D0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		079D7B6FAA7B0E0E2B0491A31E13A781 /* AnimationViewInitializers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3495C27A747A5F1217977C2B425FFE68 /* AnimationViewInitializers.swift */; };
-		07D5D290AFC1C0625577879F23E1CA98 /* Keyframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9E12A2E87E0BA9AE4016E53CF97301A /* Keyframe.swift */; };
-		0895BD0F32401CBD152A493B8619EE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		0ABF0E24D4C5C2211CC8734E9F045546 /* TextCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0FCB8F57E58C830BAB4F780F27A2D49 /* TextCompositionLayer.swift */; };
-		0B90D4E67E64B752E415C0227FBB8BAA /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 731E71200527264FB84F75D13F46BF67 /* Bundle+pathToTrainedData.swift */; };
-		0E4F718620888EE78E494057B9D3DEBC /* PathElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5556DFB9311B28338AF86E4A38829FE5 /* PathElement.swift */; };
-		0F5226419BBB085467BA8C5F52CC94B6 /* Glyph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D6DDCA3A1169CAB8435BE2A4C6EFE0 /* Glyph.swift */; };
-		0FA94B0CBA835214F8CFFDC2D1419BAF /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6D057E72E37906D85927C76929A073F /* UIColorExtension.swift */; };
-		1054137AE9E91B0E0D9B63092CE376B5 /* ShapeContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E698DA27E582FCBC027595C1D28A42 /* ShapeContainerLayer.swift */; };
-		112C74EFE714BCE32F08F8D6D546794A /* StarNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C52CC30198E67F6B4333134B21C6CF65 /* StarNode.swift */; };
-		1218933A8027C276466182664799D7DF /* PreCompLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D351439C8F07FFABEE9028D771F19695 /* PreCompLayerModel.swift */; };
-		187AA66ABF3683980ECF622D6DBD1AD3 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9796A7A4FCE81D4E4606304980021B5F /* TextAnimatorNode.swift */; };
-		18F0E77D3312E80E7EA2E809FBB10439 /* TextLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C75B2D4B3627C8C2322424096D389D87 /* TextLayer.swift */; };
-		1EBDC31834A8904BE9C2E6C416DB7483 /* LRUAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 815CAAAC5AC954D26BD702AED57AE7C5 /* LRUAnimationCache.swift */; };
-		234268BD38A122DE31CF0280378B778C /* GradientFill.swift in Sources */ = {isa = PBXBuildFile; fileRef = D15947AB0FD4FBFA5AC60F5610B6F942 /* GradientFill.swift */; };
-		2468319AB27EE70D9BB5D28AD1B1A408 /* CGFloatExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 456AAD0596D7A5C2940B4CA3189C6532 /* CGFloatExtensions.swift */; };
-		248067FE931D5EB2D20417570F07BD35 /* KeyedDecodingContainerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37DC893F07CAE5227C4A661E6213C31 /* KeyedDecodingContainerExtensions.swift */; };
-		24AC03A69DCEEDC21E29F9E63F95D808 /* Font.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE250A734B4AA5E63BCC8398A38E5C86 /* Font.swift */; };
-		258F97D25D4210D19DEC0118C50BBEE3 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCF256D111D81B676A425B189EFF67BE /* ResultIteratorLevel.swift */; };
-		269E0D3C45823193E8FF7F4057195B59 /* Stroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8BF4EDC45B22368291427B348280099 /* Stroke.swift */; };
-		2758F281AF0C7D8F312A3B0661F3509E /* Star.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B4F26A302AADFC3ABD2AEAEA306C507 /* Star.swift */; };
-		2922B51988C082497CF379C93B976717 /* Repeater.swift in Sources */ = {isa = PBXBuildFile; fileRef = 854F4399A0AA930165C45D7516C6BB46 /* Repeater.swift */; };
-		29AC5563A65E92E1D5A39C76A94558FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
-		2E754D63217B7BC94CECA7FE23D96905 /* AnimatedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA0D037336C20A8D66E2998B64F56D7 /* AnimatedControl.swift */; };
-		2F0715E5BCE33639A0FCA1F626B9BFA7 /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DC5A0780679CB93EEF376734693166B /* SolidCompositionLayer.swift */; };
-		2FE08E71527A2450E881B39F8B9EC98C /* GradientFillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FD8FF98103F7D5AF1AC4397BECE6E64 /* GradientFillRenderer.swift */; };
-		30B63ABB31D31B203ECF577A4B613F65 /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 139F3FEE8B94A77BB3C919525A7640C1 /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		338366E6762002CDF447808FD6E7AB86 /* InterpolatableExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67049A06D5B09CD4849FFFC016E92C /* InterpolatableExtensions.swift */; };
-		33C7935FAFF578A13D784DA2A3528E82 /* GradientFillNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE5CF39409E6786B5B0E2A14CC920AC8 /* GradientFillNode.swift */; };
-		3803EDA965588719CA8C54F9B13E997F /* GroupNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91E3E5820709D62F6B914541E83CB1D4 /* GroupNode.swift */; };
-		3AB381D0AE115FF6FD925F521872976E /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4BCB662DF2A9D48457D5791D2EE37254 /* ImageCompositionLayer.swift */; };
-		3EB03A262C7F5F9B14DFC52CC9C8B6F6 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7553DAA7FFF7EA65E7C39B048B4D8B /* ColorExtension.swift */; };
-		3EC7B1E8A42E64BC81E289A460EB6A07 /* FillI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D75D80A14F8ADC160FDC7684C0280ED /* FillI.swift */; };
-		3F0AC8DA2FF52961DFBA9B995A094AB8 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A43448D4D25D265780505095AF3A7B53 /* QKMRZParser-dummy.m */; };
-		3F84D4C0A3E8A01D6FC705973B6CD4E3 /* PointValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2947931B9A3ABDA4218D6F9B9D980F9D /* PointValueProvider.swift */; };
-		41BA6E81F80EEF15FAD6BF55DADBFFE1 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35528E7C31412FC946874BDDC3E219D6 /* MRZFieldFormatter.swift */; };
-		4222ADA2E456904DAA7C5E6C135457F4 /* ColorValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5FDD4D79A4638DB14E1D68C30D412F /* ColorValueProvider.swift */; };
-		459369743D5C5DC3D14F9A3D4BA46DA4 /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AD7F8C354159E6937BEC47015214C0 /* RecognizedBlock.swift */; };
-		47D859E65A7F529E0D00DAC941F4C8A3 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E507D5900DF11419806922E80D8F9957 /* BoundingBox.swift */; };
-		47F63B725F7D79C6B35AE458421320EC /* FillRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21B193E728808F99498EC247A09E83B3 /* FillRenderer.swift */; };
-		49229652E662E1F06AD60AB7E04816D1 /* GradientStrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 545F89710618418FE032D88D701B4F20 /* GradientStrokeRenderer.swift */; };
-		4933C8DCD0A1958CAD07333EF82C0011 /* td3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1232DC6BB6178CDF008F4966D44749 /* td3.swift */; };
-		4B6F77ADDBD9A476A94F29AA8311B595 /* PrecompAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FE1DD5A81CD0C41ED688AC966A4214 /* PrecompAsset.swift */; };
-		4C159BD8975D5734D8F9D71E51DD30CF /* CompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD72BFE0CE4A36509DAC1B129A690EEE /* CompositionLayer.swift */; };
-		4DDFDBCB37FA90B0BBF12A0A2EE8736E /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54257B5BA5FFFC229A95511A143A8E5B /* StringExtensions.swift */; };
-		4E0588332E5C8BE6B875B5A440192EFC /* SingleValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA84E0C12209B1D783F26D4A52DE93C5 /* SingleValueProvider.swift */; };
-		4EE0D8D1F4032EC2FD6801C9979EDAF4 /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C03227B7E12CDC32E329C5CBBADBF28 /* RecognitionLanguage.swift */; };
-		502B36A7D6E865B6C980705FF1938DF8 /* PreCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2AECED0CA527C73BF69D62238F041D3 /* PreCompositionLayer.swift */; };
-		530DCDE9EF6CADD6AEAAAD2978C6C6BF /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4DF55B82CD7FC2B08D01AD36C45A919 /* AnyValueProvider.swift */; };
-		5323BB7033DDFBB8DF91A570B47E37F4 /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8862B538AFB18C5CEA0580437AAD169C /* Mask.swift */; };
-		5429E317969AAD6CFD490D60443CB9B3 /* BundleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6024597CFA93B3E3C8BCB1166340A473 /* BundleImageProvider.swift */; };
-		54A9E4C7BF9137C82BAEF05720F50B0A /* ShapeLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A2B784EAB068C8E00FFDC338BA8B7BE /* ShapeLayerModel.swift */; };
-		559E05F30E4EAE32BA48379660AE44B4 /* KeyframeInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 914A1BBCD1BF5DEB130B31369A2EE300 /* KeyframeInterpolator.swift */; };
-		585B65BDCE13078CE78CDAEE29A74BF0 /* EllipseNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A03A64AE66255EC6DD602B26BA0959 /* EllipseNode.swift */; };
-		58DC484F75A76F06C4C7DB078BE54709 /* InvertedMatteLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B7EC76AFACFF98F9DBB6747E9AAFAE8 /* InvertedMatteLayer.swift */; };
-		59895C7550FB1575D9236CF7B9E977DC /* Rectangle.swift in Sources */ = {isa = PBXBuildFile; fileRef = A85E277B14A2479528F6C39B3B001CDD /* Rectangle.swift */; };
-		5AE4D0932F1517F975525A5505421240 /* CompoundBezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69AA846450700CB37806E4D8F8BCC291 /* CompoundBezierPath.swift */; };
-		5BF1B44B30938D3B6D132CE5C5BA4319 /* LayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5704724753D58BE4A6B2B6925E04FE27 /* LayerModel.swift */; };
-		5EE3A72B1EAE8196BC068E5BB8DF6EE7 /* TextDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC711CD60D70E2E9FDD072C9F0858158 /* TextDocument.swift */; };
-		5F7AA8300D54023C648A5E6DE7892435 /* Transform.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66FDD00A3FAD1D878E66581A6ADD67DD /* Transform.swift */; };
-		60449BD9530C4D527F6D9865AD7AC7F0 /* LayerTransformNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7423014173A56E555D91014685CF5BF8 /* LayerTransformNode.swift */; };
-		6079862E4DC9B5AC605B8E9807582EAC /* ValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F10D1F198A779D7FD0BC740526978BA /* ValueContainer.swift */; };
-		633BD5D93A364F4404EED5243BF70596 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DBA4DD2A3091CF60F8DD2FE62EA95DC /* LanguageModelDataSource.swift */; };
-		63AA1E813E021D69590BDFFB0484CB92 /* Marker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EE299385E69A567683F4F0F78C6EE72 /* Marker.swift */; };
-		645DC6A0FDFA7FDC3DF1D2AA265C1A8F /* AnimatedSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 064B147B8073B5B67F835FA887B87B0D /* AnimatedSwitch.swift */; };
-		6477C63835313EB2B9CBBDB4E7C6344F /* MathKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E31314AF9923E75B98D1F0F4ABA7DC5E /* MathKit.swift */; };
-		64B353CDD897B011A947ED5649FE5B91 /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8ECE64F5384880E854B89F8713C146EF /* AnimationTextProvider.swift */; };
-		67FA0E52AF43BC37707EE3691A6C6E87 /* MaskContainerLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3920A3607ED284958454C1F42E3D524 /* MaskContainerLayer.swift */; };
-		6AF6F812803A66EE13956BB5A5B22F4E /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = FFD8A51CDF46D1202FE44D89DB4C1756 /* SwiftyTesseract.swift */; };
-		6B47DC7B0BB820FB64AC372007D77BA9 /* td1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6818103C31716A90F18DDF84EC49AA8F /* td1.swift */; };
-		6CBB1D9311405F2C563D4BABCD04703E /* GroupOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF83135169E267D0080E34E9B1FC65 /* GroupOutputNode.swift */; };
-		6E271B5076A2153A2539F24479B7F0D2 /* RenderNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB8001FBFC4178FA0D5ED71EFA87FBF2 /* RenderNode.swift */; };
-		728CCE03BA79F5E0F2F4A838BE5847A7 /* VectorsExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C553883E171B949E76B149FF8754ECA /* VectorsExtensions.swift */; };
-		780A85B3BEA67F48B2342B14BE44D348 /* AnimationImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0127CC244DBD4282E1622125D7456E62 /* AnimationImageProvider.swift */; };
-		7D571BD1E936FC8FCB5C907EB0EDA8EA /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 564193221AC3EEE8306CC1719BD41629 /* EngineMode.swift */; };
-		85BA0432AF587B1C0DD30FD6EF4526D4 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07C9E4A69F53BD1DD0AC6AE4ADD2FDF7 /* LottieView.swift */; };
-		8701E0B84141B2D9D0D4D9AFF362F0B6 /* AnimationFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D6815AA000988775F15A917126B761 /* AnimationFontProvider.swift */; };
-		8845022AF994AC16FE422609A00E7FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 04D60AC13D33197690A05C641925DDDA /* UIKit.framework */; };
-		8AB6C217119A35985E0A3E2857ABB418 /* Ellipse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E281F0887FC7410679FDC63B9C6D366 /* Ellipse.swift */; };
-		8ABDB3C677973B869BABD0E654F8C8B2 /* Pods-QKMRZScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8BD831DC877702B1577F759D984511E9 /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE10DE8C8435312063B47DDBE51D98F1 /* ShapeCompositionLayer.swift */; };
-		8BFDCC92AA945E802B2FD7FBCBEFD18B /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9403C5FF06B048CCD92194AF6B632686 /* TesseractVariableName.swift */; };
-		8D945C57214018450702FEE8734883B2 /* AnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 016B62477A12CC9AF28369F4646F35BE /* AnimationKeypath.swift */; };
-		8EC7DED1459CE95E2FFFC45D429C71BB /* AnimatorNodeDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9A2876101E7C34B5B45BFF316F1B24A /* AnimatorNodeDebugging.swift */; };
-		934466F4C4B07C006BC4EEE5B17E926C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */; };
-		9456B9ABD3F9E2767FCD2E6CB8862836 /* KeyframeExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835882E688341AA57332DEE422012B4B /* KeyframeExtensions.swift */; };
-		95F9BAAFE3FC6BF6ABF607A836B08113 /* NodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DFE47020684BA678C4ED03C2F254E09 /* NodeProperty.swift */; };
-		97431400B8DFFE173E415A8B9C4F1C5E /* lottie-ios-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4E27EB948B56F217C11E91456D86BA27 /* lottie-ios-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9758CD5895E13491B0F5D17625B7F4CF /* Interpolatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35D701680D53C04897CC58CF0715C86E /* Interpolatable.swift */; };
-		993748F61F35290FFAD7CDE35F889F7A /* GradientStroke.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F648BEFCD0F29241BF3A1A2091988E8 /* GradientStroke.swift */; };
-		99A40A5D7DE69F7B97ABA8CCCAE9955C /* GradientValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BD8B1E0AC958359A041E8C96E4FB81A /* GradientValueProvider.swift */; };
-		9C7F15FA7D7B94637138BCC65307BD7F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08E589AD4A6F8353D8D75657508636E /* String+Extensions.swift */; };
-		9CFBA1B6279BCAC332CDA1A9BAC869D3 /* TextLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36574ACE3F2248EFDC27FC8E9773168E /* TextLayerModel.swift */; };
-		9EB11A84EF4C5B21533707563E2D169A /* KeypathSearchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E37CDA33B28F73EFA0EF3A6D3DCC736C /* KeypathSearchable.swift */; };
-		9EDBA961B404B9A2CBE8EFF51BD5DFB8 /* StrokeRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D0887BD80B54702FB94E8B4B9F1389E /* StrokeRenderer.swift */; };
-		A090A400F77C7D72305DE29D29AC564C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */; };
-		A1E5120CA044B874E2B88C3EF6D338C1 /* FloatValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E08B702DE458351AC1ACD0E478A3D660 /* FloatValueProvider.swift */; };
-		A2A239A2B89A243A2892D5256B5E6548 /* DashPattern.swift in Sources */ = {isa = PBXBuildFile; fileRef = 889551FCA817115BC35547F2DEA9276E /* DashPattern.swift */; };
-		A362B77FBCFCAD79E93757315CE39B36 /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 915FE7215AB87E4DDEEC93A551DC3F20 /* LanguageStringConverter.swift */; };
-		A6EC5575FC578319B77F311CE92C38F7 /* KeyframeGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF0CB6D0879E69EC9546EF25BBFDA5E3 /* KeyframeGroup.swift */; };
-		AB2E29798AD033CAE8727EFD2A5F4D59 /* ShapeItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D2F66421B84148791037E3DF97A50429 /* ShapeItem.swift */; };
-		AC0AB63D4857B7BE72409748962ED419 /* Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA31C5E4EA4BBD6799B5C34FED0AC50 /* Merge.swift */; };
-		ADB57E490D09267ED50E152AB2215B7E /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 54B03014648B27020599E4E9843CC8D6 /* String-Ext.swift */; };
-		B12033FCEF029B8D2F8BFC8AC5F9F336 /* CompositionLayersInitializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 567CA17E9B8A2C573FF58A8C0DFFFAD3 /* CompositionLayersInitializer.swift */; };
-		B18ED58C8DF81C079B5015D356A49817 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AEE1CFE671278F524EAEF7174DABC460 /* SolidLayerModel.swift */; };
-		B1D7B4A10BD29854A979065125CD2BB7 /* Trim.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7849E000FBA63C528181030608802ADC /* Trim.swift */; };
-		B31B0CB4874A037F044750EE515D8B1C /* ShapeTransform.swift in Sources */ = {isa = PBXBuildFile; fileRef = B163AD57ADD60E3F670A493C77B03C9C /* ShapeTransform.swift */; };
-		B3FEA99DEF08A1A72B0D194926043801 /* SwiftyTesseract-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 64FF5861C6DCD23E60829877BD817EBA /* SwiftyTesseract-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B586A32221BA51D37840F63E667214B0 /* SwiftyTesseract-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 38300CBBE423F091E239D8B30AFA502B /* SwiftyTesseract-dummy.m */; };
-		B5E7A50CACD20C0F5DBAB6DBBDAFEF81 /* AnyNodeProperty.swift in Sources */ = {isa = PBXBuildFile; fileRef = C327E549D379FA203E103ACCC3FF143D /* AnyNodeProperty.swift */; };
-		B8EA9274ACDDE99F957E4D61CE880F64 /* ImageLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB4FDF89602D472242135581ECBFCFFD /* ImageLayerModel.swift */; };
-		BCFA5D17A7DA6457F1DAABB6577898A4 /* BezierPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB1B8461C4322FC677D60277D858EF6C /* BezierPath.swift */; };
-		BE559AD46D01CC77943B2B0273612D8A /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80138191274AAA27318CB161F0A8AF2C /* Asset.swift */; };
-		BEBA1B8C12D7F63B669832C898B0ECB4 /* AssetLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7BEC8D51B489408A14467CDAA89EE2 /* AssetLibrary.swift */; };
-		BFA126908186F19EE41BE5868FC1C210 /* CurveVertex.swift in Sources */ = {isa = PBXBuildFile; fileRef = C095A236C7DB795C37938F1FE0AFAD41 /* CurveVertex.swift */; };
-		C17B4450D1626364B2DCAA7A42C5EE97 /* AnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC357BCFB6423B31BD257FFFAD77E4F6 /* AnimationView.swift */; };
-		C2F4BF932391B859E01C4A8A161A6E0D /* LayerFontProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3CB1857E22CC6FCC50CD2CDDF82DDC6 /* LayerFontProvider.swift */; };
-		C3A978B4634C8A40CAB5834D45C6D943 /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203D3FA1E6987336304E3ED1C00B0818 /* QKMRZResult.swift */; };
-		C5D7664DEA52A2080B49D6B2622C39DE /* CompatibleAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A50FEFE9CF55ABE1BE6B53D7A24AFC7 /* CompatibleAnimationView.swift */; };
-		C960309E8DBD13A20BC26B2842463D62 /* StrokeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E94C7218DD0290126B32CBCC186F7A /* StrokeNode.swift */; };
-		C9E9AB1A4B11F4EFF49986DD6BA05AC1 /* Vectors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 345EC05981969E868800E64F9B2F2288 /* Vectors.swift */; };
-		CB8A7BE8F63886EE30FBCAF2F3968764 /* LayerTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A715F5B83BB73D445062D1F842066384 /* LayerTextProvider.swift */; };
-		CF779993E4FEEE72B1B59F71160BF7BA /* AnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973F483F076E98B461ED9CEA3DC4AE75 /* AnimatorNode.swift */; };
-		D3BB7C10CF7FB03081B7ACF2B95313D4 /* FilepathImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C0B6E50CB27AD346EBC96DC15349B2C /* FilepathImageProvider.swift */; };
-		D482B07B389D6BED35B449680862FD5F /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFAD1FAFDCA74117D944ADDFF6AE8ED /* Animation.swift */; };
-		D4FE036734A6D5B9548B6E8144804700 /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8D39B593C6F2AA42D774AB463269366 /* AnimationContext.swift */; };
-		D79692BB25F9CFC26CEEA50ABB81CE95 /* NullCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 21604A28FD9EE9383D8A2B0EF0076D04 /* NullCompositionLayer.swift */; };
-		DB64698482B57470F644E7A916619EE5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
-		DB8CB26680625363B4223412D88C3041 /* AnimationSubview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB83BB8B89F37D44DE81A6A71033456 /* AnimationSubview.swift */; };
-		DE66E6F35287CBE5875652B44E5DB76E /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8225102B7D0EB0EF4320903EB32D5E96 /* AnyValueContainer.swift */; };
-		DF75937FFEF23A62DBDE3B7632BCD1C4 /* lottie-ios-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B14032BF5C9AC2F1F0FAB9FDC00290C1 /* lottie-ios-dummy.m */; };
-		E0D17096D3801D5683ADD4D823A12D3E /* AnimationCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CF8DD0EAD9239E17E71A651E85F6F1B /* AnimationCacheProvider.swift */; };
-		E191971060C289CB32E2A243ED1A9D79 /* PassThroughOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D49D7DCCBE493684784ED5ED07DDCDD /* PassThroughOutputNode.swift */; };
-		E4D454584D3C6A2B296DAC18F15A5C2E /* RectNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1C218D87C7CC61195BA58748F729E33 /* RectNode.swift */; };
-		E52835E3A69E0F0D060140EFFCAE45B3 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B164DC44DBB3F1459AA64FB558971489 /* Color.swift */; };
-		E60306AC47675AB65AF2F2C614A81DEE /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B900D485D78832C70E71604360714B5B /* SwiftyTesseractError.swift */; };
-		E663A44D97FFE0F736EA3B73E47A0690 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECFAB2E1A775121975FE2A4C2BA03727 /* CompatibleAnimationKeypath.swift */; };
-		E6A69EB7C716F3284634E00892C40806 /* GroupInterpolator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C41F07A48B68301F7A4BD3191A3F097 /* GroupInterpolator.swift */; };
-		E6C28E5CB16A16EC986B790C1A1A5B64 /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B48136325799EC9B043E73397ADE17FD /* QKMRZParser.swift */; };
-		E718AB84042ECA239584381DB5970552 /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = B479083B17E961CD4A31D6C5CE9727FF /* ShapeRenderLayer.swift */; };
-		E89DDD10D39B7447CEE9B8CE5255FCED /* PathOutputNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 835D98013C8E91380125774C62DE60D1 /* PathOutputNode.swift */; };
-		EBF2506DBF64C42BB02F207763BFC350 /* ItemsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89290653B18FE76B12FC12304EF2F526 /* ItemsExtension.swift */; };
-		EC018DD5D1BE025DDF186DBA64B9420A /* LayerImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94298416C67163B19FC77FF67CCC2661 /* LayerImageProvider.swift */; };
-		ED357987764A814A01E4E438045C4247 /* ImageAsset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F7B03079A6F35440B57F05BD59B01 /* ImageAsset.swift */; };
-		ED5B12BA89B00CA016A5CCB6AEAC6478 /* SizeValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E19EDD29100491901361849E71CF868 /* SizeValueProvider.swift */; };
-		EEF7528D1A1DC76EADC7CB145295235C /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A08886F76C34B3A05A9EAB97F8F2943 /* Group.swift */; };
-		F1645F6BD6B1A5647F7F4F40802FAA05 /* td2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31DBA091BA847D835675AFBFA535D73D /* td2.swift */; };
-		F2FFF322C9048FC0B23B9C49A6E62F35 /* AnimatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69D38E218309C0DA6B7A51FA114485B /* AnimatedButton.swift */; };
-		F3D7ACEB8411814DF1DB0B4AAE90A2FC /* TextAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD5A536A6912CD9CEEC9E7D9E9E1C0A9 /* TextAnimator.swift */; };
-		F50798429B75117D4FEDA66D60D5E5F1 /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A9B80C57FC601C808311CBE3012D267 /* MRZField.swift */; };
-		F734F4F307A445DC8CDD50ED2FBDD8CC /* AnimationPublic.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF3BA7C905B90F7FAC04206E652C22A5 /* AnimationPublic.swift */; };
-		F79C6CF75F09D963BC5B8C2C9680D862 /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7517CEAA081CED6C8D9ECC0F2BA3C2E6 /* NodePropertyMap.swift */; };
-		FA6BCAE8F1D4B6B2376C0FC7E40D57F5 /* TrimPathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF349C4922DD8B965F503DA41DA3E423 /* TrimPathNode.swift */; };
-		FCD9C4D5DBEF4C15588C5EC43B2DF91B /* Pods-QKMRZScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */; };
-		FEC9061C02A16F7449132B5407416BDA /* AnimationContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0EAB2D253E6E5F7CEA95643D0D9BE63 /* AnimationContainer.swift */; };
-		FEFFEFAF099B5368569FA4AFBB05CDBD /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E59D02C91968B2B1D27E2C583B5F774A /* PathNode.swift */; };
-		FF2B32B1BAC49FDA4438824049CC4347 /* LayerDebugging.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9423C3D774E96CE5D1E62A9CB0AAD9F3 /* LayerDebugging.swift */; };
-		FF86C8EB28B703745F812175ACFD803C /* Shape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85121B21EB3415934733B35766C9ECA5 /* Shape.swift */; };
+		0637711CC432FC84B361AB01027F744F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		0895BD0F32401CBD152A493B8619EE4E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		0B90D4E67E64B752E415C0227FBB8BAA /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */; };
+		258F97D25D4210D19DEC0118C50BBEE3 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */; };
+		30B63ABB31D31B203ECF577A4B613F65 /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F0AC8DA2FF52961DFBA9B995A094AB8 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */; };
+		41BA6E81F80EEF15FAD6BF55DADBFFE1 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */; };
+		459369743D5C5DC3D14F9A3D4BA46DA4 /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */; };
+		47D859E65A7F529E0D00DAC941F4C8A3 /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */; };
+		4933C8DCD0A1958CAD07333EF82C0011 /* td3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */; };
+		4EE0D8D1F4032EC2FD6801C9979EDAF4 /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */; };
+		5FFE815EE35488A8BBBC467A98F4184E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
+		61941FB89FAAF5872CF98CC7789C288B /* Pods-QKMRZScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */; };
+		633BD5D93A364F4404EED5243BF70596 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */; };
+		6AF6F812803A66EE13956BB5A5B22F4E /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */; };
+		6B47DC7B0BB820FB64AC372007D77BA9 /* td1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */; };
+		7D571BD1E936FC8FCB5C907EB0EDA8EA /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */; };
+		8845022AF994AC16FE422609A00E7FE9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
+		8BFDCC92AA945E802B2FD7FBCBEFD18B /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */; };
+		9C7F15FA7D7B94637138BCC65307BD7F /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */; };
+		A362B77FBCFCAD79E93757315CE39B36 /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */; };
+		ADB57E490D09267ED50E152AB2215B7E /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */; };
+		B3FEA99DEF08A1A72B0D194926043801 /* SwiftyTesseract-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B586A32221BA51D37840F63E667214B0 /* SwiftyTesseract-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */; };
+		C3A978B4634C8A40CAB5834D45C6D943 /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */; };
+		E60306AC47675AB65AF2F2C614A81DEE /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */; };
+		E6C28E5CB16A16EC986B790C1A1A5B64 /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */; };
+		F1645F6BD6B1A5647F7F4F40802FAA05 /* td2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE969423F57B1E3B27088C482873F00 /* td2.swift */; };
+		F50798429B75117D4FEDA66D60D5E5F1 /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */; };
+		F7776EAF6ABC6311DC992F54214FE26C /* Pods-QKMRZScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		58BBA4630CE5216C291F0D932403DB71 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 5FDA8701204211983085669C4E12E6FE;
-			remoteInfo = SwiftyTesseract;
-		};
-		A31C321BF6BFC76701A55A3BE0AF8CAC /* PBXContainerItemProxy */ = {
+		BCF341A85B4794658B71F7B010F0FEAF /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 44846E5E2172F853B4F70588F8115052;
 			remoteInfo = QKMRZParser;
 		};
-		C786D31099419DD344031702574480E7 /* PBXContainerItemProxy */ = {
+		EA9D72521CF34A52CDD784F9D53BB64E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 0B967D7F8561D42493EE289EC8D450D1;
-			remoteInfo = "lottie-ios";
+			remoteGlobalIDString = 5FDA8701204211983085669C4E12E6FE;
+			remoteInfo = SwiftyTesseract;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0127CC244DBD4282E1622125D7456E62 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = "lottie-swift/src/Public/ImageProvider/AnimationImageProvider.swift"; sourceTree = "<group>"; };
-		016B62477A12CC9AF28369F4646F35BE /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = "lottie-swift/src/Public/DynamicProperties/AnimationKeypath.swift"; sourceTree = "<group>"; };
-		0414EFFC098FC27D4DAA0399E5B5C3E2 /* SwiftyTesseract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.release.xcconfig; sourceTree = "<group>"; };
-		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		064B147B8073B5B67F835FA887B87B0D /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = "lottie-swift/src/Public/iOS/AnimatedSwitch.swift"; sourceTree = "<group>"; };
-		078FCB1220E098B90E5A9F1F86202503 /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
-		07C9E4A69F53BD1DD0AC6AE4ADD2FDF7 /* LottieView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieView.swift; path = "lottie-swift/src/Public/iOS/LottieView.swift"; sourceTree = "<group>"; };
-		08D6DDCA3A1169CAB8435BE2A4C6EFE0 /* Glyph.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Glyph.swift; path = "lottie-swift/src/Private/Model/Text/Glyph.swift"; sourceTree = "<group>"; };
-		09FE1DD5A81CD0C41ED688AC966A4214 /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecompAsset.swift; path = "lottie-swift/src/Private/Model/Assets/PrecompAsset.swift"; sourceTree = "<group>"; };
-		0A50FEFE9CF55ABE1BE6B53D7A24AFC7 /* CompatibleAnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationView.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationView.swift"; sourceTree = "<group>"; };
-		0D0887BD80B54702FB94E8B4B9F1389E /* StrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/StrokeRenderer.swift"; sourceTree = "<group>"; };
-		0D75D80A14F8ADC160FDC7684C0280ED /* FillI.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillI.swift; path = "lottie-swift/src/Private/Model/ShapeItems/FillI.swift"; sourceTree = "<group>"; };
-		0EA31C5E4EA4BBD6799B5C34FED0AC50 /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Merge.swift"; sourceTree = "<group>"; };
-		0EAE8A2603FCB1FDEC49CA46AB668234 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
-		139F3FEE8B94A77BB3C919525A7640C1 /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
-		1B1232DC6BB6178CDF008F4966D44749 /* td3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td3.swift; path = QKMRZParser/Parsers/td3.swift; sourceTree = "<group>"; };
-		1C03227B7E12CDC32E329C5CBBADBF28 /* RecognitionLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognitionLanguage.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/RecognitionLanguage.swift; sourceTree = "<group>"; };
-		1DC5A0780679CB93EEF376734693166B /* SolidCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/SolidCompositionLayer.swift"; sourceTree = "<group>"; };
-		1E281F0887FC7410679FDC63B9C6D366 /* Ellipse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Ellipse.swift"; sourceTree = "<group>"; };
-		203D3FA1E6987336304E3ED1C00B0818 /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
-		21604A28FD9EE9383D8A2B0EF0076D04 /* NullCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NullCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/NullCompositionLayer.swift"; sourceTree = "<group>"; };
-		21B193E728808F99498EC247A09E83B3 /* FillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/FillRenderer.swift"; sourceTree = "<group>"; };
+		07A3A1FF3DF769F0B93A1783B8B780AA /* SwiftyTesseract-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SwiftyTesseract-xcframeworks.sh"; sourceTree = "<group>"; };
+		085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognizedBlock.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/RecognizedBlock.swift; sourceTree = "<group>"; };
+		0B841BAAB7C1406DEDAFBE646AAB1DDD /* libtesseract.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = libtesseract.xcframework; path = SwiftyTesseract/libtesseract.xcframework; sourceTree = "<group>"; };
+		0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
+		0DE969423F57B1E3B27088C482873F00 /* td2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td2.swift; path = QKMRZParser/Parsers/td2.swift; sourceTree = "<group>"; };
+		0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageStringConverter.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageStringConverter.swift; sourceTree = "<group>"; };
+		1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EngineMode.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/EngineMode.swift; sourceTree = "<group>"; };
+		1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
+		1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
 		28325BB70560DB246AB3AE5D24A53B18 /* Pods-QKMRZScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_QKMRZScanner.framework; path = "Pods-QKMRZScanner.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2947931B9A3ABDA4218D6F9B9D980F9D /* PointValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PointValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/PointValueProvider.swift"; sourceTree = "<group>"; };
-		2CB83BB8B89F37D44DE81A6A71033456 /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = "lottie-swift/src/Public/iOS/AnimationSubview.swift"; sourceTree = "<group>"; };
-		2F5FDD4D79A4638DB14E1D68C30D412F /* ColorValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/ColorValueProvider.swift"; sourceTree = "<group>"; };
-		2F7553DAA7FFF7EA65E7C39B048B4D8B /* ColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorExtension.swift; path = "lottie-swift/src/Private/Utility/Primitives/ColorExtension.swift"; sourceTree = "<group>"; };
+		28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
+		29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
 		2F8880A6D4DB469AA47147A0522BD530 /* Pods-QKMRZScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-Info.plist"; sourceTree = "<group>"; };
-		2FD8FF98103F7D5AF1AC4397BECE6E64 /* GradientFillRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientFillRenderer.swift"; sourceTree = "<group>"; };
-		30E698DA27E582FCBC027595C1D28A42 /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift"; sourceTree = "<group>"; };
-		31DBA091BA847D835675AFBFA535D73D /* td2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td2.swift; path = QKMRZParser/Parsers/td2.swift; sourceTree = "<group>"; };
-		345EC05981969E868800E64F9B2F2288 /* Vectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vectors.swift; path = "lottie-swift/src/Public/Primitives/Vectors.swift"; sourceTree = "<group>"; };
-		3495C27A747A5F1217977C2B425FFE68 /* AnimationViewInitializers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationViewInitializers.swift; path = "lottie-swift/src/Public/Animation/AnimationViewInitializers.swift"; sourceTree = "<group>"; };
-		35528E7C31412FC946874BDDC3E219D6 /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
-		35D701680D53C04897CC58CF0715C86E /* Interpolatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Interpolatable.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/Interpolatable.swift"; sourceTree = "<group>"; };
-		36574ACE3F2248EFDC27FC8E9773168E /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/TextLayerModel.swift"; sourceTree = "<group>"; };
-		38300CBBE423F091E239D8B30AFA502B /* SwiftyTesseract-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTesseract-dummy.m"; sourceTree = "<group>"; };
-		456AAD0596D7A5C2940B4CA3189C6532 /* CGFloatExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CGFloatExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/CGFloatExtensions.swift"; sourceTree = "<group>"; };
+		3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
+		459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
 		470B0D69F320CB4435997C818298027D /* Pods-QKMRZScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QKMRZScanner.modulemap"; sourceTree = "<group>"; };
-		4B4F26A302AADFC3ABD2AEAEA306C507 /* Star.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Star.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Star.swift"; sourceTree = "<group>"; };
-		4BCB662DF2A9D48457D5791D2EE37254 /* ImageCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ImageCompositionLayer.swift"; sourceTree = "<group>"; };
-		4C0B6E50CB27AD346EBC96DC15349B2C /* FilepathImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FilepathImageProvider.swift; path = "lottie-swift/src/Public/iOS/FilepathImageProvider.swift"; sourceTree = "<group>"; };
-		4C553883E171B949E76B149FF8754ECA /* VectorsExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VectorsExtensions.swift; path = "lottie-swift/src/Private/Utility/Primitives/VectorsExtensions.swift"; sourceTree = "<group>"; };
-		4DBA4DD2A3091CF60F8DD2FE62EA95DC /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageModelDataSource.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageModelDataSource.swift; sourceTree = "<group>"; };
-		4E27EB948B56F217C11E91456D86BA27 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
-		4E7615F67750941D80C523249A507A99 /* PolygonNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PolygonNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/PolygonNode.swift"; sourceTree = "<group>"; };
-		4EA0D037336C20A8D66E2998B64F56D7 /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = "lottie-swift/src/Public/iOS/AnimatedControl.swift"; sourceTree = "<group>"; };
-		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Lottie.framework; path = "lottie-ios.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		54257B5BA5FFFC229A95511A143A8E5B /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = "lottie-swift/src/Private/Utility/Extensions/StringExtensions.swift"; sourceTree = "<group>"; };
-		545F89710618418FE032D88D701B4F20 /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift"; sourceTree = "<group>"; };
-		54B03014648B27020599E4E9843CC8D6 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
-		5556DFB9311B28338AF86E4A38829FE5 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = "lottie-swift/src/Private/Utility/Primitives/PathElement.swift"; sourceTree = "<group>"; };
-		564193221AC3EEE8306CC1719BD41629 /* EngineMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EngineMode.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/EngineMode.swift; sourceTree = "<group>"; };
-		567CA17E9B8A2C573FF58A8C0DFFFAD3 /* CompositionLayersInitializer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayersInitializer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/CompositionLayersInitializer.swift"; sourceTree = "<group>"; };
-		5704724753D58BE4A6B2B6925E04FE27 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/LayerModel.swift"; sourceTree = "<group>"; };
-		5A08886F76C34B3A05A9EAB97F8F2943 /* Group.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Group.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Group.swift"; sourceTree = "<group>"; };
-		5A9B80C57FC601C808311CBE3012D267 /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
-		5BD8B1E0AC958359A041E8C96E4FB81A /* GradientValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/GradientValueProvider.swift"; sourceTree = "<group>"; };
-		5CF8DD0EAD9239E17E71A651E85F6F1B /* AnimationCacheProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationCacheProvider.swift; path = "lottie-swift/src/Public/AnimationCache/AnimationCacheProvider.swift"; sourceTree = "<group>"; };
-		6024597CFA93B3E3C8BCB1166340A473 /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = "lottie-swift/src/Public/iOS/BundleImageProvider.swift"; sourceTree = "<group>"; };
-		64FF5861C6DCD23E60829877BD817EBA /* SwiftyTesseract-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-umbrella.h"; sourceTree = "<group>"; };
-		66FDD00A3FAD1D878E66581A6ADD67DD /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = "lottie-swift/src/Private/Model/Objects/Transform.swift"; sourceTree = "<group>"; };
-		678DF39A2ACF2344A9DBD4FEC48C2A8B /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
-		6818103C31716A90F18DDF84EC49AA8F /* td1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td1.swift; path = QKMRZParser/Parsers/td1.swift; sourceTree = "<group>"; };
-		69AA846450700CB37806E4D8F8BCC291 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/CompoundBezierPath.swift"; sourceTree = "<group>"; };
-		6F10D1F198A779D7FD0BC740526978BA /* ValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueContainer.swift"; sourceTree = "<group>"; };
-		6FED1BA40C3631470869CCFDA672F508 /* libtesseract.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = libtesseract.xcframework; path = SwiftyTesseract/libtesseract.xcframework; sourceTree = "<group>"; };
-		731E71200527264FB84F75D13F46BF67 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+pathToTrainedData.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
-		7423014173A56E555D91014685CF5BF8 /* LayerTransformNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTransformNode.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTransformNode.swift"; sourceTree = "<group>"; };
-		7517CEAA081CED6C8D9ECC0F2BA3C2E6 /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift"; sourceTree = "<group>"; };
-		7849E000FBA63C528181030608802ADC /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Trim.swift"; sourceTree = "<group>"; };
-		79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		7C41F07A48B68301F7A4BD3191A3F097 /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift"; sourceTree = "<group>"; };
-		7E19EDD29100491901361849E71CF868 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift"; sourceTree = "<group>"; };
-		7EE299385E69A567683F4F0F78C6EE72 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = "lottie-swift/src/Private/Model/Objects/Marker.swift"; sourceTree = "<group>"; };
-		80138191274AAA27318CB161F0A8AF2C /* Asset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Asset.swift; path = "lottie-swift/src/Private/Model/Assets/Asset.swift"; sourceTree = "<group>"; };
-		815CAAAC5AC954D26BD702AED57AE7C5 /* LRUAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LRUAnimationCache.swift; path = "lottie-swift/src/Public/AnimationCache/LRUAnimationCache.swift"; sourceTree = "<group>"; };
+		4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognitionLanguage.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/RecognitionLanguage.swift; sourceTree = "<group>"; };
+		4FDDE51DA8A0D8AC8B4B2CEFE578F1A9 /* SwiftyTesseract-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTesseract-Info.plist"; sourceTree = "<group>"; };
+		513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
+		5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseract.swift; path = SwiftyTesseract/SwiftyTesseract/SwiftyTesseract.swift; sourceTree = "<group>"; };
+		5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
+		63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageModelDataSource.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageModelDataSource.swift; sourceTree = "<group>"; };
+		64FAA583FC1A227218662750DF532813 /* SwiftyTesseract-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-prefix.pch"; sourceTree = "<group>"; };
+		6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.debug.xcconfig; sourceTree = "<group>"; };
+		74AECDB56EC95C1AD5C27D11EF1156CB /* SwiftyTesseract.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTesseract.modulemap; sourceTree = "<group>"; };
+		76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-umbrella.h"; sourceTree = "<group>"; };
+		775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+pathToTrainedData.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
+		81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td3.swift; path = QKMRZParser/Parsers/td3.swift; sourceTree = "<group>"; };
 		8208C69518782F5498D1D7980C9FAA98 /* Pods-QKMRZScanner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QKMRZScanner-acknowledgements.markdown"; sourceTree = "<group>"; };
-		8225102B7D0EB0EF4320903EB32D5E96 /* AnyValueContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueContainer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyValueContainer.swift"; sourceTree = "<group>"; };
-		835882E688341AA57332DEE422012B4B /* KeyframeExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/KeyframeExtensions.swift"; sourceTree = "<group>"; };
-		835D98013C8E91380125774C62DE60D1 /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift"; sourceTree = "<group>"; };
-		840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/CoreGraphics.framework; sourceTree = DEVELOPER_DIR; };
-		85121B21EB3415934733B35766C9ECA5 /* Shape.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Shape.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Shape.swift"; sourceTree = "<group>"; };
-		854F4399A0AA930165C45D7516C6BB46 /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Repeater.swift"; sourceTree = "<group>"; };
-		855FA5B8AFF5A2D01A869F0ABC31C876 /* SwiftyTesseract.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTesseract.modulemap; sourceTree = "<group>"; };
-		8862B538AFB18C5CEA0580437AAD169C /* Mask.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Mask.swift; path = "lottie-swift/src/Private/Model/Objects/Mask.swift"; sourceTree = "<group>"; };
-		889551FCA817115BC35547F2DEA9276E /* DashPattern.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DashPattern.swift; path = "lottie-swift/src/Private/Model/Objects/DashPattern.swift"; sourceTree = "<group>"; };
-		89290653B18FE76B12FC12304EF2F526 /* ItemsExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ItemsExtension.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Extensions/ItemsExtension.swift"; sourceTree = "<group>"; };
-		8AA918F8A0D03CBE08C5F0E3F8651AEA /* SwiftyTesseract-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTesseract-Info.plist"; sourceTree = "<group>"; };
-		8B7F5494FFA4E3185AC331E3E5BDD137 /* lottie-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.release.xcconfig"; sourceTree = "<group>"; };
-		8ECE64F5384880E854B89F8713C146EF /* AnimationTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTextProvider.swift; path = "lottie-swift/src/Public/TextProvider/AnimationTextProvider.swift"; sourceTree = "<group>"; };
-		914A1BBCD1BF5DEB130B31369A2EE300 /* KeyframeInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeInterpolator.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/KeyframeInterpolator.swift"; sourceTree = "<group>"; };
-		915FE7215AB87E4DDEEC93A551DC3F20 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageStringConverter.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageStringConverter.swift; sourceTree = "<group>"; };
-		91E3E5820709D62F6B914541E83CB1D4 /* GroupNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderContainers/GroupNode.swift"; sourceTree = "<group>"; };
-		9403C5FF06B048CCD92194AF6B632686 /* TesseractVariableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TesseractVariableName.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/TesseractVariableName.swift; sourceTree = "<group>"; };
-		9423C3D774E96CE5D1E62A9CB0AAD9F3 /* LayerDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/LayerDebugging.swift"; sourceTree = "<group>"; };
-		94298416C67163B19FC77FF67CCC2661 /* LayerImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerImageProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerImageProvider.swift"; sourceTree = "<group>"; };
-		9623D00F4DE6C389F7F35E46FA0A158F /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
-		973F483F076E98B461ED9CEA3DC4AE75 /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/AnimatorNode.swift"; sourceTree = "<group>"; };
-		9796A7A4FCE81D4E4606304980021B5F /* TextAnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimatorNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/Text/TextAnimatorNode.swift"; sourceTree = "<group>"; };
-		9A2B784EAB068C8E00FFDC338BA8B7BE /* ShapeLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ShapeLayerModel.swift"; sourceTree = "<group>"; };
-		9B7EC76AFACFF98F9DBB6747E9AAFAE8 /* InvertedMatteLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InvertedMatteLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/InvertedMatteLayer.swift"; sourceTree = "<group>"; };
-		9BD7847BA940C0AB820914DD71FDAC58 /* SwiftyTesseract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.debug.xcconfig; sourceTree = "<group>"; };
-		9CD352D3BD2B5742D7E531FBE5BC6658 /* FillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/FillNode.swift"; sourceTree = "<group>"; };
-		9D49D7DCCBE493684784ED5ED07DDCDD /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9DFE47020684BA678C4ED03C2F254E09 /* NodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/NodeProperty.swift"; sourceTree = "<group>"; };
-		9F648BEFCD0F29241BF3A1A2091988E8 /* GradientStroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientStroke.swift"; sourceTree = "<group>"; };
-		A3A03A64AE66255EC6DD602B26BA0959 /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift"; sourceTree = "<group>"; };
-		A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
-		A43448D4D25D265780505095AF3A7B53 /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
-		A69D38E218309C0DA6B7A51FA114485B /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = "lottie-swift/src/Public/iOS/AnimatedButton.swift"; sourceTree = "<group>"; };
-		A715F5B83BB73D445062D1F842066384 /* LayerTextProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerTextProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerTextProvider.swift"; sourceTree = "<group>"; };
-		A7E94C7218DD0290126B32CBCC186F7A /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift"; sourceTree = "<group>"; };
-		A85E277B14A2479528F6C39B3B001CDD /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Rectangle.swift"; sourceTree = "<group>"; };
-		A900FA62C6EF1A68C05B87F491D7A7BD /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
-		A99FAA642A5026A46A6FB886957DABA1 /* AnimationTime.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationTime.swift; path = "lottie-swift/src/Public/Primitives/AnimationTime.swift"; sourceTree = "<group>"; };
-		AB1B8461C4322FC677D60277D858EF6C /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = "lottie-swift/src/Private/Utility/Primitives/BezierPath.swift"; sourceTree = "<group>"; };
-		AD5A536A6912CD9CEEC9E7D9E9E1C0A9 /* TextAnimator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextAnimator.swift; path = "lottie-swift/src/Private/Model/Text/TextAnimator.swift"; sourceTree = "<group>"; };
-		AD72BFE0CE4A36509DAC1B129A690EEE /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/CompositionLayer.swift"; sourceTree = "<group>"; };
-		AEE1CFE671278F524EAEF7174DABC460 /* SolidLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SolidLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/SolidLayerModel.swift"; sourceTree = "<group>"; };
-		B14032BF5C9AC2F1F0FAB9FDC00290C1 /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
-		B163AD57ADD60E3F670A493C77B03C9C /* ShapeTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeTransform.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeTransform.swift"; sourceTree = "<group>"; };
-		B164DC44DBB3F1459AA64FB558971489 /* Color.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Color.swift; path = "lottie-swift/src/Public/Primitives/Color.swift"; sourceTree = "<group>"; };
-		B479083B17E961CD4A31D6C5CE9727FF /* ShapeRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeRenderLayer.swift; path = "lottie-swift/src/Private/NodeRenderSystem/RenderLayers/ShapeRenderLayer.swift"; sourceTree = "<group>"; };
-		B48136325799EC9B043E73397ADE17FD /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
-		B4D6815AA000988775F15A917126B761 /* AnimationFontProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationFontProvider.swift; path = "lottie-swift/src/Public/FontProvider/AnimationFontProvider.swift"; sourceTree = "<group>"; };
-		B4DF55B82CD7FC2B08D01AD36C45A919 /* AnyValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/AnyValueProvider.swift"; sourceTree = "<group>"; };
-		B58FFDF2CDE14ACD9E270DE6FEAE2D45 /* ShapeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/ShapeNode.swift"; sourceTree = "<group>"; };
-		B8D39B593C6F2AA42D774AB463269366 /* AnimationContext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContext.swift; path = "lottie-swift/src/Private/Utility/Helpers/AnimationContext.swift"; sourceTree = "<group>"; };
-		B900D485D78832C70E71604360714B5B /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseractError.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/SwiftyTesseractError.swift; sourceTree = "<group>"; };
-		BA0AC5F55BCFDFA7C44CC12CB28AB7DD /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = "lottie-swift/src/Private/Utility/Extensions/AnimationKeypathExtension.swift"; sourceTree = "<group>"; };
-		BA84E0C12209B1D783F26D4A52DE93C5 /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift"; sourceTree = "<group>"; };
-		BB4FDF89602D472242135581ECBFCFFD /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/ImageLayerModel.swift"; sourceTree = "<group>"; };
-		BCCF83135169E267D0080E34E9B1FC65 /* GroupOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupOutputNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/OutputNodes/GroupOutputNode.swift"; sourceTree = "<group>"; };
-		BE10DE8C8435312063B47DDBE51D98F1 /* ShapeCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/ShapeCompositionLayer.swift"; sourceTree = "<group>"; };
-		C08E589AD4A6F8353D8D75657508636E /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
-		C095A236C7DB795C37938F1FE0AFAD41 /* CurveVertex.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CurveVertex.swift; path = "lottie-swift/src/Private/Utility/Primitives/CurveVertex.swift"; sourceTree = "<group>"; };
-		C2AECED0CA527C73BF69D62238F041D3 /* PreCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/PreCompositionLayer.swift"; sourceTree = "<group>"; };
-		C327E549D379FA203E103ACCC3FF143D /* AnyNodeProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnyNodeProperty.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/AnyNodeProperty.swift"; sourceTree = "<group>"; };
-		C52CC30198E67F6B4333134B21C6CF65 /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/StarNode.swift"; sourceTree = "<group>"; };
-		C75B2D4B3627C8C2322424096D389D87 /* TextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayer.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/TextLayer.swift"; sourceTree = "<group>"; };
+		A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
+		AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.release.xcconfig; sourceTree = "<group>"; };
+		B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseractError.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/SwiftyTesseractError.swift; sourceTree = "<group>"; };
 		C7ECC162FF7E57C6E878AC9C03CCEFEB /* Pods-QKMRZScanner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-acknowledgements.plist"; sourceTree = "<group>"; };
-		C8BF4EDC45B22368291427B348280099 /* Stroke.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Stroke.swift; path = "lottie-swift/src/Private/Model/ShapeItems/Stroke.swift"; sourceTree = "<group>"; };
-		C90F7B03079A6F35440B57F05BD59B01 /* ImageAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageAsset.swift; path = "lottie-swift/src/Private/Model/Assets/ImageAsset.swift"; sourceTree = "<group>"; };
-		C93CEFB9F6751B5662F23191E0208820 /* GradientStrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientStrokeNode.swift"; sourceTree = "<group>"; };
-		C9A2876101E7C34B5B45BFF316F1B24A /* AnimatorNodeDebugging.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNodeDebugging.swift; path = "lottie-swift/src/Private/Utility/Debugging/AnimatorNodeDebugging.swift"; sourceTree = "<group>"; };
-		C9E12A2E87E0BA9AE4016E53CF97301A /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = "lottie-swift/src/Private/Model/Keyframes/Keyframe.swift"; sourceTree = "<group>"; };
-		CA2F5CBAE84485B509BFE4BB93693B04 /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
+		CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/BoundingBox.swift; sourceTree = "<group>"; };
 		CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QKMRZScanner-dummy.m"; sourceTree = "<group>"; };
-		CD67049A06D5B09CD4849FFFC016E92C /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = "lottie-swift/src/Private/Utility/Interpolatable/InterpolatableExtensions.swift"; sourceTree = "<group>"; };
-		CF3BA7C905B90F7FAC04206E652C22A5 /* AnimationPublic.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationPublic.swift; path = "lottie-swift/src/Public/Animation/AnimationPublic.swift"; sourceTree = "<group>"; };
 		D0579590D0C93205406E0F132CC75E5C /* Pods-QKMRZScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.release.xcconfig"; sourceTree = "<group>"; };
-		D15947AB0FD4FBFA5AC60F5610B6F942 /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = "lottie-swift/src/Private/Model/ShapeItems/GradientFill.swift"; sourceTree = "<group>"; };
-		D1C218D87C7CC61195BA58748F729E33 /* RectNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/PathNodes/RectNode.swift"; sourceTree = "<group>"; };
-		D2F66421B84148791037E3DF97A50429 /* ShapeItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItem.swift; path = "lottie-swift/src/Private/Model/ShapeItems/ShapeItem.swift"; sourceTree = "<group>"; };
-		D351439C8F07FFABEE9028D771F19695 /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = "lottie-swift/src/Private/Model/Layers/PreCompLayerModel.swift"; sourceTree = "<group>"; };
-		D9F5D4ABC171C3BC57F1029F327183FB /* lottie-ios-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "lottie-ios-Info.plist"; sourceTree = "<group>"; };
-		DB8001FBFC4178FA0D5ED71EFA87FBF2 /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/RenderNode.swift"; sourceTree = "<group>"; };
-		DC7BEC8D51B489408A14467CDAA89EE2 /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = "lottie-swift/src/Private/Model/Assets/AssetLibrary.swift"; sourceTree = "<group>"; };
-		DCF256D111D81B676A425B189EFF67BE /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultIteratorLevel.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/ResultIteratorLevel.swift; sourceTree = "<group>"; };
-		DF0CB6D0879E69EC9546EF25BBFDA5E3 /* KeyframeGroup.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeGroup.swift; path = "lottie-swift/src/Private/Model/Keyframes/KeyframeGroup.swift"; sourceTree = "<group>"; };
-		E08B702DE458351AC1ACD0E478A3D660 /* FloatValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatValueProvider.swift; path = "lottie-swift/src/Public/DynamicProperties/ValueProviders/FloatValueProvider.swift"; sourceTree = "<group>"; };
-		E0EAB2D253E6E5F7CEA95643D0D9BE63 /* AnimationContainer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationContainer.swift; path = "lottie-swift/src/Private/LayerContainers/AnimationContainer.swift"; sourceTree = "<group>"; };
-		E0FCB8F57E58C830BAB4F780F27A2D49 /* TextCompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextCompositionLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/TextCompositionLayer.swift"; sourceTree = "<group>"; };
-		E16A76228A0241F4C612D897BEB56234 /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
-		E31314AF9923E75B98D1F0F4ABA7DC5E /* MathKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MathKit.swift; path = "lottie-swift/src/Private/Utility/Extensions/MathKit.swift"; sourceTree = "<group>"; };
+		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TesseractVariableName.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/TesseractVariableName.swift; sourceTree = "<group>"; };
+		D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultIteratorLevel.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/ResultIteratorLevel.swift; sourceTree = "<group>"; };
+		D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
 		E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QKMRZScanner-umbrella.h"; sourceTree = "<group>"; };
-		E37CDA33B28F73EFA0EF3A6D3DCC736C /* KeypathSearchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeypathSearchable.swift; path = "lottie-swift/src/Private/NodeRenderSystem/NodeProperties/Protocols/KeypathSearchable.swift"; sourceTree = "<group>"; };
-		E37DC893F07CAE5227C4A661E6213C31 /* KeyedDecodingContainerExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyedDecodingContainerExtensions.swift; path = "lottie-swift/src/Private/Model/Extensions/KeyedDecodingContainerExtensions.swift"; sourceTree = "<group>"; };
-		E3920A3607ED284958454C1F42E3D524 /* MaskContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskContainerLayer.swift; path = "lottie-swift/src/Private/LayerContainers/CompLayers/MaskContainerLayer.swift"; sourceTree = "<group>"; };
-		E3CB1857E22CC6FCC50CD2CDDF82DDC6 /* LayerFontProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerFontProvider.swift; path = "lottie-swift/src/Private/LayerContainers/Utility/LayerFontProvider.swift"; sourceTree = "<group>"; };
-		E507D5900DF11419806922E80D8F9957 /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/BoundingBox.swift; sourceTree = "<group>"; };
 		E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QKMRZParser.framework; path = QKMRZParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E59D02C91968B2B1D27E2C583B5F774A /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Protocols/PathNode.swift"; sourceTree = "<group>"; };
-		E6D057E72E37906D85927C76929A073F /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = "lottie-swift/src/Public/iOS/UIColorExtension.swift"; sourceTree = "<group>"; };
-		EC357BCFB6423B31BD257FFFAD77E4F6 /* AnimationView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationView.swift; path = "lottie-swift/src/Public/Animation/AnimationView.swift"; sourceTree = "<group>"; };
-		ECFAB2E1A775121975FE2A4C2BA03727 /* CompatibleAnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibleAnimationKeypath.swift; path = "lottie-swift/src/Public/iOS/Compatibility/CompatibleAnimationKeypath.swift"; sourceTree = "<group>"; };
-		EDFAD1FAFDCA74117D944ADDFF6AE8ED /* Animation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animation.swift; path = "lottie-swift/src/Private/Model/Animation.swift"; sourceTree = "<group>"; };
-		EE250A734B4AA5E63BCC8398A38E5C86 /* Font.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Font.swift; path = "lottie-swift/src/Private/Model/Text/Font.swift"; sourceTree = "<group>"; };
-		F210155F097B8F055F68DEA95E1CD133 /* SwiftyTesseract-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-prefix.pch"; sourceTree = "<group>"; };
-		F6A801D4FFB44253316BA6C7BD20F7D1 /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
+		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
+		F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
 		F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyTesseract.framework; path = SwiftyTesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7AD7F8C354159E6937BEC47015214C0 /* RecognizedBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognizedBlock.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/RecognizedBlock.swift; sourceTree = "<group>"; };
-		FA35B72DA40979B6B57CA4391930F6A8 /* SwiftyTesseract-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SwiftyTesseract-xcframeworks.sh"; sourceTree = "<group>"; };
-		FC711CD60D70E2E9FDD072C9F0858158 /* TextDocument.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextDocument.swift; path = "lottie-swift/src/Private/Model/Text/TextDocument.swift"; sourceTree = "<group>"; };
-		FE5CF39409E6786B5B0E2A14CC920AC8 /* GradientFillNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFillNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/RenderNodes/GradientFillNode.swift"; sourceTree = "<group>"; };
-		FF349C4922DD8B965F503DA41DA3E423 /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = "lottie-swift/src/Private/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift"; sourceTree = "<group>"; };
-		FFD8A51CDF46D1202FE44D89DB4C1756 /* SwiftyTesseract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseract.swift; path = SwiftyTesseract/SwiftyTesseract/SwiftyTesseract.swift; sourceTree = "<group>"; };
+		F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTesseract-dummy.m"; sourceTree = "<group>"; };
+		FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td1.swift; path = QKMRZParser/Parsers/td1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2F60C6764CA449F03DDE3C9035E18C62 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				A090A400F77C7D72305DE29D29AC564C /* CoreGraphics.framework in Frameworks */,
-				DB64698482B57470F644E7A916619EE5 /* Foundation.framework in Frameworks */,
-				934466F4C4B07C006BC4EEE5B17E926C /* QuartzCore.framework in Frameworks */,
-				29AC5563A65E92E1D5A39C76A94558FE /* UIKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		723B530F814076C10689DC7AE567A4B6 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0895BD0F32401CBD152A493B8619EE4E /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		ED51F5BB127110F5ED880EC7C3657CD5 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				06AFEBE3AECF87F127B004715517E6D0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -429,58 +127,20 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F332E7FF020194C7479394B348F99BAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5FFE815EE35488A8BBBC467A98F4184E /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06F34D52A1F22948C4472C86675C24BC /* Frameworks */ = {
+		0FC5607056B64C1C7A264607B1D46F36 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6FED1BA40C3631470869CCFDA672F508 /* libtesseract.xcframework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		078BE950A31A780A3DAE67930F9997EE /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F6A801D4FFB44253316BA6C7BD20F7D1 /* lottie-ios.modulemap */,
-				B14032BF5C9AC2F1F0FAB9FDC00290C1 /* lottie-ios-dummy.m */,
-				D9F5D4ABC171C3BC57F1029F327183FB /* lottie-ios-Info.plist */,
-				678DF39A2ACF2344A9DBD4FEC48C2A8B /* lottie-ios-prefix.pch */,
-				4E27EB948B56F217C11E91456D86BA27 /* lottie-ios-umbrella.h */,
-				A900FA62C6EF1A68C05B87F491D7A7BD /* lottie-ios.debug.xcconfig */,
-				8B7F5494FFA4E3185AC331E3E5BDD137 /* lottie-ios.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/lottie-ios";
-			sourceTree = "<group>";
-		};
-		12577C1C74C4C00FCBDD4CF71B38C95E /* SwiftyTesseract */ = {
-			isa = PBXGroup;
-			children = (
-				E507D5900DF11419806922E80D8F9957 /* BoundingBox.swift */,
-				731E71200527264FB84F75D13F46BF67 /* Bundle+pathToTrainedData.swift */,
-				564193221AC3EEE8306CC1719BD41629 /* EngineMode.swift */,
-				4DBA4DD2A3091CF60F8DD2FE62EA95DC /* LanguageModelDataSource.swift */,
-				915FE7215AB87E4DDEEC93A551DC3F20 /* LanguageStringConverter.swift */,
-				1C03227B7E12CDC32E329C5CBBADBF28 /* RecognitionLanguage.swift */,
-				F7AD7F8C354159E6937BEC47015214C0 /* RecognizedBlock.swift */,
-				DCF256D111D81B676A425B189EFF67BE /* ResultIteratorLevel.swift */,
-				C08E589AD4A6F8353D8D75657508636E /* String+Extensions.swift */,
-				FFD8A51CDF46D1202FE44D89DB4C1756 /* SwiftyTesseract.swift */,
-				B900D485D78832C70E71604360714B5B /* SwiftyTesseractError.swift */,
-				9403C5FF06B048CCD92194AF6B632686 /* TesseractVariableName.swift */,
-				06F34D52A1F22948C4472C86675C24BC /* Frameworks */,
-				5DCB6FB7C0FA3408A8118B1000108FA0 /* Support Files */,
-			);
-			name = SwiftyTesseract;
-			path = SwiftyTesseract;
-			sourceTree = "<group>";
-		};
-		4490A009E030C2A95CA445DFACCCB1F1 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
 				28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */,
 				E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser.framework */,
 				F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract.framework */,
@@ -488,35 +148,37 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		5AAE777422F7FF3B0C57E0231B3D4ADD /* Support Files */ = {
+		1045FBB312C2C528F5F1F44ECAAC0657 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				9623D00F4DE6C389F7F35E46FA0A158F /* QKMRZParser.modulemap */,
-				A43448D4D25D265780505095AF3A7B53 /* QKMRZParser-dummy.m */,
-				CA2F5CBAE84485B509BFE4BB93693B04 /* QKMRZParser-Info.plist */,
-				E16A76228A0241F4C612D897BEB56234 /* QKMRZParser-prefix.pch */,
-				139F3FEE8B94A77BB3C919525A7640C1 /* QKMRZParser-umbrella.h */,
-				0EAE8A2603FCB1FDEC49CA46AB668234 /* QKMRZParser.debug.xcconfig */,
-				078FCB1220E098B90E5A9F1F86202503 /* QKMRZParser.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QKMRZParser";
-			sourceTree = "<group>";
-		};
-		5DCB6FB7C0FA3408A8118B1000108FA0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				855FA5B8AFF5A2D01A869F0ABC31C876 /* SwiftyTesseract.modulemap */,
-				38300CBBE423F091E239D8B30AFA502B /* SwiftyTesseract-dummy.m */,
-				8AA918F8A0D03CBE08C5F0E3F8651AEA /* SwiftyTesseract-Info.plist */,
-				F210155F097B8F055F68DEA95E1CD133 /* SwiftyTesseract-prefix.pch */,
-				64FF5861C6DCD23E60829877BD817EBA /* SwiftyTesseract-umbrella.h */,
-				FA35B72DA40979B6B57CA4391930F6A8 /* SwiftyTesseract-xcframeworks.sh */,
-				9BD7847BA940C0AB820914DD71FDAC58 /* SwiftyTesseract.debug.xcconfig */,
-				0414EFFC098FC27D4DAA0399E5B5C3E2 /* SwiftyTesseract.release.xcconfig */,
+				74AECDB56EC95C1AD5C27D11EF1156CB /* SwiftyTesseract.modulemap */,
+				F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */,
+				4FDDE51DA8A0D8AC8B4B2CEFE578F1A9 /* SwiftyTesseract-Info.plist */,
+				64FAA583FC1A227218662750DF532813 /* SwiftyTesseract-prefix.pch */,
+				76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */,
+				07A3A1FF3DF769F0B93A1783B8B780AA /* SwiftyTesseract-xcframeworks.sh */,
+				6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */,
+				AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */,
 			);
 			name = "Support Files";
 			path = "../Target Support Files/SwiftyTesseract";
+			sourceTree = "<group>";
+		};
+		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */,
+				D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */,
+			);
+			name = iOS;
 			sourceTree = "<group>";
 		};
 		5ECEAEFA59DC20BDF84F5307D6D47AB6 /* Pods-QKMRZScanner */ = {
@@ -535,6 +197,43 @@
 			path = "Target Support Files/Pods-QKMRZScanner";
 			sourceTree = "<group>";
 		};
+		67CAFA9982095848019CC347E5D93773 /* SwiftyTesseract */ = {
+			isa = PBXGroup;
+			children = (
+				CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */,
+				775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */,
+				1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */,
+				63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */,
+				0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */,
+				4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */,
+				085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */,
+				D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */,
+				0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */,
+				5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */,
+				B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */,
+				D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */,
+				BE6119ACF001181D8195957D2C13CDEC /* Frameworks */,
+				1045FBB312C2C528F5F1F44ECAAC0657 /* Support Files */,
+			);
+			name = SwiftyTesseract;
+			path = SwiftyTesseract;
+			sourceTree = "<group>";
+		};
+		82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */,
+				F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */,
+				5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */,
+				3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */,
+				A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */,
+				F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */,
+				459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QKMRZParser";
+			sourceTree = "<group>";
+		};
 		95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -543,218 +242,59 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9D257BF44175BAD5A16573445B68A353 /* Pods */ = {
+		A3750814BB6632E7E30A0274B3200B6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E9B5C652D16B37AF7670202F2392EF89 /* lottie-ios */,
-				BD035D4DE8CFBB2177870E97CDB4D8EC /* QKMRZParser */,
-				12577C1C74C4C00FCBDD4CF71B38C95E /* SwiftyTesseract */,
+				F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */,
+				67CAFA9982095848019CC347E5D93773 /* SwiftyTesseract */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+		BE6119ACF001181D8195957D2C13CDEC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */,
+				0B841BAAB7C1406DEDAFBE646AAB1DDD /* libtesseract.xcframework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		BD035D4DE8CFBB2177870E97CDB4D8EC /* QKMRZParser */ = {
-			isa = PBXGroup;
-			children = (
-				5A9B80C57FC601C808311CBE3012D267 /* MRZField.swift */,
-				35528E7C31412FC946874BDDC3E219D6 /* MRZFieldFormatter.swift */,
-				B48136325799EC9B043E73397ADE17FD /* QKMRZParser.swift */,
-				203D3FA1E6987336304E3ED1C00B0818 /* QKMRZResult.swift */,
-				54B03014648B27020599E4E9843CC8D6 /* String-Ext.swift */,
-				6818103C31716A90F18DDF84EC49AA8F /* td1.swift */,
-				31DBA091BA847D835675AFBFA535D73D /* td2.swift */,
-				1B1232DC6BB6178CDF008F4966D44749 /* td3.swift */,
-				5AAE777422F7FF3B0C57E0231B3D4ADD /* Support Files */,
-			);
-			name = QKMRZParser;
-			path = QKMRZParser;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				9D257BF44175BAD5A16573445B68A353 /* Pods */,
-				4490A009E030C2A95CA445DFACCCB1F1 /* Products */,
+				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				A3750814BB6632E7E30A0274B3200B6C /* Pods */,
+				0FC5607056B64C1C7A264607B1D46F36 /* Products */,
 				95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		E9B5C652D16B37AF7670202F2392EF89 /* lottie-ios */ = {
+		F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */ = {
 			isa = PBXGroup;
 			children = (
-				A69D38E218309C0DA6B7A51FA114485B /* AnimatedButton.swift */,
-				4EA0D037336C20A8D66E2998B64F56D7 /* AnimatedControl.swift */,
-				064B147B8073B5B67F835FA887B87B0D /* AnimatedSwitch.swift */,
-				EDFAD1FAFDCA74117D944ADDFF6AE8ED /* Animation.swift */,
-				5CF8DD0EAD9239E17E71A651E85F6F1B /* AnimationCacheProvider.swift */,
-				E0EAB2D253E6E5F7CEA95643D0D9BE63 /* AnimationContainer.swift */,
-				B8D39B593C6F2AA42D774AB463269366 /* AnimationContext.swift */,
-				B4D6815AA000988775F15A917126B761 /* AnimationFontProvider.swift */,
-				0127CC244DBD4282E1622125D7456E62 /* AnimationImageProvider.swift */,
-				016B62477A12CC9AF28369F4646F35BE /* AnimationKeypath.swift */,
-				BA0AC5F55BCFDFA7C44CC12CB28AB7DD /* AnimationKeypathExtension.swift */,
-				CF3BA7C905B90F7FAC04206E652C22A5 /* AnimationPublic.swift */,
-				2CB83BB8B89F37D44DE81A6A71033456 /* AnimationSubview.swift */,
-				8ECE64F5384880E854B89F8713C146EF /* AnimationTextProvider.swift */,
-				A99FAA642A5026A46A6FB886957DABA1 /* AnimationTime.swift */,
-				EC357BCFB6423B31BD257FFFAD77E4F6 /* AnimationView.swift */,
-				3495C27A747A5F1217977C2B425FFE68 /* AnimationViewInitializers.swift */,
-				973F483F076E98B461ED9CEA3DC4AE75 /* AnimatorNode.swift */,
-				C9A2876101E7C34B5B45BFF316F1B24A /* AnimatorNodeDebugging.swift */,
-				C327E549D379FA203E103ACCC3FF143D /* AnyNodeProperty.swift */,
-				8225102B7D0EB0EF4320903EB32D5E96 /* AnyValueContainer.swift */,
-				B4DF55B82CD7FC2B08D01AD36C45A919 /* AnyValueProvider.swift */,
-				80138191274AAA27318CB161F0A8AF2C /* Asset.swift */,
-				DC7BEC8D51B489408A14467CDAA89EE2 /* AssetLibrary.swift */,
-				AB1B8461C4322FC677D60277D858EF6C /* BezierPath.swift */,
-				6024597CFA93B3E3C8BCB1166340A473 /* BundleImageProvider.swift */,
-				456AAD0596D7A5C2940B4CA3189C6532 /* CGFloatExtensions.swift */,
-				B164DC44DBB3F1459AA64FB558971489 /* Color.swift */,
-				2F7553DAA7FFF7EA65E7C39B048B4D8B /* ColorExtension.swift */,
-				2F5FDD4D79A4638DB14E1D68C30D412F /* ColorValueProvider.swift */,
-				ECFAB2E1A775121975FE2A4C2BA03727 /* CompatibleAnimationKeypath.swift */,
-				0A50FEFE9CF55ABE1BE6B53D7A24AFC7 /* CompatibleAnimationView.swift */,
-				AD72BFE0CE4A36509DAC1B129A690EEE /* CompositionLayer.swift */,
-				567CA17E9B8A2C573FF58A8C0DFFFAD3 /* CompositionLayersInitializer.swift */,
-				69AA846450700CB37806E4D8F8BCC291 /* CompoundBezierPath.swift */,
-				C095A236C7DB795C37938F1FE0AFAD41 /* CurveVertex.swift */,
-				889551FCA817115BC35547F2DEA9276E /* DashPattern.swift */,
-				1E281F0887FC7410679FDC63B9C6D366 /* Ellipse.swift */,
-				A3A03A64AE66255EC6DD602B26BA0959 /* EllipseNode.swift */,
-				4C0B6E50CB27AD346EBC96DC15349B2C /* FilepathImageProvider.swift */,
-				0D75D80A14F8ADC160FDC7684C0280ED /* FillI.swift */,
-				9CD352D3BD2B5742D7E531FBE5BC6658 /* FillNode.swift */,
-				21B193E728808F99498EC247A09E83B3 /* FillRenderer.swift */,
-				E08B702DE458351AC1ACD0E478A3D660 /* FloatValueProvider.swift */,
-				EE250A734B4AA5E63BCC8398A38E5C86 /* Font.swift */,
-				08D6DDCA3A1169CAB8435BE2A4C6EFE0 /* Glyph.swift */,
-				D15947AB0FD4FBFA5AC60F5610B6F942 /* GradientFill.swift */,
-				FE5CF39409E6786B5B0E2A14CC920AC8 /* GradientFillNode.swift */,
-				2FD8FF98103F7D5AF1AC4397BECE6E64 /* GradientFillRenderer.swift */,
-				9F648BEFCD0F29241BF3A1A2091988E8 /* GradientStroke.swift */,
-				C93CEFB9F6751B5662F23191E0208820 /* GradientStrokeNode.swift */,
-				545F89710618418FE032D88D701B4F20 /* GradientStrokeRenderer.swift */,
-				5BD8B1E0AC958359A041E8C96E4FB81A /* GradientValueProvider.swift */,
-				5A08886F76C34B3A05A9EAB97F8F2943 /* Group.swift */,
-				7C41F07A48B68301F7A4BD3191A3F097 /* GroupInterpolator.swift */,
-				91E3E5820709D62F6B914541E83CB1D4 /* GroupNode.swift */,
-				BCCF83135169E267D0080E34E9B1FC65 /* GroupOutputNode.swift */,
-				C90F7B03079A6F35440B57F05BD59B01 /* ImageAsset.swift */,
-				4BCB662DF2A9D48457D5791D2EE37254 /* ImageCompositionLayer.swift */,
-				BB4FDF89602D472242135581ECBFCFFD /* ImageLayerModel.swift */,
-				35D701680D53C04897CC58CF0715C86E /* Interpolatable.swift */,
-				CD67049A06D5B09CD4849FFFC016E92C /* InterpolatableExtensions.swift */,
-				9B7EC76AFACFF98F9DBB6747E9AAFAE8 /* InvertedMatteLayer.swift */,
-				89290653B18FE76B12FC12304EF2F526 /* ItemsExtension.swift */,
-				E37DC893F07CAE5227C4A661E6213C31 /* KeyedDecodingContainerExtensions.swift */,
-				C9E12A2E87E0BA9AE4016E53CF97301A /* Keyframe.swift */,
-				835882E688341AA57332DEE422012B4B /* KeyframeExtensions.swift */,
-				DF0CB6D0879E69EC9546EF25BBFDA5E3 /* KeyframeGroup.swift */,
-				914A1BBCD1BF5DEB130B31369A2EE300 /* KeyframeInterpolator.swift */,
-				E37CDA33B28F73EFA0EF3A6D3DCC736C /* KeypathSearchable.swift */,
-				9423C3D774E96CE5D1E62A9CB0AAD9F3 /* LayerDebugging.swift */,
-				E3CB1857E22CC6FCC50CD2CDDF82DDC6 /* LayerFontProvider.swift */,
-				94298416C67163B19FC77FF67CCC2661 /* LayerImageProvider.swift */,
-				5704724753D58BE4A6B2B6925E04FE27 /* LayerModel.swift */,
-				A715F5B83BB73D445062D1F842066384 /* LayerTextProvider.swift */,
-				7423014173A56E555D91014685CF5BF8 /* LayerTransformNode.swift */,
-				07C9E4A69F53BD1DD0AC6AE4ADD2FDF7 /* LottieView.swift */,
-				815CAAAC5AC954D26BD702AED57AE7C5 /* LRUAnimationCache.swift */,
-				7EE299385E69A567683F4F0F78C6EE72 /* Marker.swift */,
-				8862B538AFB18C5CEA0580437AAD169C /* Mask.swift */,
-				E3920A3607ED284958454C1F42E3D524 /* MaskContainerLayer.swift */,
-				E31314AF9923E75B98D1F0F4ABA7DC5E /* MathKit.swift */,
-				0EA31C5E4EA4BBD6799B5C34FED0AC50 /* Merge.swift */,
-				9DFE47020684BA678C4ED03C2F254E09 /* NodeProperty.swift */,
-				7517CEAA081CED6C8D9ECC0F2BA3C2E6 /* NodePropertyMap.swift */,
-				21604A28FD9EE9383D8A2B0EF0076D04 /* NullCompositionLayer.swift */,
-				9D49D7DCCBE493684784ED5ED07DDCDD /* PassThroughOutputNode.swift */,
-				5556DFB9311B28338AF86E4A38829FE5 /* PathElement.swift */,
-				E59D02C91968B2B1D27E2C583B5F774A /* PathNode.swift */,
-				835D98013C8E91380125774C62DE60D1 /* PathOutputNode.swift */,
-				2947931B9A3ABDA4218D6F9B9D980F9D /* PointValueProvider.swift */,
-				4E7615F67750941D80C523249A507A99 /* PolygonNode.swift */,
-				09FE1DD5A81CD0C41ED688AC966A4214 /* PrecompAsset.swift */,
-				D351439C8F07FFABEE9028D771F19695 /* PreCompLayerModel.swift */,
-				C2AECED0CA527C73BF69D62238F041D3 /* PreCompositionLayer.swift */,
-				A85E277B14A2479528F6C39B3B001CDD /* Rectangle.swift */,
-				D1C218D87C7CC61195BA58748F729E33 /* RectNode.swift */,
-				DB8001FBFC4178FA0D5ED71EFA87FBF2 /* RenderNode.swift */,
-				854F4399A0AA930165C45D7516C6BB46 /* Repeater.swift */,
-				85121B21EB3415934733B35766C9ECA5 /* Shape.swift */,
-				BE10DE8C8435312063B47DDBE51D98F1 /* ShapeCompositionLayer.swift */,
-				30E698DA27E582FCBC027595C1D28A42 /* ShapeContainerLayer.swift */,
-				D2F66421B84148791037E3DF97A50429 /* ShapeItem.swift */,
-				9A2B784EAB068C8E00FFDC338BA8B7BE /* ShapeLayerModel.swift */,
-				B58FFDF2CDE14ACD9E270DE6FEAE2D45 /* ShapeNode.swift */,
-				B479083B17E961CD4A31D6C5CE9727FF /* ShapeRenderLayer.swift */,
-				B163AD57ADD60E3F670A493C77B03C9C /* ShapeTransform.swift */,
-				BA84E0C12209B1D783F26D4A52DE93C5 /* SingleValueProvider.swift */,
-				7E19EDD29100491901361849E71CF868 /* SizeValueProvider.swift */,
-				1DC5A0780679CB93EEF376734693166B /* SolidCompositionLayer.swift */,
-				AEE1CFE671278F524EAEF7174DABC460 /* SolidLayerModel.swift */,
-				4B4F26A302AADFC3ABD2AEAEA306C507 /* Star.swift */,
-				C52CC30198E67F6B4333134B21C6CF65 /* StarNode.swift */,
-				54257B5BA5FFFC229A95511A143A8E5B /* StringExtensions.swift */,
-				C8BF4EDC45B22368291427B348280099 /* Stroke.swift */,
-				A7E94C7218DD0290126B32CBCC186F7A /* StrokeNode.swift */,
-				0D0887BD80B54702FB94E8B4B9F1389E /* StrokeRenderer.swift */,
-				AD5A536A6912CD9CEEC9E7D9E9E1C0A9 /* TextAnimator.swift */,
-				9796A7A4FCE81D4E4606304980021B5F /* TextAnimatorNode.swift */,
-				E0FCB8F57E58C830BAB4F780F27A2D49 /* TextCompositionLayer.swift */,
-				FC711CD60D70E2E9FDD072C9F0858158 /* TextDocument.swift */,
-				C75B2D4B3627C8C2322424096D389D87 /* TextLayer.swift */,
-				36574ACE3F2248EFDC27FC8E9773168E /* TextLayerModel.swift */,
-				66FDD00A3FAD1D878E66581A6ADD67DD /* Transform.swift */,
-				7849E000FBA63C528181030608802ADC /* Trim.swift */,
-				FF349C4922DD8B965F503DA41DA3E423 /* TrimPathNode.swift */,
-				E6D057E72E37906D85927C76929A073F /* UIColorExtension.swift */,
-				6F10D1F198A779D7FD0BC740526978BA /* ValueContainer.swift */,
-				345EC05981969E868800E64F9B2F2288 /* Vectors.swift */,
-				4C553883E171B949E76B149FF8754ECA /* VectorsExtensions.swift */,
-				078BE950A31A780A3DAE67930F9997EE /* Support Files */,
+				D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */,
+				28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */,
+				29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */,
+				1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */,
+				1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */,
+				FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */,
+				0DE969423F57B1E3B27088C482873F00 /* td2.swift */,
+				81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */,
+				82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */,
 			);
-			name = "lottie-ios";
-			path = "lottie-ios";
-			sourceTree = "<group>";
-		};
-		F9D206BABE81E6BF0B9B23880B238CC7 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				840FA0B75AF62912A30DDC66B647ED98 /* CoreGraphics.framework */,
-				79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */,
-				A42DBD2F42D55606EEBA514009498B87 /* QuartzCore.framework */,
-				04D60AC13D33197690A05C641925DDDA /* UIKit.framework */,
-			);
-			name = iOS;
+			name = QKMRZParser;
+			path = QKMRZParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		D29FF6455545C2F4D0145EDD2FED44B6 /* Headers */ = {
+		E9C5D6B5B6BEE160486E9F7A2EF4992F /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				97431400B8DFFE173E415A8B9C4F1C5E /* lottie-ios-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		EA1D732E70D77B862C5454EBE2DA35CD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8ABDB3C677973B869BABD0E654F8C8B2 /* Pods-QKMRZScanner-umbrella.h in Headers */,
+				F7776EAF6ABC6311DC992F54214FE26C /* Pods-QKMRZScanner-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -779,41 +319,22 @@
 /* Begin PBXNativeTarget section */
 		02AF989565A12ECBC4DF73E132D043A6 /* Pods-QKMRZScanner */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3BD799479574A591FBD5CA3869CB5A3F /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */;
+			buildConfigurationList = 92AF16508354BFD4BC3AA0B682ADCEC3 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */;
 			buildPhases = (
-				EA1D732E70D77B862C5454EBE2DA35CD /* Headers */,
-				25801AD09931DEF8342425A05230A56B /* Sources */,
-				ED51F5BB127110F5ED880EC7C3657CD5 /* Frameworks */,
-				D5BF8CF8777B0FF6F695F9089E4354A9 /* Resources */,
+				E9C5D6B5B6BEE160486E9F7A2EF4992F /* Headers */,
+				9B35C125CCC365C246BCEE91AF31E722 /* Sources */,
+				F332E7FF020194C7479394B348F99BAE /* Frameworks */,
+				77DA723E8FC408C1D5A35976FD5F6F6F /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				302287FC1367EDD65952CF757F1D5617 /* PBXTargetDependency */,
-				5EB7CBDC83D3FFFD932179853D62C040 /* PBXTargetDependency */,
-				AF64582A652E0A827BCC52622CCD6C9B /* PBXTargetDependency */,
+				132A19044011D4F328CD170376569372 /* PBXTargetDependency */,
+				09104E6946DBF0462900C735E7E60930 /* PBXTargetDependency */,
 			);
 			name = "Pods-QKMRZScanner";
 			productName = "Pods-QKMRZScanner";
 			productReference = 28BFE9113EBD01E76CCC43AF125C406E /* Pods_QKMRZScanner.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D475FFA1A89F8A9E6ECCE9674D42D468 /* Build configuration list for PBXNativeTarget "lottie-ios" */;
-			buildPhases = (
-				D29FF6455545C2F4D0145EDD2FED44B6 /* Headers */,
-				46010A4D1B5A84E2437F6D486879CA48 /* Sources */,
-				2F60C6764CA449F03DDE3C9035E18C62 /* Frameworks */,
-				7141B8BFD91321B48D2EC833C693184F /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "lottie-ios";
-			productName = "lottie-ios";
-			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		44846E5E2172F853B4F70588F8115052 /* QKMRZParser */ = {
@@ -871,11 +392,10 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 4490A009E030C2A95CA445DFACCCB1F1 /* Products */;
+			productRefGroup = 0FC5607056B64C1C7A264607B1D46F36 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
 				02AF989565A12ECBC4DF73E132D043A6 /* Pods-QKMRZScanner */,
 				44846E5E2172F853B4F70588F8115052 /* QKMRZParser */,
 				5FDA8701204211983085669C4E12E6FE /* SwiftyTesseract */,
@@ -884,7 +404,7 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7141B8BFD91321B48D2EC833C693184F /* Resources */ = {
+		77DA723E8FC408C1D5A35976FD5F6F6F /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -899,13 +419,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		CA0B93B0470F0F55935AB07BDC1495DC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5BF8CF8777B0FF6F695F9089E4354A9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -956,14 +469,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		25801AD09931DEF8342425A05230A56B /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				FCD9C4D5DBEF4C15588C5EC43B2DF91B /* Pods-QKMRZScanner-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		34E1949EA79F9CCEDCB22F76CF5DB6B8 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -980,164 +485,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		46010A4D1B5A84E2437F6D486879CA48 /* Sources */ = {
+		9B35C125CCC365C246BCEE91AF31E722 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F2FFF322C9048FC0B23B9C49A6E62F35 /* AnimatedButton.swift in Sources */,
-				2E754D63217B7BC94CECA7FE23D96905 /* AnimatedControl.swift in Sources */,
-				645DC6A0FDFA7FDC3DF1D2AA265C1A8F /* AnimatedSwitch.swift in Sources */,
-				D482B07B389D6BED35B449680862FD5F /* Animation.swift in Sources */,
-				E0D17096D3801D5683ADD4D823A12D3E /* AnimationCacheProvider.swift in Sources */,
-				FEC9061C02A16F7449132B5407416BDA /* AnimationContainer.swift in Sources */,
-				D4FE036734A6D5B9548B6E8144804700 /* AnimationContext.swift in Sources */,
-				8701E0B84141B2D9D0D4D9AFF362F0B6 /* AnimationFontProvider.swift in Sources */,
-				780A85B3BEA67F48B2342B14BE44D348 /* AnimationImageProvider.swift in Sources */,
-				8D945C57214018450702FEE8734883B2 /* AnimationKeypath.swift in Sources */,
-				0653A2C5607C749695E268E4E6C2F021 /* AnimationKeypathExtension.swift in Sources */,
-				F734F4F307A445DC8CDD50ED2FBDD8CC /* AnimationPublic.swift in Sources */,
-				DB8CB26680625363B4223412D88C3041 /* AnimationSubview.swift in Sources */,
-				64B353CDD897B011A947ED5649FE5B91 /* AnimationTextProvider.swift in Sources */,
-				02625B5BFE249E69FB44FDC74093E4DB /* AnimationTime.swift in Sources */,
-				C17B4450D1626364B2DCAA7A42C5EE97 /* AnimationView.swift in Sources */,
-				079D7B6FAA7B0E0E2B0491A31E13A781 /* AnimationViewInitializers.swift in Sources */,
-				CF779993E4FEEE72B1B59F71160BF7BA /* AnimatorNode.swift in Sources */,
-				8EC7DED1459CE95E2FFFC45D429C71BB /* AnimatorNodeDebugging.swift in Sources */,
-				B5E7A50CACD20C0F5DBAB6DBBDAFEF81 /* AnyNodeProperty.swift in Sources */,
-				DE66E6F35287CBE5875652B44E5DB76E /* AnyValueContainer.swift in Sources */,
-				530DCDE9EF6CADD6AEAAAD2978C6C6BF /* AnyValueProvider.swift in Sources */,
-				BE559AD46D01CC77943B2B0273612D8A /* Asset.swift in Sources */,
-				BEBA1B8C12D7F63B669832C898B0ECB4 /* AssetLibrary.swift in Sources */,
-				BCFA5D17A7DA6457F1DAABB6577898A4 /* BezierPath.swift in Sources */,
-				5429E317969AAD6CFD490D60443CB9B3 /* BundleImageProvider.swift in Sources */,
-				2468319AB27EE70D9BB5D28AD1B1A408 /* CGFloatExtensions.swift in Sources */,
-				E52835E3A69E0F0D060140EFFCAE45B3 /* Color.swift in Sources */,
-				3EB03A262C7F5F9B14DFC52CC9C8B6F6 /* ColorExtension.swift in Sources */,
-				4222ADA2E456904DAA7C5E6C135457F4 /* ColorValueProvider.swift in Sources */,
-				E663A44D97FFE0F736EA3B73E47A0690 /* CompatibleAnimationKeypath.swift in Sources */,
-				C5D7664DEA52A2080B49D6B2622C39DE /* CompatibleAnimationView.swift in Sources */,
-				4C159BD8975D5734D8F9D71E51DD30CF /* CompositionLayer.swift in Sources */,
-				B12033FCEF029B8D2F8BFC8AC5F9F336 /* CompositionLayersInitializer.swift in Sources */,
-				5AE4D0932F1517F975525A5505421240 /* CompoundBezierPath.swift in Sources */,
-				BFA126908186F19EE41BE5868FC1C210 /* CurveVertex.swift in Sources */,
-				A2A239A2B89A243A2892D5256B5E6548 /* DashPattern.swift in Sources */,
-				8AB6C217119A35985E0A3E2857ABB418 /* Ellipse.swift in Sources */,
-				585B65BDCE13078CE78CDAEE29A74BF0 /* EllipseNode.swift in Sources */,
-				D3BB7C10CF7FB03081B7ACF2B95313D4 /* FilepathImageProvider.swift in Sources */,
-				3EC7B1E8A42E64BC81E289A460EB6A07 /* FillI.swift in Sources */,
-				009CB881035B85E694EDE43F7F32AB6B /* FillNode.swift in Sources */,
-				47F63B725F7D79C6B35AE458421320EC /* FillRenderer.swift in Sources */,
-				A1E5120CA044B874E2B88C3EF6D338C1 /* FloatValueProvider.swift in Sources */,
-				24AC03A69DCEEDC21E29F9E63F95D808 /* Font.swift in Sources */,
-				0F5226419BBB085467BA8C5F52CC94B6 /* Glyph.swift in Sources */,
-				234268BD38A122DE31CF0280378B778C /* GradientFill.swift in Sources */,
-				33C7935FAFF578A13D784DA2A3528E82 /* GradientFillNode.swift in Sources */,
-				2FE08E71527A2450E881B39F8B9EC98C /* GradientFillRenderer.swift in Sources */,
-				993748F61F35290FFAD7CDE35F889F7A /* GradientStroke.swift in Sources */,
-				02216B580F40908071EC21B96D67E9D9 /* GradientStrokeNode.swift in Sources */,
-				49229652E662E1F06AD60AB7E04816D1 /* GradientStrokeRenderer.swift in Sources */,
-				99A40A5D7DE69F7B97ABA8CCCAE9955C /* GradientValueProvider.swift in Sources */,
-				EEF7528D1A1DC76EADC7CB145295235C /* Group.swift in Sources */,
-				E6A69EB7C716F3284634E00892C40806 /* GroupInterpolator.swift in Sources */,
-				3803EDA965588719CA8C54F9B13E997F /* GroupNode.swift in Sources */,
-				6CBB1D9311405F2C563D4BABCD04703E /* GroupOutputNode.swift in Sources */,
-				ED357987764A814A01E4E438045C4247 /* ImageAsset.swift in Sources */,
-				3AB381D0AE115FF6FD925F521872976E /* ImageCompositionLayer.swift in Sources */,
-				B8EA9274ACDDE99F957E4D61CE880F64 /* ImageLayerModel.swift in Sources */,
-				9758CD5895E13491B0F5D17625B7F4CF /* Interpolatable.swift in Sources */,
-				338366E6762002CDF447808FD6E7AB86 /* InterpolatableExtensions.swift in Sources */,
-				58DC484F75A76F06C4C7DB078BE54709 /* InvertedMatteLayer.swift in Sources */,
-				EBF2506DBF64C42BB02F207763BFC350 /* ItemsExtension.swift in Sources */,
-				248067FE931D5EB2D20417570F07BD35 /* KeyedDecodingContainerExtensions.swift in Sources */,
-				07D5D290AFC1C0625577879F23E1CA98 /* Keyframe.swift in Sources */,
-				9456B9ABD3F9E2767FCD2E6CB8862836 /* KeyframeExtensions.swift in Sources */,
-				A6EC5575FC578319B77F311CE92C38F7 /* KeyframeGroup.swift in Sources */,
-				559E05F30E4EAE32BA48379660AE44B4 /* KeyframeInterpolator.swift in Sources */,
-				9EB11A84EF4C5B21533707563E2D169A /* KeypathSearchable.swift in Sources */,
-				FF2B32B1BAC49FDA4438824049CC4347 /* LayerDebugging.swift in Sources */,
-				C2F4BF932391B859E01C4A8A161A6E0D /* LayerFontProvider.swift in Sources */,
-				EC018DD5D1BE025DDF186DBA64B9420A /* LayerImageProvider.swift in Sources */,
-				5BF1B44B30938D3B6D132CE5C5BA4319 /* LayerModel.swift in Sources */,
-				CB8A7BE8F63886EE30FBCAF2F3968764 /* LayerTextProvider.swift in Sources */,
-				60449BD9530C4D527F6D9865AD7AC7F0 /* LayerTransformNode.swift in Sources */,
-				DF75937FFEF23A62DBDE3B7632BCD1C4 /* lottie-ios-dummy.m in Sources */,
-				85BA0432AF587B1C0DD30FD6EF4526D4 /* LottieView.swift in Sources */,
-				1EBDC31834A8904BE9C2E6C416DB7483 /* LRUAnimationCache.swift in Sources */,
-				63AA1E813E021D69590BDFFB0484CB92 /* Marker.swift in Sources */,
-				5323BB7033DDFBB8DF91A570B47E37F4 /* Mask.swift in Sources */,
-				67FA0E52AF43BC37707EE3691A6C6E87 /* MaskContainerLayer.swift in Sources */,
-				6477C63835313EB2B9CBBDB4E7C6344F /* MathKit.swift in Sources */,
-				AC0AB63D4857B7BE72409748962ED419 /* Merge.swift in Sources */,
-				95F9BAAFE3FC6BF6ABF607A836B08113 /* NodeProperty.swift in Sources */,
-				F79C6CF75F09D963BC5B8C2C9680D862 /* NodePropertyMap.swift in Sources */,
-				D79692BB25F9CFC26CEEA50ABB81CE95 /* NullCompositionLayer.swift in Sources */,
-				E191971060C289CB32E2A243ED1A9D79 /* PassThroughOutputNode.swift in Sources */,
-				0E4F718620888EE78E494057B9D3DEBC /* PathElement.swift in Sources */,
-				FEFFEFAF099B5368569FA4AFBB05CDBD /* PathNode.swift in Sources */,
-				E89DDD10D39B7447CEE9B8CE5255FCED /* PathOutputNode.swift in Sources */,
-				3F84D4C0A3E8A01D6FC705973B6CD4E3 /* PointValueProvider.swift in Sources */,
-				02295D78802AA44A08CC4D151AB3754F /* PolygonNode.swift in Sources */,
-				4B6F77ADDBD9A476A94F29AA8311B595 /* PrecompAsset.swift in Sources */,
-				1218933A8027C276466182664799D7DF /* PreCompLayerModel.swift in Sources */,
-				502B36A7D6E865B6C980705FF1938DF8 /* PreCompositionLayer.swift in Sources */,
-				59895C7550FB1575D9236CF7B9E977DC /* Rectangle.swift in Sources */,
-				E4D454584D3C6A2B296DAC18F15A5C2E /* RectNode.swift in Sources */,
-				6E271B5076A2153A2539F24479B7F0D2 /* RenderNode.swift in Sources */,
-				2922B51988C082497CF379C93B976717 /* Repeater.swift in Sources */,
-				FF86C8EB28B703745F812175ACFD803C /* Shape.swift in Sources */,
-				8BD831DC877702B1577F759D984511E9 /* ShapeCompositionLayer.swift in Sources */,
-				1054137AE9E91B0E0D9B63092CE376B5 /* ShapeContainerLayer.swift in Sources */,
-				AB2E29798AD033CAE8727EFD2A5F4D59 /* ShapeItem.swift in Sources */,
-				54A9E4C7BF9137C82BAEF05720F50B0A /* ShapeLayerModel.swift in Sources */,
-				04691E6969AC548F927B70E462F08B00 /* ShapeNode.swift in Sources */,
-				E718AB84042ECA239584381DB5970552 /* ShapeRenderLayer.swift in Sources */,
-				B31B0CB4874A037F044750EE515D8B1C /* ShapeTransform.swift in Sources */,
-				4E0588332E5C8BE6B875B5A440192EFC /* SingleValueProvider.swift in Sources */,
-				ED5B12BA89B00CA016A5CCB6AEAC6478 /* SizeValueProvider.swift in Sources */,
-				2F0715E5BCE33639A0FCA1F626B9BFA7 /* SolidCompositionLayer.swift in Sources */,
-				B18ED58C8DF81C079B5015D356A49817 /* SolidLayerModel.swift in Sources */,
-				2758F281AF0C7D8F312A3B0661F3509E /* Star.swift in Sources */,
-				112C74EFE714BCE32F08F8D6D546794A /* StarNode.swift in Sources */,
-				4DDFDBCB37FA90B0BBF12A0A2EE8736E /* StringExtensions.swift in Sources */,
-				269E0D3C45823193E8FF7F4057195B59 /* Stroke.swift in Sources */,
-				C960309E8DBD13A20BC26B2842463D62 /* StrokeNode.swift in Sources */,
-				9EDBA961B404B9A2CBE8EFF51BD5DFB8 /* StrokeRenderer.swift in Sources */,
-				F3D7ACEB8411814DF1DB0B4AAE90A2FC /* TextAnimator.swift in Sources */,
-				187AA66ABF3683980ECF622D6DBD1AD3 /* TextAnimatorNode.swift in Sources */,
-				0ABF0E24D4C5C2211CC8734E9F045546 /* TextCompositionLayer.swift in Sources */,
-				5EE3A72B1EAE8196BC068E5BB8DF6EE7 /* TextDocument.swift in Sources */,
-				18F0E77D3312E80E7EA2E809FBB10439 /* TextLayer.swift in Sources */,
-				9CFBA1B6279BCAC332CDA1A9BAC869D3 /* TextLayerModel.swift in Sources */,
-				5F7AA8300D54023C648A5E6DE7892435 /* Transform.swift in Sources */,
-				B1D7B4A10BD29854A979065125CD2BB7 /* Trim.swift in Sources */,
-				FA6BCAE8F1D4B6B2376C0FC7E40D57F5 /* TrimPathNode.swift in Sources */,
-				0FA94B0CBA835214F8CFFDC2D1419BAF /* UIColorExtension.swift in Sources */,
-				6079862E4DC9B5AC605B8E9807582EAC /* ValueContainer.swift in Sources */,
-				C9E9AB1A4B11F4EFF49986DD6BA05AC1 /* Vectors.swift in Sources */,
-				728CCE03BA79F5E0F2F4A838BE5847A7 /* VectorsExtensions.swift in Sources */,
+				61941FB89FAAF5872CF98CC7789C288B /* Pods-QKMRZScanner-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		302287FC1367EDD65952CF757F1D5617 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = QKMRZParser;
-			target = 44846E5E2172F853B4F70588F8115052 /* QKMRZParser */;
-			targetProxy = A31C321BF6BFC76701A55A3BE0AF8CAC /* PBXContainerItemProxy */;
-		};
-		5EB7CBDC83D3FFFD932179853D62C040 /* PBXTargetDependency */ = {
+		09104E6946DBF0462900C735E7E60930 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SwiftyTesseract;
 			target = 5FDA8701204211983085669C4E12E6FE /* SwiftyTesseract */;
-			targetProxy = 58BBA4630CE5216C291F0D932403DB71 /* PBXContainerItemProxy */;
+			targetProxy = EA9D72521CF34A52CDD784F9D53BB64E /* PBXContainerItemProxy */;
 		};
-		AF64582A652E0A827BCC52622CCD6C9B /* PBXTargetDependency */ = {
+		132A19044011D4F328CD170376569372 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = "lottie-ios";
-			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
-			targetProxy = C786D31099419DD344031702574480E7 /* PBXContainerItemProxy */;
+			name = QKMRZParser;
+			target = 44846E5E2172F853B4F70588F8115052 /* QKMRZParser */;
+			targetProxy = BCF341A85B4794658B71F7B010F0FEAF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1208,7 +577,7 @@
 			};
 			name = Debug;
 		};
-		2527AF4D1C1D1D81D53308A2D20CAAD2 /* Debug */ = {
+		484DCEBE36724DC4439E2CF3F29E168D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 28325BB70560DB246AB3AE5D24A53B18 /* Pods-QKMRZScanner.debug.xcconfig */;
 			buildSettings = {
@@ -1244,7 +613,7 @@
 		};
 		4B5715DD03ACEBFFB58DCDA33D6D4C9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0414EFFC098FC27D4DAA0399E5B5C3E2 /* SwiftyTesseract.release.xcconfig */;
+			baseConfigurationReference = AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1277,7 +646,7 @@
 		};
 		7F9CAD7634EBECCE71494C50110C82E6 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 078FCB1220E098B90E5A9F1F86202503 /* QKMRZParser.release.xcconfig */;
+			baseConfigurationReference = 459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1307,11 +676,12 @@
 			};
 			name = Release;
 		};
-		8E76A2FDDC50F12DD0E4ADB37C45E79F /* Debug */ = {
+		D0E80E828C4B7EF573793A312D2AA927 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A900FA62C6EF1A68C05B87F491D7A7BD /* lottie-ios.debug.xcconfig */;
+			baseConfigurationReference = 6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -1320,27 +690,27 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTesseract/SwiftyTesseract-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
-				PRODUCT_MODULE_NAME = Lottie;
-				PRODUCT_NAME = Lottie;
+				MODULEMAP_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract.modulemap";
+				PRODUCT_MODULE_NAME = SwiftyTesseract;
+				PRODUCT_NAME = SwiftyTesseract;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 5.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		904E7E7F776E6B5FBEFD40519C35DDD0 /* Release */ = {
+		DA7633052FEF8E5EB3B4F7F3958A973B /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8B7F5494FFA4E3185AC331E3E5BDD137 /* lottie-ios.release.xcconfig */;
+			baseConfigurationReference = F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -1351,26 +721,25 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/lottie-ios/lottie-ios.modulemap";
-				PRODUCT_MODULE_NAME = Lottie;
-				PRODUCT_NAME = Lottie;
+				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
+				PRODUCT_MODULE_NAME = QKMRZParser;
+				PRODUCT_NAME = QKMRZParser;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
-		91CC8588C47729479FEA69FC371DA9F7 /* Release */ = {
+		EAE18172C2D85C17C1A88D6E5FECD9C0 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D0579590D0C93205406E0F132CC75E5C /* Pods-QKMRZScanner.release.xcconfig */;
 			buildSettings = {
@@ -1404,69 +773,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
-		};
-		D0E80E828C4B7EF573793A312D2AA927 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9BD7847BA940C0AB820914DD71FDAC58 /* SwiftyTesseract.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/SwiftyTesseract/SwiftyTesseract-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SwiftyTesseract/SwiftyTesseract.modulemap";
-				PRODUCT_MODULE_NAME = SwiftyTesseract;
-				PRODUCT_NAME = SwiftyTesseract;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5.2;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		DA7633052FEF8E5EB3B4F7F3958A973B /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0EAE8A2603FCB1FDEC49CA46AB668234 /* QKMRZParser.debug.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
-				PRODUCT_MODULE_NAME = QKMRZParser;
-				PRODUCT_NAME = QKMRZParser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
 		};
 		F5ECF10F20E087973F0918B3F0B20FFC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -1542,15 +848,6 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		3BD799479574A591FBD5CA3869CB5A3F /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2527AF4D1C1D1D81D53308A2D20CAAD2 /* Debug */,
-				91CC8588C47729479FEA69FC371DA9F7 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1569,11 +866,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D475FFA1A89F8A9E6ECCE9674D42D468 /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
+		92AF16508354BFD4BC3AA0B682ADCEC3 /* Build configuration list for PBXNativeTarget "Pods-QKMRZScanner" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				8E76A2FDDC50F12DD0E4ADB37C45E79F /* Debug */,
-				904E7E7F776E6B5FBEFD40519C35DDD0 /* Release */,
+				484DCEBE36724DC4439E2CF3F29E168D /* Debug */,
+				EAE18172C2D85C17C1A88D6E5FECD9C0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
