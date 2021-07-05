@@ -15,6 +15,7 @@
 		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
 		12832C282167519000D132D4 /* QKCutoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C272167519000D132D4 /* QKCutoutView.swift */; };
 		12A54E1A2693055E00228E0E /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A54E192693055E00228E0E /* UIView.swift */; };
+		12A54E1C2693092900228E0E /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 12A54E1B2693092900228E0E /* Media.xcassets */; };
 		12C0055122D536AC0086FDBC /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055022D536AC0086FDBC /* CIImage.swift */; };
 		12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055222D562CE0086FDBC /* CVImageBuffer.swift */; };
 		12C0055522D5643F0086FDBC /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055422D5643F0086FDBC /* CIContext.swift */; };
@@ -34,6 +35,7 @@
 		12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
 		12832C272167519000D132D4 /* QKCutoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKCutoutView.swift; sourceTree = "<group>"; };
 		12A54E192693055E00228E0E /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		12A54E1B2693092900228E0E /* Media.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Media.xcassets; sourceTree = "<group>"; };
 		12C0055022D536AC0086FDBC /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		12C0055222D562CE0086FDBC /* CVImageBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVImageBuffer.swift; sourceTree = "<group>"; };
 		12C0055422D5643F0086FDBC /* CIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */,
 				12832C222167491900D132D4 /* Extensions */,
 				1277816A2165484E00070E1C /* Supporting Files */,
+				12A54E1B2693092900228E0E /* Media.xcassets */,
 			);
 			path = QKMRZScanner;
 			sourceTree = "<group>";
@@ -207,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				12A54E1C2693092900228E0E /* Media.xcassets in Resources */,
 				123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

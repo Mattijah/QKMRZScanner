@@ -198,7 +198,7 @@ public class QKMRZScannerView: UIView {
                                                 width: UIScreen.main.bounds.width * 0.9, height: 1)).cgPath
         
         self.addSubview(cameraButton)
-        cameraButton.setImage(UIImage.init(named: ""), for: .normal)
+        cameraButton.setImage(UIImage.init(named: "save_camera"), for: .normal)
         cameraButton.setTitleColor(UIColor.white, for: .normal)
         cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
         cameraButton.layer.cornerRadius = 25
