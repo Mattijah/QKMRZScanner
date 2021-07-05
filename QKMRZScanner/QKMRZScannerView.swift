@@ -31,6 +31,7 @@ public class QKMRZScannerView: UIView {
     public weak var delegate: QKMRZScannerViewDelegate?
     
     // my changed
+    fileprivate var rotateDocumentImage: UIImage? = nil
     fileprivate let parentRect = UIScreen.main.bounds
     
     let cameraButton = UIButton()
@@ -317,6 +318,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
             DispatchQueue.main.async {
                 self.showSaveImage.image = enlargedDocumentImage
+                self.rotateDocumentImage = enlargedDocumentImage
                 self.delegate?.rotateAnimationIdCard(isRotate: true)
             }
         }
@@ -350,7 +352,12 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
                     
                     DispatchQueue.main.async {
                         let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
-                        let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
+                        var scanResult: QKMRZScanResult!
+                        if isScanPasssport {
+                            scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
+                        }else {
+                            scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage, rotateDocumentImage: self.rotateDocumentImage)
+                        }
                         self.delegate?.mrzScannerView(self, didFind: scanResult)
                         if self.vibrateOnResult {
                             AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)

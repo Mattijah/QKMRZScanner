@@ -10,6 +10,7 @@ import QKMRZParser
 
 public class QKMRZScanResult {
     public let documentImage: UIImage
+    public let rotateDocumentImage: UIImage?
     public let documentType: String
     public let countryCode: String
     public let surnames: String
@@ -43,7 +44,8 @@ public class QKMRZScanResult {
         return UIImage(cgImage: cgImage)
     }()
     
-    init(mrzResult: QKMRZResult, documentImage image: UIImage) {
+    init(mrzResult: QKMRZResult, documentImage image: UIImage, rotateDocumentImage: UIImage? = nil) {
+        self.rotateDocumentImage = rotateDocumentImage
         documentImage = image
         documentType = mrzResult.documentType
         countryCode = mrzResult.countryCode
