@@ -14,7 +14,7 @@ import Vision
 
 public protocol QKMRZScannerViewDelegate: AnyObject {
     func mrzScannerView(_ mrzScannerView: QKMRZScannerView, didFind scanResult: QKMRZScanResult)
-    func rotateAnimationIdCard()
+    func rotateAnimationIdCard(isRotate: Bool)
 }
 
 public class QKMRZScannerView: UIView {
@@ -317,7 +317,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
             DispatchQueue.main.async {
                 self.showSaveImage.image = enlargedDocumentImage
-                self.delegate?.rotateAnimationIdCard()
+                self.delegate?.rotateAnimationIdCard(isRotate: true)
             }
         }
         
