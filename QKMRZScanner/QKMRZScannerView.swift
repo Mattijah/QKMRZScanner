@@ -21,6 +21,7 @@ public class QKMRZScannerView: UIView {
     fileprivate let mrzParser = QKMRZParser(ocrCorrection: true)
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
+    fileprivate let photoOutput = AVCapturePhotoOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningPaused = false
@@ -185,6 +186,7 @@ public class QKMRZScannerView: UIView {
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
         
+        //my changed
         let passportLineView = CAShapeLayer()
         self.layer.addSublayer(passportLineView)
         passportLineView.strokeColor = UIColor.white.withAlphaComponent(0.4).cgColor
@@ -204,6 +206,7 @@ public class QKMRZScannerView: UIView {
         cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
         cameraButton.layer.cornerRadius = cameraSize / 2
         cameraButton.isHidden = self.isScanPasssport
+        cameraButton.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(savePhoto)))
         cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - (cameraSize / 2)),
                                          y: (parentRect.height - getBottomMargin() - cameraSize - 20),
                                          width: cameraSize, height: cameraSize)
@@ -246,6 +249,14 @@ public class QKMRZScannerView: UIView {
         else {
             print("Input & Output could not be added to the session")
         }
+        
+        //my changed
+        photoOutput.isHighResolutionCaptureEnabled = true
+        if captureSession.canAddOutput(photoOutput) {
+            captureSession.sessionPreset = .hd1280x720
+            captureSession.addOutput(photoOutput)
+        }
+        
     }
     
     fileprivate func addAppObservers() {
@@ -280,10 +291,39 @@ public class QKMRZScannerView: UIView {
         
         return CIContext.shared.createCGImage(inputImage, from: inputImage.extent)!
     }
+    
+    
+    //my changed
+    @objc func savePhoto() {
+        let photoSettings = AVCapturePhotoSettings()
+        photoSettings.isAutoStillImageStabilizationEnabled = true
+        photoSettings.isHighResolutionPhotoEnabled = true
+        
+        photoOutput.capturePhoto(with: photoSettings, delegate: self)
+    }
+    
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
-extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
+extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapturePhotoCaptureDelegate {
+    public func photoOutput(_ output: AVCapturePhotoOutput, didFinishProcessingPhoto photo: AVCapturePhoto, error: Error?) {
+        if let error = error {
+            print("error occured : \(error.localizedDescription)")
+        }
+        
+        if let dataImage = photo.fileDataRepresentation() {
+            print(UIImage(data: dataImage)?.size as Any)
+            
+            let dataProvider = CGDataProvider(data: dataImage as CFData)
+            let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
+            let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.up)
+            
+            
+        } else {
+            print("some error here")
+        }
+    }
+    
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let cgImage = CMSampleBufferGetImageBuffer(sampleBuffer)?.cgImage else {
             return
