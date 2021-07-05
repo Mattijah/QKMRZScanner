@@ -181,6 +181,18 @@ public class QKMRZScannerView: UIView {
             cutoutView.rightAnchor.constraint(equalTo: rightAnchor)
         ])
         
+        let passportLineView = CAShapeLayer()
+        self.layer.addSublayer(passportLineView)
+        passportLineView.strokeColor = UIColor.white.withAlphaComponent(0.4).cgColor
+        passportLineView.lineDashPattern = [8, 5]
+        passportLineView.fillColor = nil
+        passportLineView.frame = self.bounds
+        passportLineView.isHidden = !self.isScanPasssport
+        passportLineView.path = UIBezierPath(rect: CGRect.init(
+                                                x: (UIScreen.main.bounds.width - (UIScreen.main.bounds.width * 0.9)) / 2,
+                                                y: UIScreen.main.bounds.height / 2 - 0.5,
+                                                width: UIScreen.main.bounds.width * 0.9, height: 1)).cgPath
+        
     }
     
     fileprivate func initCaptureSession() {
