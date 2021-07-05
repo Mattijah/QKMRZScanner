@@ -328,7 +328,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate, AVCapt
             
             let dataProvider = CGDataProvider(data: dataImage as CFData)
             let cgImageRef: CGImage! = CGImage(jpegDataProviderSource: dataProvider!, decode: nil, shouldInterpolate: true, intent: .defaultIntent)
-            let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.up)
+            let image = UIImage(cgImage: cgImageRef, scale: 1.0, orientation: UIImage.Orientation.down)
             
             showSaveImage.image = image
             
