@@ -197,15 +197,16 @@ public class QKMRZScannerView: UIView {
                                                 y: UIScreen.main.bounds.height / 2 - 0.5,
                                                 width: UIScreen.main.bounds.width * 0.9, height: 1)).cgPath
         
+        let cameraSize: CGFloat = 60
         self.addSubview(cameraButton)
         cameraButton.setImage(UIImage.init(named: "save_camera"), for: .normal)
         cameraButton.setTitleColor(UIColor.white, for: .normal)
         cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
-        cameraButton.layer.cornerRadius = 25
+        cameraButton.layer.cornerRadius = cameraSize / 2
         cameraButton.isHidden = self.isScanPasssport
-        cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - 25),
-                                         y: (parentRect.height - getBottomMargin() - 70),
-                                         width: 50, height: 50)
+        cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - (cameraSize / 2)),
+                                         y: (parentRect.height - getBottomMargin() - cameraSize - 20),
+                                         width: cameraSize, height: cameraSize)
         
     }
     
