@@ -14,6 +14,7 @@
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */; };
 		12832C282167519000D132D4 /* QKCutoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12832C272167519000D132D4 /* QKCutoutView.swift */; };
+		12A54E162693030700228E0E /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12A54E152693030700228E0E /* UIViewController.swift */; };
 		12C0055122D536AC0086FDBC /* CIImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055022D536AC0086FDBC /* CIImage.swift */; };
 		12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055222D562CE0086FDBC /* CVImageBuffer.swift */; };
 		12C0055522D5643F0086FDBC /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055422D5643F0086FDBC /* CIContext.swift */; };
@@ -32,6 +33,7 @@
 		1277814221653FB500070E1C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		12832C232167492A00D132D4 /* AVCaptureVideoOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVCaptureVideoOrientation.swift; sourceTree = "<group>"; };
 		12832C272167519000D132D4 /* QKCutoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKCutoutView.swift; sourceTree = "<group>"; };
+		12A54E152693030700228E0E /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
 		12C0055022D536AC0086FDBC /* CIImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIImage.swift; sourceTree = "<group>"; };
 		12C0055222D562CE0086FDBC /* CVImageBuffer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CVImageBuffer.swift; sourceTree = "<group>"; };
 		12C0055422D5643F0086FDBC /* CIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 				12C0055022D536AC0086FDBC /* CIImage.swift */,
 				12C0055422D5643F0086FDBC /* CIContext.swift */,
 				12C0055222D562CE0086FDBC /* CVImageBuffer.swift */,
+				12A54E152693030700228E0E /* UIViewController.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 			files = (
 				12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */,
 				12E298AD22D52A6700A9AFBB /* LuminanceThresholdFilter.swift in Sources */,
+				12A54E162693030700228E0E /* UIViewController.swift in Sources */,
 				12C0055122D536AC0086FDBC /* CIImage.swift in Sources */,
 				12C0055522D5643F0086FDBC /* CIContext.swift in Sources */,
 				12832C242167492A00D132D4 /* AVCaptureVideoOrientation.swift in Sources */,
