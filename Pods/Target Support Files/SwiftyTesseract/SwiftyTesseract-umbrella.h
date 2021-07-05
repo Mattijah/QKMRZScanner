@@ -10,6 +10,7 @@
 #endif
 #endif
 
+#import "SwiftyTesseract.h"
 
 FOUNDATION_EXPORT double SwiftyTesseractVersionNumber;
 FOUNDATION_EXPORT const unsigned char SwiftyTesseractVersionString[];

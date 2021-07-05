@@ -7,7 +7,12 @@
 //
 
 extension String {
+  init(tesseractString: TessString) {
+    self.init(cString: tesseractString)
+  }
+  
   func droppingLast() -> String {
     return String(self.dropLast())
   }
+  
 }
