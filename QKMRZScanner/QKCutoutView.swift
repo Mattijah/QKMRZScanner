@@ -69,7 +69,7 @@ class QKCutoutView: UIView {
         if isScanPasssport {
             height = (bounds.height * 0.6)
         }else {
-            height = (bounds.width * 0.9)
+            height = (width / documentFrameRatio)
         }
         
         let topOffset = (bounds.height - height) / 2

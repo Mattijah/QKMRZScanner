@@ -32,6 +32,13 @@ public class QKMRZScannerView: UIView {
     // my changed
     public var isScanPasssport: Bool = true
     
+    public init(isScanPasssport: Bool) {
+        super.init(frame: CGRect())
+        
+        self.isScanPasssport = isScanPasssport
+        initialize()
+    }
+    
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
     }
