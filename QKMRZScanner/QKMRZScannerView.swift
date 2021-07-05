@@ -204,7 +204,7 @@ public class QKMRZScannerView: UIView {
         cameraButton.layer.cornerRadius = 25
         cameraButton.isHidden = self.isScanPasssport
         cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - 25),
-                                         y: (parentRect.height - getBottomMargin() - 45),
+                                         y: (parentRect.height - getBottomMargin() - 70),
                                          width: 50, height: 50)
         
     }
