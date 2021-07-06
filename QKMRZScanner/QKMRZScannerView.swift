@@ -210,6 +210,7 @@ public class QKMRZScannerView: UIView {
         cameraButton.setTitleColor(UIColor.white.withAlphaComponent(0.5), for: .highlighted)
         cameraButton.layer.cornerRadius = cameraSize / 2
         cameraButton.isHidden = self.isScanPasssport
+        cameraButton.isEnabled = false
         cameraButton.addGestureRecognizer(UITapGestureRecognizer.init(target: self, action: #selector(savePhoto)))
         cameraButton.frame = CGRect.init(x: (parentRect.width / 2 - (cameraSize / 2)),
                                          y: (parentRect.height - getBottomMargin() - cameraSize - 20),
@@ -346,7 +347,7 @@ public class QKMRZScannerView: UIView {
             let faceHeight = faceBoundingBox.path?.boundingBoxOfPath.height ?? 0
             let faceWigth = faceBoundingBox.path?.boundingBoxOfPath.width ?? 0
             
-            self.layer.addSublayer(faceBoundingBox)
+//            self.layer.addSublayer(faceBoundingBox)
             
             let limitX = cutoutRect.origin.x
             let limitY = cutoutRect.origin.y
@@ -402,9 +403,12 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
             DispatchQueue.main.async {
                 self.showSaveImage.image = enlargedDocumentImage
-                self.rotateDocumentImage = enlargedDocumentImage
-                self.delegate?.rotateAnimationIdCard(isRotate: true)
             }
+            self.rotateDocumentImage = enlargedDocumentImage
+            self.delegate?.rotateAnimationIdCard(isRotate: true)
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+                self.delegate?.rotateAnimationIdCard(isRotate: false)
+            })
         }
         
         
