@@ -39,6 +39,8 @@ public class QKMRZScannerView: UIView {
     
     public var isScanPasssport: Bool = true
     
+    private var drawings: [CAShapeLayer] = []
+    
     public init(isScanPasssport: Bool) {
         super.init(frame: CGRect())
         
@@ -304,11 +306,103 @@ public class QKMRZScannerView: UIView {
         isSaveImage = true
     }
     
+    //face detection
+    func detectFace(in image: CVImageBuffer) {
+        let faceDetectionRequest = VNDetectFaceLandmarksRequest(completionHandler: { (request: VNRequest, error: Error?) in
+            DispatchQueue.main.async {
+                if let results = request.results as? [VNFaceObservation] {
+                    self.handleFaceDetectionResults(results)
+                } else {
+                    self.clearDrawings()
+                }
+            }
+        })
+        
+        let imageRequestHandler = VNImageRequestHandler(cvPixelBuffer: image, orientation: .leftMirrored, options: [:])
+        try? imageRequestHandler.perform([faceDetectionRequest])
+    }
+    
+    var isFaceDetect = false
+    var isDocumentDetect = false
+    func handleFaceDetectionResults(_ observedFaces: [VNFaceObservation]) {
+        self.clearDrawings()
+        let facesBoundingBoxes: [CAShapeLayer] = observedFaces.map({ (observedFace: VNFaceObservation) -> CAShapeLayer in
+            let faceBoundingBoxOnScreen = self.videoPreviewLayer.layerRectConverted(fromMetadataOutputRect: observedFace.boundingBox)
+            let faceBoundingBoxPath = CGPath(rect: faceBoundingBoxOnScreen, transform: nil)
+            let faceBoundingBoxShape = CAShapeLayer()
+            faceBoundingBoxShape.path = faceBoundingBoxPath
+            faceBoundingBoxShape.fillColor = UIColor.clear.cgColor
+            faceBoundingBoxShape.strokeColor = UIColor.green.cgColor
+            return faceBoundingBoxShape
+        })
+        
+        if facesBoundingBoxes.count < 1 {
+            cutoutView.deActiveFaceView()
+            cutoutView.deActiveFaceView()
+            isFaceDetect = false
+            isDocumentDetect = false
+        }
+        
+        facesBoundingBoxes.forEach({ faceBoundingBox in
+            let faceX = faceBoundingBox.path?.boundingBoxOfPath.origin.x ?? 0
+            let faceY = faceBoundingBox.path?.boundingBoxOfPath.origin.y ?? 0
+            let faceHeight = faceBoundingBox.path?.boundingBoxOfPath.height ?? 0
+            let faceWigth = faceBoundingBox.path?.boundingBoxOfPath.width ?? 0
+            
+            self.layer.addSublayer(faceBoundingBox)
+            if faceX > (cutoutRect.origin.y - 15) {
+                let limitX = cutoutRect.origin.x
+                let limitY = cutoutRect.origin.y
+                let limitHeight = cutoutRect.height
+                let limitWidth = cutoutRect.width
+                
+                if (faceX > limitY && faceY > limitX &&
+                    ((faceX - limitY) + faceWigth) < limitHeight &&
+                    ((faceY - limitX) + faceHeight) < limitWidth) {
+                    
+                    cutoutView.activeFaceView()
+                    isFaceDetect = true
+                }else {
+                    cutoutView.deActiveFaceView()
+                    isFaceDetect = false
+                }
+            }
+            else {
+                cutoutView.deActiveFaceView()
+                isFaceDetect = false
+                isDocumentDetect = false
+            }
+            
+            if self.isFaceDetect && self.isDocumentDetect {
+                cameraButton.isEnabled = false
+            }else {
+                cameraButton.isEnabled = true
+            }
+        })
+        self.drawings = facesBoundingBoxes
+    }
+    
+    func clearDrawings() {
+        cutoutView.activeFaceView()
+        cutoutView.deActiveFaceView()
+        self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
+    }
+    
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        
+        if !isScanPasssport {
+            guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
+                debugPrint("unable to get image from sample buffer")
+                return
+            }
+            
+            detectFace(in: imageBuffer)
+        }
+        
         guard let cgImage = CMSampleBufferGetImageBuffer(sampleBuffer)?.cgImage else {
             return
         }

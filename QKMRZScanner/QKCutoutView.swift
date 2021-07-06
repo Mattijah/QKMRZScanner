@@ -12,6 +12,8 @@ class QKCutoutView: UIView {
     
     public var isScanPasssport: Bool = true
     
+    let borderLayer = CAShapeLayer()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = UIColor.black.withAlphaComponent(0.45)
@@ -43,8 +45,6 @@ class QKCutoutView: UIView {
         layer.mask = maskLayer
         
         // Add border around the cutout
-        let borderLayer = CAShapeLayer()
-        
         borderLayer.path = UIBezierPath(roundedRect: cutoutRect, cornerRadius: cornerRadius).cgPath
         borderLayer.lineWidth = 3
         borderLayer.strokeColor = UIColor.white.cgColor
@@ -77,4 +77,13 @@ class QKCutoutView: UIView {
         
         return CGRect(x: leftOffset, y: topOffset, width: width, height: height)
     }
+    
+    func activeFaceView() {
+        borderLayer.strokeColor = UIColor.green.cgColor
+    }
+    
+    func deActiveFaceView() {
+        borderLayer.strokeColor = UIColor.white.cgColor
+    }
+    
 }
