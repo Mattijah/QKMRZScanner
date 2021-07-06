@@ -339,6 +339,7 @@ public class QKMRZScannerView: UIView {
         if facesBoundingBoxes.count < 1 {
             cutoutView.deActiveFaceView()
             isFaceDetect = false
+            cameraButton.isEnabled = false
         }
         
         facesBoundingBoxes.forEach({ faceBoundingBox in
@@ -379,13 +380,19 @@ public class QKMRZScannerView: UIView {
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
     }
     
+    //end animation
+    func endRotateAnimation() {
+        cameraButton.isHidden = true
+        showSaveImage.image = nil
+    }
+    
 }
 
 // MARK: - AVCaptureVideoDataOutputSampleBufferDelegate
 extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
     public func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         
-        if !isScanPasssport {
+        if !isScanPasssport && rotateDocumentImage == nil {
             guard let imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {
                 debugPrint("unable to get image from sample buffer")
                 return
@@ -406,55 +413,57 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             }
             self.rotateDocumentImage = enlargedDocumentImage
             self.delegate?.rotateAnimationIdCard(isRotate: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
                 self.delegate?.rotateAnimationIdCard(isRotate: false)
+                self.endRotateAnimation()
             })
         }
         
-        
-        let documentImage = self.documentImage(from: cgImage)
-        let imageRequestHandler = VNImageRequestHandler(cgImage: documentImage, options: [:])
-        
-        let detectTextRectangles = VNDetectTextRectanglesRequest { [unowned self] request, error in
-            guard error == nil else {
-                return
-            }
+        if isScanPasssport || rotateDocumentImage != nil {
+            let documentImage = self.documentImage(from: cgImage)
+            let imageRequestHandler = VNImageRequestHandler(cgImage: documentImage, options: [:])
             
-            guard let results = request.results as? [VNTextObservation] else {
-                return
-            }
-            
-            let imageWidth = CGFloat(documentImage.width)
-            let imageHeight = CGFloat(documentImage.height)
-            let transform = CGAffineTransform.identity.scaledBy(x: imageWidth, y: -imageHeight).translatedBy(x: 0, y: -1)
-            let mrzTextRectangles = results.map({ $0.boundingBox.applying(transform) }).filter({ $0.width > (imageWidth * 0.8) })
-            let mrzRegionRect = mrzTextRectangles.reduce(into: CGRect.null, { $0 = $0.union($1) })
-            
-            guard mrzRegionRect.height <= (imageHeight * 0.4) else { // Avoid processing the full image (can occur if there is a long text in the header)
-                return
-            }
-            
-            if let mrzTextImage = documentImage.cropping(to: mrzRegionRect) {
-                if let mrzResult = self.mrz(from: mrzTextImage), mrzResult.allCheckDigitsValid {
-                    self.stopScanning()
-                    
-                    DispatchQueue.main.async {
-                        let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
-                        var scanResult: QKMRZScanResult!
-                        if isScanPasssport {
-                            scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
-                        }else {
-                            scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage, rotateDocumentImage: self.rotateDocumentImage)
-                        }
-                        self.delegate?.mrzScannerView(self, didFind: scanResult)
-                        if self.vibrateOnResult {
-                            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+            let detectTextRectangles = VNDetectTextRectanglesRequest { [unowned self] request, error in
+                guard error == nil else {
+                    return
+                }
+                
+                guard let results = request.results as? [VNTextObservation] else {
+                    return
+                }
+                
+                let imageWidth = CGFloat(documentImage.width)
+                let imageHeight = CGFloat(documentImage.height)
+                let transform = CGAffineTransform.identity.scaledBy(x: imageWidth, y: -imageHeight).translatedBy(x: 0, y: -1)
+                let mrzTextRectangles = results.map({ $0.boundingBox.applying(transform) }).filter({ $0.width > (imageWidth * 0.8) })
+                let mrzRegionRect = mrzTextRectangles.reduce(into: CGRect.null, { $0 = $0.union($1) })
+                
+                guard mrzRegionRect.height <= (imageHeight * 0.4) else { // Avoid processing the full image (can occur if there is a long text in the header)
+                    return
+                }
+                
+                if let mrzTextImage = documentImage.cropping(to: mrzRegionRect) {
+                    if let mrzResult = self.mrz(from: mrzTextImage), mrzResult.allCheckDigitsValid {
+                        self.stopScanning()
+                        
+                        DispatchQueue.main.async {
+                            let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
+                            var scanResult: QKMRZScanResult!
+                            if isScanPasssport {
+                                scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
+                            }else {
+                                scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage, rotateDocumentImage: self.rotateDocumentImage)
+                            }
+                            self.delegate?.mrzScannerView(self, didFind: scanResult)
+                            if self.vibrateOnResult {
+                                AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                            }
                         }
                     }
                 }
             }
+            
+            try? imageRequestHandler.perform([detectTextRectangles])
         }
-        
-        try? imageRequestHandler.perform([detectTextRectangles])
     }
 }
