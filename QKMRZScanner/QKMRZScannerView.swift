@@ -323,7 +323,6 @@ public class QKMRZScannerView: UIView {
     }
     
     var isFaceDetect = false
-    var isDocumentDetect = false
     func handleFaceDetectionResults(_ observedFaces: [VNFaceObservation]) {
         self.clearDrawings()
         let facesBoundingBoxes: [CAShapeLayer] = observedFaces.map({ (observedFace: VNFaceObservation) -> CAShapeLayer in
@@ -338,9 +337,7 @@ public class QKMRZScannerView: UIView {
         
         if facesBoundingBoxes.count < 1 {
             cutoutView.deActiveFaceView()
-            cutoutView.deActiveFaceView()
             isFaceDetect = false
-            isDocumentDetect = false
         }
         
         facesBoundingBoxes.forEach({ faceBoundingBox in
@@ -350,40 +347,33 @@ public class QKMRZScannerView: UIView {
             let faceWigth = faceBoundingBox.path?.boundingBoxOfPath.width ?? 0
             
             self.layer.addSublayer(faceBoundingBox)
-            if faceX > (cutoutRect.origin.y - 15) {
-                let limitX = cutoutRect.origin.x
-                let limitY = cutoutRect.origin.y
-                let limitHeight = cutoutRect.height
-                let limitWidth = cutoutRect.width
+            
+            let limitX = cutoutRect.origin.x
+            let limitY = cutoutRect.origin.y
+            let limitHeight = cutoutRect.height
+            let limitWidth = cutoutRect.width
+            
+            if (faceX > (limitX + (20)) && faceY > (limitY + (limitHeight / 3)) &&
+                    ((faceX - limitX) + faceWigth) < (limitWidth / 3 + 20) &&
+                    ((faceY - limitY) + faceHeight) < (limitHeight / 2 + 50)) {
                 
-                if (faceX > limitY && faceY > limitX &&
-                    ((faceX - limitY) + faceWigth) < limitHeight &&
-                    ((faceY - limitX) + faceHeight) < limitWidth) {
-                    
-                    cutoutView.activeFaceView()
-                    isFaceDetect = true
-                }else {
-                    cutoutView.deActiveFaceView()
-                    isFaceDetect = false
-                }
-            }
-            else {
+                cutoutView.activeFaceView()
+                isFaceDetect = true
+            }else {
                 cutoutView.deActiveFaceView()
                 isFaceDetect = false
-                isDocumentDetect = false
             }
             
-            if self.isFaceDetect && self.isDocumentDetect {
-                cameraButton.isEnabled = false
-            }else {
+            if self.isFaceDetect {
                 cameraButton.isEnabled = true
+            }else {
+                cameraButton.isEnabled = false
             }
         })
         self.drawings = facesBoundingBoxes
     }
     
     func clearDrawings() {
-        cutoutView.activeFaceView()
         cutoutView.deActiveFaceView()
         self.drawings.forEach({ drawing in drawing.removeFromSuperlayer() })
     }
