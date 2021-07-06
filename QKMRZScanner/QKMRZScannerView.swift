@@ -357,7 +357,7 @@ public class QKMRZScannerView: UIView {
             
             if (faceX > (limitX + (20)) && faceY > (limitY + (limitHeight / 3)) &&
                     ((faceX - limitX) + faceWigth) < (limitWidth / 3 + 20) &&
-                    ((faceY - limitY) + faceHeight) < (limitHeight / 2 + 50)) {
+                    ((faceY - limitY) + faceHeight) < (limitHeight - 50)) {
                 
                 cutoutView.activeFaceView()
                 isFaceDetect = true
@@ -382,6 +382,7 @@ public class QKMRZScannerView: UIView {
     
     //end animation
     func endRotateAnimation() {
+        cutoutView.deActiveFaceView()
         cameraButton.isHidden = true
         showSaveImage.image = nil
     }
@@ -413,7 +414,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             }
             self.rotateDocumentImage = enlargedDocumentImage
             self.delegate?.rotateAnimationIdCard(isRotate: true)
-            DispatchQueue.main.asyncAfter(deadline: .now() + 4, execute: {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 self.delegate?.rotateAnimationIdCard(isRotate: false)
                 self.endRotateAnimation()
             })
