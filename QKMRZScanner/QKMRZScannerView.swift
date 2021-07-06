@@ -357,7 +357,7 @@ public class QKMRZScannerView: UIView {
             
             if (faceX > (limitX + (20)) && faceY > (limitY + (limitHeight / 3)) &&
                     ((faceX - limitX) + faceWigth) < (limitWidth / 3 + 20) &&
-                    ((faceY - limitY) + faceHeight) < (limitHeight - 50)) {
+                    ((faceY - limitY) + faceHeight) < (limitHeight - 20)) {
                 
                 cutoutView.activeFaceView()
                 isFaceDetect = true
