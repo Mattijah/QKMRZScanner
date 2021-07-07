@@ -17,12 +17,13 @@
 		12C0055322D562CE0086FDBC /* CVImageBuffer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055222D562CE0086FDBC /* CVImageBuffer.swift */; };
 		12C0055522D5643F0086FDBC /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055422D5643F0086FDBC /* CIContext.swift */; };
 		12E298AD22D52A6700A9AFBB /* LuminanceThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */; };
-		5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; };
 		9F59388A2695C098009A1E74 /* QKMRZParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5938892695C098009A1E74 /* QKMRZParser.framework */; };
 		9F59388B2695C098009A1E74 /* QKMRZParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5938892695C098009A1E74 /* QKMRZParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F59388E2695C09A009A1E74 /* SwiftyTesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */; };
 		9F59388F2695C09B009A1E74 /* SwiftyTesseract.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		9F5938912695C0B2009A1E74 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9F5938902695C0B2009A1E74 /* tessdata */; };
+		9F5938B22695C1FB009A1E74 /* Pods_QKMRZScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; };
+		9F5938B32695C1FB009A1E74 /* Pods_QKMRZScanner.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -34,6 +35,7 @@
 			files = (
 				9F59388B2695C098009A1E74 /* QKMRZParser.framework in Embed Frameworks */,
 				9F59388F2695C09B009A1E74 /* SwiftyTesseract.framework in Embed Frameworks */,
+				9F5938B32695C1FB009A1E74 /* Pods_QKMRZScanner.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -70,7 +72,7 @@
 				9F59388A2695C098009A1E74 /* QKMRZParser.framework in Frameworks */,
 				9F59388E2695C09A009A1E74 /* SwiftyTesseract.framework in Frameworks */,
 				121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */,
-				5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */,
+				9F5938B22695C1FB009A1E74 /* Pods_QKMRZScanner.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
