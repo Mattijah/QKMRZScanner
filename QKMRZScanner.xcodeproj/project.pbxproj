@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 121B535E216FBC72000F7123 /* CoreImage.framework */; };
-		123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */ = {isa = PBXBuildFile; fileRef = 123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */; };
 		124306312165512C000BE94A /* QKMRZScannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124306302165512C000BE94A /* QKMRZScannerView.swift */; };
 		125C104F21767532009541D4 /* QKMRZScanResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 125C104E21767532009541D4 /* QKMRZScanResult.swift */; };
 		1277814321653FB500070E1C /* QKMRZScanner.h in Headers */ = {isa = PBXBuildFile; fileRef = 1277814121653FB500070E1C /* QKMRZScanner.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -19,12 +18,31 @@
 		12C0055522D5643F0086FDBC /* CIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12C0055422D5643F0086FDBC /* CIContext.swift */; };
 		12E298AD22D52A6700A9AFBB /* LuminanceThresholdFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */; };
 		5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */; };
+		9F59388A2695C098009A1E74 /* QKMRZParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5938892695C098009A1E74 /* QKMRZParser.framework */; };
+		9F59388B2695C098009A1E74 /* QKMRZParser.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F5938892695C098009A1E74 /* QKMRZParser.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F59388E2695C09A009A1E74 /* SwiftyTesseract.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */; };
+		9F59388F2695C09B009A1E74 /* SwiftyTesseract.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9F5938912695C0B2009A1E74 /* tessdata in Resources */ = {isa = PBXBuildFile; fileRef = 9F5938902695C0B2009A1E74 /* tessdata */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9F59388C2695C098009A1E74 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				9F59388B2695C098009A1E74 /* QKMRZParser.framework in Embed Frameworks */,
+				9F59388F2695C09B009A1E74 /* SwiftyTesseract.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		121B535E216FBC72000F7123 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
 		121B5361216FBCED000F7123 /* TesseractOCR.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = TesseractOCR.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */ = {isa = PBXFileReference; lastKnownFileType = file; path = ocrb.traineddata; sourceTree = "<group>"; };
 		124306302165512C000BE94A /* QKMRZScannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScannerView.swift; sourceTree = "<group>"; };
 		125C104E21767532009541D4 /* QKMRZScanResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QKMRZScanResult.swift; sourceTree = "<group>"; };
 		1277813E21653FB500070E1C /* QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -37,6 +55,9 @@
 		12C0055422D5643F0086FDBC /* CIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIContext.swift; sourceTree = "<group>"; };
 		12E298AC22D52A6700A9AFBB /* LuminanceThresholdFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuminanceThresholdFilter.swift; sourceTree = "<group>"; };
 		6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5938892695C098009A1E74 /* QKMRZParser.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = QKMRZParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SwiftyTesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F5938902695C0B2009A1E74 /* tessdata */ = {isa = PBXFileReference; lastKnownFileType = folder; path = tessdata; sourceTree = "<group>"; };
 		DA7784BC05891FFB8A38C353 /* Pods-QKMRZScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QKMRZScanner.release.xcconfig"; path = "Pods/Target Support Files/Pods-QKMRZScanner/Pods-QKMRZScanner.release.xcconfig"; sourceTree = "<group>"; };
 		F6B140B9A4C7437306FFF880 /* Pods-QKMRZScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QKMRZScanner.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QKMRZScanner/Pods-QKMRZScanner.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -46,6 +67,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9F59388A2695C098009A1E74 /* QKMRZParser.framework in Frameworks */,
+				9F59388E2695C09A009A1E74 /* SwiftyTesseract.framework in Frameworks */,
 				121B535F216FBC72000F7123 /* CoreImage.framework in Frameworks */,
 				5C45248B5974315AC8BE1E35 /* Pods_QKMRZScanner.framework in Frameworks */,
 			);
@@ -54,17 +77,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		121B5359216FBBBF000F7123 /* tessdata */ = {
-			isa = PBXGroup;
-			children = (
-				123BDEFF216FF0C2000CF6CF /* ocrb.traineddata */,
-			);
-			path = tessdata;
-			sourceTree = "<group>";
-		};
 		122C5896216D64620001DE90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9F59388D2695C09A009A1E74 /* SwiftyTesseract.framework */,
+				9F5938892695C098009A1E74 /* QKMRZParser.framework */,
 				121B5361216FBCED000F7123 /* TesseractOCR.framework */,
 				121B535E216FBC72000F7123 /* CoreImage.framework */,
 				6F58CF4674449175F89B65B8 /* Pods_QKMRZScanner.framework */,
@@ -106,7 +123,7 @@
 		1277816A2165484E00070E1C /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				121B5359216FBBBF000F7123 /* tessdata */,
+				9F5938902695C0B2009A1E74 /* tessdata */,
 				1277814221653FB500070E1C /* Info.plist */,
 				1277814121653FB500070E1C /* QKMRZScanner.h */,
 			);
@@ -156,6 +173,7 @@
 				1277813A21653FB500070E1C /* Frameworks */,
 				1277813B21653FB500070E1C /* Headers */,
 				1277813C21653FB500070E1C /* Resources */,
+				9F59388C2695C098009A1E74 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -204,7 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				123BDF00216FF0C6000CF6CF /* ocrb.traineddata in Resources */,
+				9F5938912695C0B2009A1E74 /* tessdata in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
