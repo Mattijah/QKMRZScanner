@@ -40,13 +40,13 @@ class QKCutoutView: UIView {
         var pathRect: CGRect!
         if isScanPasssport {
             pathRect = CGRect.init(x: cutoutRect.origin.x,
-                                   y: (cutoutRect.origin.y + cutoutRect.height - (cutoutRect.height / 2 / 3)),
-                                   width: cutoutRect.width, height: (cutoutRect.height / 2 / 3))
+                                   y: (cutoutRect.origin.y + cutoutRect.height - (cutoutRect.height / 2 / 3 - 20)),
+                                   width: cutoutRect.width, height: (cutoutRect.height / 2 / 3 - 20))
         }
         else if isSaveImage {
             pathRect = CGRect.init(x: cutoutRect.origin.x,
-                                   y: (cutoutRect.origin.y + cutoutRect.height - (cutoutRect.height / 3)),
-                                   width: cutoutRect.width, height: (cutoutRect.height / 3))
+                                   y: (cutoutRect.origin.y + cutoutRect.height - (cutoutRect.height / 3 - 10)),
+                                   width: cutoutRect.width, height: (cutoutRect.height / 3 - 10))
         }
         else {
             pathRect = cutoutRect
