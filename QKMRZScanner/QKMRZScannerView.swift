@@ -408,6 +408,7 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
         
         if isSaveImage {
             isSaveImage = false
+            cutoutView.changedBlurEffect()
             let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
             DispatchQueue.main.async {
                 self.showSaveImage.image = enlargedDocumentImage

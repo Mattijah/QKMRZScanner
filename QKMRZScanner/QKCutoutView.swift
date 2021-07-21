@@ -11,6 +11,7 @@ class QKCutoutView: UIView {
     fileprivate(set) var cutoutRect: CGRect!
     
     public var isScanPasssport: Bool = true
+    public var isSaveImage: Bool = false
     
     let borderLayer = CAShapeLayer()
     
@@ -36,7 +37,14 @@ class QKCutoutView: UIView {
         let path = CGMutablePath()
         let cornerRadius = CGFloat(3)
         
-        path.addRoundedRect(in: cutoutRect, cornerWidth: cornerRadius, cornerHeight: cornerRadius)
+        var pathRect: CGRect!
+        if isScanPasssport || !isSaveImage {
+            pathRect = CGRect.init(x: cutoutRect.origin.x, y: (cutoutRect.origin.y + cutoutRect.height - 80), width: cutoutRect.width, height: 80)
+        }else {
+            pathRect = cutoutRect
+        }
+        
+        path.addRoundedRect(in: pathRect, cornerWidth: cornerRadius, cornerHeight: cornerRadius)
         path.addRect(bounds)
         
         maskLayer.path = path
@@ -44,11 +52,12 @@ class QKCutoutView: UIView {
         
         layer.mask = maskLayer
         
-        // Add border around the cutout
-        borderLayer.path = UIBezierPath(roundedRect: cutoutRect, cornerRadius: cornerRadius).cgPath
-        borderLayer.lineWidth = 3
+        // my changed
         borderLayer.strokeColor = UIColor.white.cgColor
-        borderLayer.frame = bounds
+        borderLayer.lineWidth = 2
+        borderLayer.fillColor = nil
+        borderLayer.frame = self.bounds
+        borderLayer.path = UIBezierPath(roundedRect: cutoutRect, cornerRadius: cornerRadius).cgPath
         
         layer.addSublayer(borderLayer)
     }
@@ -74,6 +83,16 @@ class QKCutoutView: UIView {
         let leftOffset = (bounds.width - width) / 2
         
         return CGRect(x: leftOffset, y: topOffset, width: width, height: height)
+    }
+    
+    
+    // my changed
+    func changedBlurEffect() {
+        isSaveImage = true
+        DispatchQueue.main.async {
+            self.layer.sublayers?.removeAll()
+            self.drawRectangleCutout()
+        }
     }
     
     func activeFaceView() {
