@@ -38,7 +38,7 @@ class QKCutoutView: UIView {
         let cornerRadius = CGFloat(3)
         
         var pathRect: CGRect!
-        if isScanPasssport || !isSaveImage {
+        if isScanPasssport || isSaveImage {
             pathRect = CGRect.init(x: cutoutRect.origin.x, y: (cutoutRect.origin.y + cutoutRect.height - 80), width: cutoutRect.width, height: 80)
         }else {
             pathRect = cutoutRect
