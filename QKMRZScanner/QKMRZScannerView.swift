@@ -413,11 +413,11 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
             DispatchQueue.main.async {
                 self.showSaveImage.image = enlargedDocumentImage
             }
-            self.rotateDocumentImage = enlargedDocumentImage
             self.delegate?.rotateAnimationIdCard(isRotate: true)
             DispatchQueue.main.asyncAfter(deadline: .now() + 3, execute: {
                 self.delegate?.rotateAnimationIdCard(isRotate: false)
                 self.endRotateAnimation()
+                self.rotateDocumentImage = enlargedDocumentImage
             })
         }
         
