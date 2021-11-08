@@ -51,12 +51,12 @@ class LuminanceThresholdFilter: CIFilter {
 }
 
 // MARK: - FilterVendor
-class FilterVendor: CIFilterConstructor {
-    static func registerFilters() {
+public class FilterVendor: CIFilterConstructor {
+    static public func registerFilters() {
         CIFilter.registerName("LuminanceThresholdFilter", constructor: FilterVendor(), classAttributes: [kCIAttributeFilterCategories: "CustomFilters"])
     }
     
-    func filter(withName name: String) -> CIFilter? {
+    public func filter(withName name: String) -> CIFilter? {
         switch name {
         case "LuminanceThresholdFilter": return LuminanceThresholdFilter()
         default: return nil

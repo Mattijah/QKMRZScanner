@@ -7,6 +7,6 @@
 
 import Foundation
 
-extension CIContext {
+public extension CIContext {
     static let shared = CIContext(options: nil)
 }

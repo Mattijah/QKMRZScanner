@@ -7,7 +7,7 @@
 
 import Foundation
 
-extension CVImageBuffer {
+public extension CVImageBuffer {
     var cgImage: CGImage? {
         CVPixelBufferLockBaseAddress(self, .readOnly)
         
