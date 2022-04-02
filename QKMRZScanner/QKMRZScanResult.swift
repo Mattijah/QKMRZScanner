@@ -7,6 +7,7 @@
 
 import Foundation
 import QKMRZParser
+import UIKit
 
 public class QKMRZScanResult {
     public let documentImage: UIImage

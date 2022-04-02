@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreImage
 
 // MARK: - LuminanceThresholdFilter
 class LuminanceThresholdFilter: CIFilter {

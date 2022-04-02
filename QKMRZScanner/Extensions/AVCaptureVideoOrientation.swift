@@ -7,6 +7,7 @@
 
 import Foundation
 import AVFoundation
+import UIKit
 
 extension AVCaptureVideoOrientation {
     internal init(orientation: UIInterfaceOrientation) {
