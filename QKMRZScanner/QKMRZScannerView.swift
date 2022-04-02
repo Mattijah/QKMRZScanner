@@ -29,18 +29,20 @@ public class QKMRZScannerView: UIView {
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningPaused = false
     fileprivate var observer: NSKeyValueObservation?
-    @objc public dynamic var isScanning = false
-    public var vibrateOnResult = true
-    public weak var delegate: QKMRZScannerViewDelegate?
-    
-    public var cutoutRect: CGRect {
-        return cutoutView.cutoutRect
-    }
-    
+
     fileprivate var interfaceOrientation: UIInterfaceOrientation {
         return UIApplication.shared.statusBarOrientation
     }
-    
+
+    // MARK: Public properties
+    @objc public dynamic var isScanning = false
+    public var vibrateOnResult = true
+    public weak var delegate: QKMRZScannerViewDelegate?
+
+    public var cutoutRect: CGRect {
+        return cutoutView.cutoutRect
+    }
+
     // MARK: Initializers
     override public init(frame: CGRect) {
         super.init(frame: frame)
