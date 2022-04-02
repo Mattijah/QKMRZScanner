@@ -7,10 +7,12 @@
 
 import Foundation
 
+// MARK: - MRZFieldType
 enum MRZFieldType {
-    case documentType, countryCode, names, documentNumber, nationality, birthDate, sex, expiryDate, personalNumber, optionalData, hash
+    case documentType, countryCode, names, documentNumber, nationality, birthdate, sex, expiryDate, personalNumber, optionalData, hash
 }
 
+// MARK: - MRZField
 struct MRZField {
     let value: Any?
     let rawValue: String

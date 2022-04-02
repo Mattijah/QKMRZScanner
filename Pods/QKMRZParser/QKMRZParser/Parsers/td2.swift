@@ -1,5 +1,5 @@
 //
-//  td2.swift
+//  TD2.swift
 //  QKMRZParser
 //
 //  Created by Matej Dorcak on 14/10/2018.
@@ -15,19 +15,19 @@ class TD2 {
     let names: MRZField
     let documentNumber: MRZField
     let nationality: MRZField
-    let birthDate: MRZField
+    let birthdate: MRZField
     let sex: MRZField
     let expiryDate: MRZField
     let optionalData: MRZField
     
     fileprivate lazy var allCheckDigitsValid: Bool = {
         if let checkDigit = finalCheckDigit {
-            let compositedValue = [documentNumber, birthDate, expiryDate, optionalData].reduce("", { ($0 + $1.rawValue + ($1.checkDigit ?? "")) })
+            let compositedValue = [documentNumber, birthdate, expiryDate, optionalData].reduce("", { ($0 + $1.rawValue + ($1.checkDigit ?? "")) })
             let isCompositedValueValid = MRZField.isValueValid(compositedValue, checkDigit: checkDigit)
-            return (documentNumber.isValid! && birthDate.isValid! && expiryDate.isValid! && isCompositedValueValid)
+            return (documentNumber.isValid! && birthdate.isValid! && expiryDate.isValid! && isCompositedValueValid)
         }
         else {
-            return (documentNumber.isValid! && birthDate.isValid! && expiryDate.isValid!)
+            return (documentNumber.isValid! && birthdate.isValid! && expiryDate.isValid!)
         }
     }()
     
@@ -40,15 +40,15 @@ class TD2 {
             surnames: surnames,
             givenNames: givenNames,
             documentNumber: documentNumber.value as! String,
-            nationality: nationality.value as! String,
-            birthDate: birthDate.value as! Date?,
+            nationalityCountryCode: nationality.value as! String,
+            birthdate: birthdate.value as! Date?,
             sex: sex.value as! String?,
             expiryDate: expiryDate.value as! Date?,
             personalNumber: optionalData.value as! String,
             personalNumber2: nil,
             
             isDocumentNumberValid: documentNumber.isValid!,
-            isBirthDateValid: birthDate.isValid!,
+            isBirthdateValid: birthdate.isValid!,
             isExpiryDateValid: expiryDate.isValid!,
             isPersonalNumberValid: nil,
             allCheckDigitsValid: allCheckDigitsValid
@@ -65,7 +65,7 @@ class TD2 {
         
         documentNumber = formatter.field(.documentNumber, from: secondLine, at: 0, length: 9, checkDigitFollows: true)
         nationality = formatter.field(.nationality, from: secondLine, at: 10, length: 3)
-        birthDate = formatter.field(.birthDate, from: secondLine, at: 13, length: 6, checkDigitFollows: true)
+        birthdate = formatter.field(.birthdate, from: secondLine, at: 13, length: 6, checkDigitFollows: true)
         sex = formatter.field(.sex, from: secondLine, at: 20, length: 1)
         expiryDate = formatter.field(.expiryDate, from: secondLine, at: 21, length: 6, checkDigitFollows: true)
         optionalData = formatter.field(.optionalData, from: secondLine, at: 28, length: isVisaDocument ? 8 : 7)

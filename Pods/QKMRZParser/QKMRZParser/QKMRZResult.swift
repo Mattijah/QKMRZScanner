@@ -13,15 +13,15 @@ public struct QKMRZResult {
     public let surnames: String
     public let givenNames: String
     public let documentNumber: String
-    public let nationality: String
-    public let birthDate: Date? // `nil` if formatting failed
+    public let nationalityCountryCode: String
+    public let birthdate: Date? // `nil` if formatting failed
     public let sex: String? // `nil` if formatting failed
     public let expiryDate: Date? // `nil` if formatting failed
     public let personalNumber: String
     public let personalNumber2: String? // `nil` if not provided
     
     public let isDocumentNumberValid: Bool
-    public let isBirthDateValid: Bool
+    public let isBirthdateValid: Bool
     public let isExpiryDateValid: Bool
     public let isPersonalNumberValid: Bool?
     public let allCheckDigitsValid: Bool

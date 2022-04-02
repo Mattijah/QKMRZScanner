@@ -7,34 +7,34 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		028B53B9DDCC45DC27E76103668689F0 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */; };
+		07D3D2A9916D3FF5B473D73D765F9548 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B05F6AF18F21AF9A7D0FFEEB36C40B71 /* MRZFieldFormatter.swift */; };
 		0CCF4F9ADD424B03CB24156D94D9449E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		0F0903626A3398D34480FF14639DDF29 /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */; };
 		1778D2F492ACD9457E2C5EF1DF5F9837 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */; };
 		181BF92D4AC3DAA306B272C406B843EC /* BoundingBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */; };
-		2088DF7B4A503F7CFC10BA0674DB07F0 /* td1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */; };
+		23093FCEAC010BA1302340B24AFA07AE /* TD1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207A28C39494B30B874D31C370E1EDD1 /* TD1.swift */; };
 		234DAA85D9879468B1D6704A3B63BC7D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
 		2E495113DCF6A324224250B838041A3E /* RecognizedBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */; };
 		4253E8AED6D7B9513E598E2017E2FDAF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		44FFA8BD533295668967915F2F7EBE10 /* Pods-QKMRZScanner-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AE5DF1FDD9964CBD0B4B3A7AE382B3E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		53FA37C91A84D8B9C632E1D9929078FA /* Pods-QKMRZScanner-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */; };
-		65678283D7763280BDBC37068DE63C7E /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */; };
-		662629A7A47543E8A7F57B245159D598 /* td3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */; };
-		66E7875D3FE18504CC62ABA3EEE3C8E0 /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */; };
-		6D81A35301D3FD70605BF176460ABA90 /* MRZFieldFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */; };
+		6B08F453594587DEEBF0735DF4AC6AE5 /* TD3.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9B65DAFA1AF57CBE4BF17617B6B440A /* TD3.swift */; };
+		7474BD04CCCB55B5D04BBC3FC3034797 /* TD2.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B59A6C9F197554977470B032E977D6 /* TD2.swift */; };
 		78543C7516613DA10029333DBEC82679 /* SwiftyTesseract-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */; };
+		78AD3535009ADDFFAB51D9225A70F4B1 /* MRZField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093063C0093EC9E2601A4093701A5C0D /* MRZField.swift */; };
 		844BF5D887AE37C8F3B2837C35EF5471 /* TesseractVariableName.swift in Sources */ = {isa = PBXBuildFile; fileRef = D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */; };
-		8E9B0BB0D3CD70320CC1174A1D331F8E /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */; };
 		8F6AA2C7E3959556CEC4969BEDB5FEE2 /* Bundle+pathToTrainedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */; };
 		92498F7F095CDEA62643A3A813D15BC7 /* SwiftyTesseract-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		940E53DBAE847E84B8FA73BC6AC9100D /* RecognitionLanguage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */; };
-		A3DF24D3C4DF26DDA3301CBDCBBD74DA /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9C9B071E7F00175D672265FBD1CA68EA /* String-Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD43FE749837D8C9BB45DE5924C3ACA9 /* String-Ext.swift */; };
+		A3DF24D3C4DF26DDA3301CBDCBBD74DA /* QKMRZParser-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C02AD39FAA5BA5B121BDE49F38FE4FA6 /* QKMRZParser-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		BA97551A88706B5BA822587EF6FFAA05 /* SwiftyTesseractError.swift in Sources */ = {isa = PBXBuildFile; fileRef = B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */; };
+		CAE6A68B3DD0190EA8FDAAAA57C68ECE /* QKMRZParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7935991DC24914B487CA3E51B5857AD3 /* QKMRZParser.swift */; };
 		DC75CED47B71DDFD0EE3B8DBCE0D6385 /* LanguageModelDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */; };
+		DF25543EADC48DF08FF031F8C8AC61BB /* QKMRZResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A7D1E24DB33D76C3B95B34C7A57E85 /* QKMRZResult.swift */; };
 		E611E10D0B3FE7456F4C003293F23B3E /* SwiftyTesseract.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */; };
 		E6B544C1D4F3FD2BAEB1D439FD565F03 /* EngineMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */; };
-		E6DEA77F5AE40423D6628A318FC39F54 /* td2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE969423F57B1E3B27088C482873F00 /* td2.swift */; };
+		F70CCF1944F4CD7024D554E7A0F061F0 /* QKMRZParser-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12B2410509362B62769A6AE08E743B5C /* QKMRZParser-dummy.m */; };
 		FDC5C61383E683FBFC7CB67C6C2E018A /* LanguageStringConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */; };
 		FF61B49BE50A62809DB85F81F233B398 /* ResultIteratorLevel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */; };
 /* End PBXBuildFile section */
@@ -59,54 +59,54 @@
 /* Begin PBXFileReference section */
 		07A3A1FF3DF769F0B93A1783B8B780AA /* SwiftyTesseract-xcframeworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "SwiftyTesseract-xcframeworks.sh"; sourceTree = "<group>"; };
 		085A9BA6FB2527C69D809DC696E544B7 /* RecognizedBlock.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognizedBlock.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/RecognizedBlock.swift; sourceTree = "<group>"; };
+		093063C0093EC9E2601A4093701A5C0D /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
 		0B841BAAB7C1406DEDAFBE646AAB1DDD /* libtesseract.xcframework */ = {isa = PBXFileReference; includeInIndex = 1; name = libtesseract.xcframework; path = SwiftyTesseract/libtesseract.xcframework; sourceTree = "<group>"; };
 		0BE709268F7888EA927B8241F13E950B /* String+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+Extensions.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/String+Extensions.swift"; sourceTree = "<group>"; };
-		0DE969423F57B1E3B27088C482873F00 /* td2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td2.swift; path = QKMRZParser/Parsers/td2.swift; sourceTree = "<group>"; };
 		0F17F0E0F3BEA7E0BB56BA906A55C324 /* LanguageStringConverter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageStringConverter.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageStringConverter.swift; sourceTree = "<group>"; };
+		12B2410509362B62769A6AE08E743B5C /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
 		1A2459A4DB3377582B17262DDB5CFC20 /* EngineMode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EngineMode.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/EngineMode.swift; sourceTree = "<group>"; };
-		1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
-		1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
+		207A28C39494B30B874D31C370E1EDD1 /* TD1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TD1.swift; path = QKMRZParser/Parsers/TD1.swift; sourceTree = "<group>"; };
 		28325BB70560DB246AB3AE5D24A53B18 /* Pods-QKMRZScanner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.debug.xcconfig"; sourceTree = "<group>"; };
 		28BFE9113EBD01E76CCC43AF125C406E /* Pods-QKMRZScanner */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-QKMRZScanner"; path = Pods_QKMRZScanner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
-		29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
 		2F8880A6D4DB469AA47147A0522BD530 /* Pods-QKMRZScanner-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-Info.plist"; sourceTree = "<group>"; };
-		3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
-		459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
 		470B0D69F320CB4435997C818298027D /* Pods-QKMRZScanner.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-QKMRZScanner.modulemap"; sourceTree = "<group>"; };
+		47913DB0E0DDB9353C714A3F3FD0B29A /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
 		4B99FCA5140480A37CCEF3A2D2A5819A /* RecognitionLanguage.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RecognitionLanguage.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/RecognitionLanguage.swift; sourceTree = "<group>"; };
 		4FDDE51DA8A0D8AC8B4B2CEFE578F1A9 /* SwiftyTesseract-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "SwiftyTesseract-Info.plist"; sourceTree = "<group>"; };
-		513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
 		5A1703BC07E1117CC746847067F8AF51 /* SwiftyTesseract.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseract.swift; path = SwiftyTesseract/SwiftyTesseract/SwiftyTesseract.swift; sourceTree = "<group>"; };
-		5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "QKMRZParser-Info.plist"; sourceTree = "<group>"; };
 		63427E3631E2CF0D78ACC49EF935D736 /* LanguageModelDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LanguageModelDataSource.swift; path = SwiftyTesseract/SwiftyTesseract/Protocols/LanguageModelDataSource.swift; sourceTree = "<group>"; };
 		64FAA583FC1A227218662750DF532813 /* SwiftyTesseract-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-prefix.pch"; sourceTree = "<group>"; };
 		6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.debug.xcconfig; sourceTree = "<group>"; };
 		74AECDB56EC95C1AD5C27D11EF1156CB /* SwiftyTesseract.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = SwiftyTesseract.modulemap; sourceTree = "<group>"; };
 		76CAED26577AD7C4BE8953D95DEFB325 /* SwiftyTesseract-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SwiftyTesseract-umbrella.h"; sourceTree = "<group>"; };
 		775641D99A1A09F878C9968A6291EC54 /* Bundle+pathToTrainedData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+pathToTrainedData.swift"; path = "SwiftyTesseract/SwiftyTesseract/Extensions/Bundle+pathToTrainedData.swift"; sourceTree = "<group>"; };
-		81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td3.swift; path = QKMRZParser/Parsers/td3.swift; sourceTree = "<group>"; };
+		7935991DC24914B487CA3E51B5857AD3 /* QKMRZParser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZParser.swift; path = QKMRZParser/QKMRZParser.swift; sourceTree = "<group>"; };
 		8208C69518782F5498D1D7980C9FAA98 /* Pods-QKMRZScanner-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-QKMRZScanner-acknowledgements.markdown"; sourceTree = "<group>"; };
+		8D48BFC94A0952B753FE8A9F53034A86 /* QKMRZParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.release.xcconfig; sourceTree = "<group>"; };
+		9304A54D987F53CAB698DFC72751B44F /* QKMRZParser.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = QKMRZParser.modulemap; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
 		AB980565C094D810C6E89CBDBA607E53 /* SwiftyTesseract.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SwiftyTesseract.release.xcconfig; sourceTree = "<group>"; };
+		AE889296BA8EF04B65EA87D81AE14E18 /* QKMRZParser-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-prefix.pch"; sourceTree = "<group>"; };
+		B05F6AF18F21AF9A7D0FFEEB36C40B71 /* MRZFieldFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZFieldFormatter.swift; path = QKMRZParser/MRZFieldFormatter.swift; sourceTree = "<group>"; };
 		B318ECB94D84ADC505DB291019E68D6E /* SwiftyTesseractError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SwiftyTesseractError.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/SwiftyTesseractError.swift; sourceTree = "<group>"; };
+		C02AD39FAA5BA5B121BDE49F38FE4FA6 /* QKMRZParser-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "QKMRZParser-umbrella.h"; sourceTree = "<group>"; };
+		C2A7D1E24DB33D76C3B95B34C7A57E85 /* QKMRZResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QKMRZResult.swift; path = QKMRZParser/QKMRZResult.swift; sourceTree = "<group>"; };
+		C4B59A6C9F197554977470B032E977D6 /* TD2.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TD2.swift; path = QKMRZParser/Parsers/TD2.swift; sourceTree = "<group>"; };
 		C7ECC162FF7E57C6E878AC9C03CCEFEB /* Pods-QKMRZScanner-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-QKMRZScanner-acknowledgements.plist"; sourceTree = "<group>"; };
+		C9B65DAFA1AF57CBE4BF17617B6B440A /* TD3.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TD3.swift; path = QKMRZParser/Parsers/TD3.swift; sourceTree = "<group>"; };
 		CAFCCB176C8F94A7A2F0676F2C7898F7 /* BoundingBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BoundingBox.swift; path = SwiftyTesseract/SwiftyTesseract/Structs/BoundingBox.swift; sourceTree = "<group>"; };
+		CCF0287CAA2539BCC4F6985A93856603 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
+		CD43FE749837D8C9BB45DE5924C3ACA9 /* String-Ext.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String-Ext.swift"; path = "QKMRZParser/String-Ext.swift"; sourceTree = "<group>"; };
 		CD64C14E087D57B66C503D715EFF4B7E /* Pods-QKMRZScanner-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-QKMRZScanner-dummy.m"; sourceTree = "<group>"; };
 		D0579590D0C93205406E0F132CC75E5C /* Pods-QKMRZScanner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-QKMRZScanner.release.xcconfig"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D391EF7A2DC81E8F324C0A3218DCFEDE /* TesseractVariableName.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TesseractVariableName.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/TesseractVariableName.swift; sourceTree = "<group>"; };
 		D4E7A583B7872EFD4635FB423163D027 /* ResultIteratorLevel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResultIteratorLevel.swift; path = SwiftyTesseract/SwiftyTesseract/Enums/ResultIteratorLevel.swift; sourceTree = "<group>"; };
-		D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MRZField.swift; path = QKMRZParser/MRZField.swift; sourceTree = "<group>"; };
 		E34CF088F04CF3F96B4FBC23DD7A7705 /* Pods-QKMRZScanner-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-QKMRZScanner-umbrella.h"; sourceTree = "<group>"; };
 		E551F26557EE13A98FB2F8D868D7ABF8 /* QKMRZParser */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = QKMRZParser; path = QKMRZParser.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "QKMRZParser-dummy.m"; sourceTree = "<group>"; };
-		F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = QKMRZParser.debug.xcconfig; sourceTree = "<group>"; };
 		F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = SwiftyTesseract; path = SwiftyTesseract.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8EDB52D5AA6A33DA47E2CB09472FB24 /* SwiftyTesseract-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "SwiftyTesseract-dummy.m"; sourceTree = "<group>"; };
-		FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = td1.swift; path = QKMRZParser/Parsers/td1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -162,6 +162,21 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		1B4994BDD9D7FB5414000EF44A2161ED /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				9304A54D987F53CAB698DFC72751B44F /* QKMRZParser.modulemap */,
+				12B2410509362B62769A6AE08E743B5C /* QKMRZParser-dummy.m */,
+				47913DB0E0DDB9353C714A3F3FD0B29A /* QKMRZParser-Info.plist */,
+				AE889296BA8EF04B65EA87D81AE14E18 /* QKMRZParser-prefix.pch */,
+				C02AD39FAA5BA5B121BDE49F38FE4FA6 /* QKMRZParser-umbrella.h */,
+				CCF0287CAA2539BCC4F6985A93856603 /* QKMRZParser.debug.xcconfig */,
+				8D48BFC94A0952B753FE8A9F53034A86 /* QKMRZParser.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/QKMRZParser";
+			sourceTree = "<group>";
+		};
 		319204C586E6EF9B71F918708D35B631 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -170,6 +185,23 @@
 				F6E3B8BC238866073523ED9347EED4C6 /* SwiftyTesseract */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		3A95B50AD068CCD7BE67BD051BBA71C5 /* QKMRZParser */ = {
+			isa = PBXGroup;
+			children = (
+				093063C0093EC9E2601A4093701A5C0D /* MRZField.swift */,
+				B05F6AF18F21AF9A7D0FFEEB36C40B71 /* MRZFieldFormatter.swift */,
+				7935991DC24914B487CA3E51B5857AD3 /* QKMRZParser.swift */,
+				C2A7D1E24DB33D76C3B95B34C7A57E85 /* QKMRZResult.swift */,
+				CD43FE749837D8C9BB45DE5924C3ACA9 /* String-Ext.swift */,
+				207A28C39494B30B874D31C370E1EDD1 /* TD1.swift */,
+				C4B59A6C9F197554977470B032E977D6 /* TD2.swift */,
+				C9B65DAFA1AF57CBE4BF17617B6B440A /* TD3.swift */,
+				1B4994BDD9D7FB5414000EF44A2161ED /* Support Files */,
+			);
+			name = QKMRZParser;
+			path = QKMRZParser;
 			sourceTree = "<group>";
 		};
 		59DA5C1F72E1D5BABC43EACBA672C3BA /* iOS */ = {
@@ -219,21 +251,6 @@
 			path = SwiftyTesseract;
 			sourceTree = "<group>";
 		};
-		82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				513E12F7583B50366675CCAAD5B91297 /* QKMRZParser.modulemap */,
-				F23304CBD312E916F0234E1C7C7C0AF9 /* QKMRZParser-dummy.m */,
-				5B11AC741233ADB17C81A8911CB7C32A /* QKMRZParser-Info.plist */,
-				3D2EE1909B4134EF696C984C9C70767F /* QKMRZParser-prefix.pch */,
-				A821D284B29A8AA38A436CA620B48CB1 /* QKMRZParser-umbrella.h */,
-				F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */,
-				459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/QKMRZParser";
-			sourceTree = "<group>";
-		};
 		95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,7 +262,7 @@
 		A3750814BB6632E7E30A0274B3200B6C /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */,
+				3A95B50AD068CCD7BE67BD051BBA71C5 /* QKMRZParser */,
 				67CAFA9982095848019CC347E5D93773 /* SwiftyTesseract */,
 			);
 			name = Pods;
@@ -268,23 +285,6 @@
 				319204C586E6EF9B71F918708D35B631 /* Products */,
 				95A24DA666BDCBB9A3AFA609812EBBD7 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		F40B859E62DFE068102C47AD7D0B276A /* QKMRZParser */ = {
-			isa = PBXGroup;
-			children = (
-				D5883BB31562DEC53F73927E1912D330 /* MRZField.swift */,
-				28E7B22948C7C17365A96B96FBB9AFD2 /* MRZFieldFormatter.swift */,
-				29AC921AE798C57115592E1FB27DC7E6 /* QKMRZParser.swift */,
-				1C3F9C29E1F656B937696BF59E0DB8A7 /* QKMRZResult.swift */,
-				1C1231DCFE478E703E345203B8782870 /* String-Ext.swift */,
-				FF9F6126FD80585A41547535BB8B8BF6 /* td1.swift */,
-				0DE969423F57B1E3B27088C482873F00 /* td2.swift */,
-				81E7B17B393C6807D5EC6C4FA4C84B03 /* td3.swift */,
-				82B691747EAFBFBBBFDFD67EB8C948D3 /* Support Files */,
-			);
-			name = QKMRZParser;
-			path = QKMRZParser;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -342,7 +342,7 @@
 			buildConfigurationList = 0F0565F341300B90AE09D23E53E2C646 /* Build configuration list for PBXNativeTarget "QKMRZParser" */;
 			buildPhases = (
 				C6ED7AE17783E13DE6D02C456C9252C4 /* Headers */,
-				343BE84DD90F5F09EAC86C4A2E0D582D /* Sources */,
+				2F0D817CCC89035771C620D611E1C97F /* Sources */,
 				C8422CA9E760EAA1FA9AA07CFE3734F4 /* Frameworks */,
 				CA63CABCC3A6C2F9077964DF980A9D64 /* Resources */,
 			);
@@ -449,19 +449,19 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		343BE84DD90F5F09EAC86C4A2E0D582D /* Sources */ = {
+		2F0D817CCC89035771C620D611E1C97F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65678283D7763280BDBC37068DE63C7E /* MRZField.swift in Sources */,
-				6D81A35301D3FD70605BF176460ABA90 /* MRZFieldFormatter.swift in Sources */,
-				8E9B0BB0D3CD70320CC1174A1D331F8E /* QKMRZParser.swift in Sources */,
-				028B53B9DDCC45DC27E76103668689F0 /* QKMRZParser-dummy.m in Sources */,
-				66E7875D3FE18504CC62ABA3EEE3C8E0 /* QKMRZResult.swift in Sources */,
-				0F0903626A3398D34480FF14639DDF29 /* String-Ext.swift in Sources */,
-				2088DF7B4A503F7CFC10BA0674DB07F0 /* td1.swift in Sources */,
-				E6DEA77F5AE40423D6628A318FC39F54 /* td2.swift in Sources */,
-				662629A7A47543E8A7F57B245159D598 /* td3.swift in Sources */,
+				78AD3535009ADDFFAB51D9225A70F4B1 /* MRZField.swift in Sources */,
+				07D3D2A9916D3FF5B473D73D765F9548 /* MRZFieldFormatter.swift in Sources */,
+				CAE6A68B3DD0190EA8FDAAAA57C68ECE /* QKMRZParser.swift in Sources */,
+				F70CCF1944F4CD7024D554E7A0F061F0 /* QKMRZParser-dummy.m in Sources */,
+				DF25543EADC48DF08FF031F8C8AC61BB /* QKMRZResult.swift in Sources */,
+				9C9B071E7F00175D672265FBD1CA68EA /* String-Ext.swift in Sources */,
+				23093FCEAC010BA1302340B24AFA07AE /* TD1.swift in Sources */,
+				7474BD04CCCB55B5D04BBC3FC3034797 /* TD2.swift in Sources */,
+				6B08F453594587DEEBF0735DF4AC6AE5 /* TD3.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -612,9 +612,9 @@
 			};
 			name = Release;
 		};
-		3FCEE4CF778A2972FD772789A3C6C2E5 /* Debug */ = {
+		15A9338BE712D918312B9F9E412D19D9 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F60B7BF6BB4851DFF78982EAE148D8B8 /* QKMRZParser.debug.xcconfig */;
+			baseConfigurationReference = 8D48BFC94A0952B753FE8A9F53034A86 /* QKMRZParser.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -636,12 +636,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		61F60C66E3488E75BD456377C92D5BDC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -676,6 +677,37 @@
 			};
 			name = Release;
 		};
+		947D8203855A1CAE1F0BA52255D80D91 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF0287CAA2539BCC4F6985A93856603 /* QKMRZParser.debug.xcconfig */;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
+				PRODUCT_MODULE_NAME = QKMRZParser;
+				PRODUCT_NAME = QKMRZParser;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		AD01808A186D187B8A757E95B0B08588 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6B2D0EA7B2399CD05CC7203F2C9AD3C9 /* SwiftyTesseract.debug.xcconfig */;
@@ -707,38 +739,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		B78C765C5F5999B1990437FDF37314A5 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 459A70B8E0DDDC6BCD25C2E28EB3940C /* QKMRZParser.release.xcconfig */;
-			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/QKMRZParser/QKMRZParser-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/QKMRZParser/QKMRZParser-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/QKMRZParser/QKMRZParser.modulemap";
-				PRODUCT_MODULE_NAME = QKMRZParser;
-				PRODUCT_NAME = QKMRZParser;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		DD42D0FB8065B2C176F02274B10A6303 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -851,8 +851,8 @@
 		0F0565F341300B90AE09D23E53E2C646 /* Build configuration list for PBXNativeTarget "QKMRZParser" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				3FCEE4CF778A2972FD772789A3C6C2E5 /* Debug */,
-				B78C765C5F5999B1990437FDF37314A5 /* Release */,
+				947D8203855A1CAE1F0BA52255D80D91 /* Debug */,
+				15A9338BE712D918312B9F9E412D19D9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

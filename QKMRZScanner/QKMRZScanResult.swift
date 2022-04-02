@@ -15,8 +15,8 @@ public class QKMRZScanResult {
     public let surnames: String
     public let givenNames: String
     public let documentNumber: String
-    public let nationality: String
-    public let birthDate: Date?
+    public let nationalityCountryCode: String
+    public let birthdate: Date?
     public let sex: String?
     public let expiryDate: Date?
     public let personalNumber: String
@@ -50,8 +50,8 @@ public class QKMRZScanResult {
         surnames = mrzResult.surnames
         givenNames = mrzResult.givenNames
         documentNumber = mrzResult.documentNumber
-        nationality = mrzResult.nationality
-        birthDate = mrzResult.birthDate
+        nationalityCountryCode = mrzResult.nationalityCountryCode
+        birthdate = mrzResult.birthdate
         sex = mrzResult.sex
         expiryDate = mrzResult.expiryDate
         personalNumber = mrzResult.personalNumber

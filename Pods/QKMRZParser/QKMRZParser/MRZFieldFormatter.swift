@@ -40,8 +40,8 @@ class MRZFieldFormatter {
         switch fieldType {
         case .names:
             return names(from: string)
-        case .birthDate:
-            return birthDate(from: string)
+        case .birthdate:
+            return birthdate(from: string)
         case .sex:
             return sex(from: string)
         case .expiryDate:
@@ -53,7 +53,7 @@ class MRZFieldFormatter {
     
     func correct(_ string: String, fieldType: MRZFieldType) -> String {
         switch fieldType {
-        case .birthDate, .expiryDate, .hash: // TODO: Check correction of dates (month & day)
+        case .birthdate, .expiryDate, .hash: // TODO: Check correction of dates (month & day)
             return replaceLetters(in: string)
         case .names, .documentType, .countryCode, .nationality: // TODO: Check documentType, countryCode and nationality against possible (allowed) values
             return replaceDigits(in: string)
@@ -80,12 +80,13 @@ class MRZFieldFormatter {
         }
     }
     
-    private func birthDate(from string: String) -> Date? {
+    private func birthdate(from string: String) -> Date? {
         guard CharacterSet.decimalDigits.isSuperset(of: CharacterSet(charactersIn: string)) else {
             return nil
         }
-        
-        let currentYear = Calendar.current.component(.year, from: Date()) - 2000
+
+        let calendar = Calendar(identifier: .gregorian)
+        let currentYear = calendar.component(.year, from: Date()) - 2000
         let parsedYear = Int(string.substring(0, to: 1))!
         let centennial = (parsedYear > currentYear) ? "19" : "20"
         
