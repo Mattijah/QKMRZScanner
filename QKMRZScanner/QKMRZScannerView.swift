@@ -25,6 +25,7 @@ public class QKMRZScannerView: UIView {
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
+    fileprivate let notificationFeedback = UINotificationFeedbackGenerator()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningPaused = false
     fileprivate var observer: NSKeyValueObservation?
@@ -74,6 +75,7 @@ public class QKMRZScannerView: UIView {
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
+            self?.notificationFeedback.prepare()
             DispatchQueue.main.async { [weak self] in self?.adjustVideoPreviewLayerFrame() }
         }
     }
@@ -283,8 +285,9 @@ extension QKMRZScannerView: AVCaptureVideoDataOutputSampleBufferDelegate {
                         let enlargedDocumentImage = self.enlargedDocumentImage(from: cgImage)
                         let scanResult = QKMRZScanResult(mrzResult: mrzResult, documentImage: enlargedDocumentImage)
                         self.delegate?.mrzScannerView(self, didFind: scanResult)
+
                         if self.vibrateOnResult {
-                            AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+                            self.notificationFeedback.notificationOccurred(.success)
                         }
                     }
                 }
