@@ -1,5 +1,5 @@
 platform :ios, '11'
-source 'https://github.com/CocoaPods/Specs.git'
+source 'https://cdn.cocoapods.org'
 use_frameworks!
 
 target 'QKMRZScanner' do
