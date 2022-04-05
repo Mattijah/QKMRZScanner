@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name     = "QKMRZScanner"
-  s.version  = "3.0.0"
+  s.version  = "2.2.1"
   s.platform = :ios, "13"
   s.ios.deployment_target = "11.0"
   s.swift_version = "5.0"
@@ -16,6 +16,6 @@ Pod::Spec.new do |s|
   s.resources    = "QKMRZScanner/Supporting Files/tessdata"
   s.frameworks   =  "Foundation", "UIKit", "AVFoundation", "CoreImage", "AudioToolbox"
   
-  s.dependency "QKMRZParser", "~> 2.0.0"
-  s.dependency "SwiftyTesseract", "~> 3.1.3"
+  s.dependency "QKMRZParser"
+  s.dependency "SwiftyTesseract"
 end
