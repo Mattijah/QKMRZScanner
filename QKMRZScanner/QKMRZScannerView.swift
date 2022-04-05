@@ -23,9 +23,16 @@ public class QKMRZScannerView: UIView {
     fileprivate let captureSession = AVCaptureSession()
     fileprivate let videoOutput = AVCaptureVideoDataOutput()
     fileprivate let videoPreviewLayer = AVCaptureVideoPreviewLayer()
+    fileprivate let notificationFeedback = UINotificationFeedbackGenerator()
     fileprivate let cutoutView = QKCutoutView()
     fileprivate var isScanningPaused = false
     fileprivate var observer: NSKeyValueObservation?
+
+    fileprivate var interfaceOrientation: UIInterfaceOrientation {
+        return UIApplication.shared.statusBarOrientation
+    }
+
+    // MARK: Public properties
     @objc public dynamic var isScanning = false
     public var vibrateOnResult = true
     public weak var delegate: QKMRZScannerViewDelegate?
@@ -51,11 +58,7 @@ public class QKMRZScannerView: UIView {
     public var cutoutRect: CGRect {
         return cutoutView.cutoutRect
     }
-    
-    fileprivate var interfaceOrientation: UIInterfaceOrientation {
-        return UIApplication.shared.statusBarOrientation
-    }
-    
+
     // MARK: Initializers
     override public init(frame: CGRect) {
         super.init(frame: frame)
@@ -90,6 +93,7 @@ public class QKMRZScannerView: UIView {
         
         DispatchQueue.global(qos: .userInitiated).async { [weak self] in
             self?.captureSession.startRunning()
+            self?.notificationFeedback.prepare()
             DispatchQueue.main.async { [weak self] in self?.adjustVideoPreviewLayerFrame() }
         }
     }
