@@ -1,0 +1,4 @@
+${PODS_ROOT}/Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example-frameworks.sh
+${BUILT_PRODUCTS_DIR}/QKMRZParser/QKMRZParser.framework
+${BUILT_PRODUCTS_DIR}/QKMRZScanner/QKMRZScanner.framework
+${BUILT_PRODUCTS_DIR}/SwiftyTesseract/SwiftyTesseract.framework

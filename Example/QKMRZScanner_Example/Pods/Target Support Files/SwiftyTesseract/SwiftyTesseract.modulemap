@@ -1,0 +1,6 @@
+framework module SwiftyTesseract {
+  umbrella header "SwiftyTesseract-umbrella.h"
+
+  export *
+  module * { export * }
+}

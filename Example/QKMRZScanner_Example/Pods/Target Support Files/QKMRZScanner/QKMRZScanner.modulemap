@@ -1,0 +1,6 @@
+framework module QKMRZScanner {
+  umbrella header "QKMRZScanner-umbrella.h"
+
+  export *
+  module * { export * }
+}
