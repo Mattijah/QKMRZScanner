@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5D4B2D6E296FE5BA005F10F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B2D6D296FE5BA005F10F2 /* AppDelegate.swift */; };
+		5D4B2D70296FE5BA005F10F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B2D6F296FE5BA005F10F2 /* SceneDelegate.swift */; };
+		5D4B2D72296FE5BA005F10F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D4B2D71296FE5BA005F10F2 /* ViewController.swift */; };
+		5D4B2D75296FE5BA005F10F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B2D73296FE5BA005F10F2 /* Main.storyboard */; };
+		5D4B2D77296FE5BC005F10F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B2D76296FE5BC005F10F2 /* Assets.xcassets */; };
+		5D4B2D7A296FE5BC005F10F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D4B2D78296FE5BC005F10F2 /* LaunchScreen.storyboard */; };
+		5DE19841296FEFDB0024D3E4 /* .gitignore in Resources */ = {isa = PBXBuildFile; fileRef = 5DE19840296FEFDB0024D3E4 /* .gitignore */; };
+		FC82FBAA319DAC250F9203D2 /* Pods_QKMRZScanner_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F556CB8B1B93CC66F57313AD /* Pods_QKMRZScanner_Example.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5D4B2D6A296FE5BA005F10F2 /* QKMRZScanner_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QKMRZScanner_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D4B2D6D296FE5BA005F10F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5D4B2D6F296FE5BA005F10F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5D4B2D71296FE5BA005F10F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5D4B2D74296FE5BA005F10F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5D4B2D76296FE5BC005F10F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5D4B2D79296FE5BC005F10F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5D4B2D7B296FE5BC005F10F2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5DE19840296FEFDB0024D3E4 /* .gitignore */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitignore; sourceTree = SOURCE_ROOT; };
+		83E801156F35A4C2DD271ACD /* Pods-QKMRZScanner_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QKMRZScanner_Example.release.xcconfig"; path = "Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example.release.xcconfig"; sourceTree = "<group>"; };
+		954A1C4E4956CA71D2F0719B /* Pods-QKMRZScanner_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QKMRZScanner_Example.debug.xcconfig"; path = "Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		F556CB8B1B93CC66F57313AD /* Pods_QKMRZScanner_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QKMRZScanner_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5D4B2D67296FE5BA005F10F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC82FBAA319DAC250F9203D2 /* Pods_QKMRZScanner_Example.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5D4B2D61296FE5BA005F10F2 = {
+			isa = PBXGroup;
+			children = (
+				5D4B2D6C296FE5BA005F10F2 /* QKMRZScanner_Example */,
+				5D4B2D6B296FE5BA005F10F2 /* Products */,
+				F6B0538D4D952D3D8AA6F2EA /* Pods */,
+				C1CD8AB8EE44F8185945CAEB /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5D4B2D6B296FE5BA005F10F2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5D4B2D6A296FE5BA005F10F2 /* QKMRZScanner_Example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5D4B2D6C296FE5BA005F10F2 /* QKMRZScanner_Example */ = {
+			isa = PBXGroup;
+			children = (
+				5DE19840296FEFDB0024D3E4 /* .gitignore */,
+				5D4B2D6D296FE5BA005F10F2 /* AppDelegate.swift */,
+				5D4B2D6F296FE5BA005F10F2 /* SceneDelegate.swift */,
+				5D4B2D71296FE5BA005F10F2 /* ViewController.swift */,
+				5D4B2D73296FE5BA005F10F2 /* Main.storyboard */,
+				5D4B2D76296FE5BC005F10F2 /* Assets.xcassets */,
+				5D4B2D78296FE5BC005F10F2 /* LaunchScreen.storyboard */,
+				5D4B2D7B296FE5BC005F10F2 /* Info.plist */,
+			);
+			path = QKMRZScanner_Example;
+			sourceTree = "<group>";
+		};
+		C1CD8AB8EE44F8185945CAEB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F556CB8B1B93CC66F57313AD /* Pods_QKMRZScanner_Example.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F6B0538D4D952D3D8AA6F2EA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				954A1C4E4956CA71D2F0719B /* Pods-QKMRZScanner_Example.debug.xcconfig */,
+				83E801156F35A4C2DD271ACD /* Pods-QKMRZScanner_Example.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5D4B2D69296FE5BA005F10F2 /* QKMRZScanner_Example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D4B2D7E296FE5BC005F10F2 /* Build configuration list for PBXNativeTarget "QKMRZScanner_Example" */;
+			buildPhases = (
+				AA891D7588416503EAAE7426 /* [CP] Check Pods Manifest.lock */,
+				5D4B2D66296FE5BA005F10F2 /* Sources */,
+				5D4B2D67296FE5BA005F10F2 /* Frameworks */,
+				5D4B2D68296FE5BA005F10F2 /* Resources */,
+				47067094D59B6F5A25DCBBCD /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QKMRZScanner_Example;
+			productName = QKMRZScanner_Example;
+			productReference = 5D4B2D6A296FE5BA005F10F2 /* QKMRZScanner_Example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5D4B2D62296FE5BA005F10F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1420;
+				LastUpgradeCheck = 1420;
+				TargetAttributes = {
+					5D4B2D69296FE5BA005F10F2 = {
+						CreatedOnToolsVersion = 14.2;
+					};
+				};
+			};
+			buildConfigurationList = 5D4B2D65296FE5BA005F10F2 /* Build configuration list for PBXProject "QKMRZScanner_Example" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5D4B2D61296FE5BA005F10F2;
+			productRefGroup = 5D4B2D6B296FE5BA005F10F2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5D4B2D69296FE5BA005F10F2 /* QKMRZScanner_Example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5D4B2D68296FE5BA005F10F2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DE19841296FEFDB0024D3E4 /* .gitignore in Resources */,
+				5D4B2D7A296FE5BC005F10F2 /* LaunchScreen.storyboard in Resources */,
+				5D4B2D77296FE5BC005F10F2 /* Assets.xcassets in Resources */,
+				5D4B2D75296FE5BA005F10F2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		47067094D59B6F5A25DCBBCD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-QKMRZScanner_Example/Pods-QKMRZScanner_Example-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AA891D7588416503EAAE7426 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-QKMRZScanner_Example-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5D4B2D66296FE5BA005F10F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D4B2D72296FE5BA005F10F2 /* ViewController.swift in Sources */,
+				5D4B2D6E296FE5BA005F10F2 /* AppDelegate.swift in Sources */,
+				5D4B2D70296FE5BA005F10F2 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5D4B2D73296FE5BA005F10F2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D4B2D74296FE5BA005F10F2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5D4B2D78296FE5BC005F10F2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D4B2D79296FE5BC005F10F2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5D4B2D7C296FE5BC005F10F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5D4B2D7D296FE5BC005F10F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5D4B2D7F296FE5BC005F10F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 954A1C4E4956CA71D2F0719B /* Pods-QKMRZScanner_Example.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QKMRZScanner_Example/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera will allow the application to take pictures";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QKMRZScanner.exmaple-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5D4B2D80296FE5BC005F10F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83E801156F35A4C2DD271ACD /* Pods-QKMRZScanner_Example.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = QKMRZScanner_Example/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera will allow the application to take pictures";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.QKMRZScanner.exmaple-app";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5D4B2D65296FE5BA005F10F2 /* Build configuration list for PBXProject "QKMRZScanner_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D4B2D7C296FE5BC005F10F2 /* Debug */,
+				5D4B2D7D296FE5BC005F10F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D4B2D7E296FE5BC005F10F2 /* Build configuration list for PBXNativeTarget "QKMRZScanner_Example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D4B2D7F296FE5BC005F10F2 /* Debug */,
+				5D4B2D80296FE5BC005F10F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5D4B2D62296FE5BA005F10F2 /* Project object */;
+}
