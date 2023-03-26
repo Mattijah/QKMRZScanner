@@ -1,3 +1,4 @@
+[![SwiftPackageSupport](https://img.shields.io/badge/Swift_Package_Index-red?logo=swift&logoColor=white)](https://swiftpackageindex.com/Mattijah/QKMRZScanner)
 [![Swift 5](https://img.shields.io/badge/Swift-5.0-orange.svg?style=flat)](https://developer.apple.com/swift/)
 [![Git](https://img.shields.io/badge/GitHub-Mattijah-blue.svg?style=flat)](https://github.com/Mattijah)
 
@@ -10,14 +11,17 @@ Scans MRZ (Machine Readable Zone) from identity documents.
 
 ## Installation
 
+##### Swift Package Manager
+For better M1 & SPM support please see [master-spm](https://github.com/Mattijah/QKMRZScanner/tree/master-spm#installation).
+
+##### CocoaPods
 QKMRZScanner is available through CocoaPods. To install it, simply add the following line to your Podfile:
 
 ```ruby
 pod 'QKMRZScanner'
 ```
 
-### Note
-**Xcode 12** and **CocoaPods** >= 1.10.0.rc.1 is recommended. More info [here](https://github.com/SwiftyTesseract/SwiftyTesseract/tree/support/3.x.x#note-on-cocoapods).
+Please note: **Xcode 12** and **CocoaPods** >= 1.10.0.rc.1 is recommended. More info [here](https://github.com/SwiftyTesseract/SwiftyTesseract/tree/support/3.x.x#note-on-cocoapods).
 
 ## Setup
 
