@@ -230,21 +230,23 @@ public class QKMRZScannerView: UIView {
     
     fileprivate func preprocessImage(_ image: CGImage) -> CGImage {
         var inputImage = CIImage(cgImage: image)
-        let averageLuminance = inputImage.averageLuminance
-        var exposure = 0.5
-        let threshold = (1 - pow(1 - averageLuminance, 0.2))
+        // Convert the image to grayscale
+        let grayscaleFilter = CIFilter(name: "CIPhotoEffectMono")
+        grayscaleFilter?.setValue(inputImage, forKey: kCIInputImageKey)
+        inputImage = grayscaleFilter?.outputImage ?? inputImage
         
-        if averageLuminance > 0.8 {
-            exposure -= ((averageLuminance - 0.5) * 2)
-        }
+        // Adjust the contrast to enhance text visibility
+        let contrastFilter = CIFilter(name: "CIColorControls")
+        contrastFilter?.setValue(inputImage, forKey: kCIInputImageKey)
+        contrastFilter?.setValue(1.5, forKey: kCIInputContrastKey)
+        inputImage = contrastFilter?.outputImage ?? inputImage
         
-        if averageLuminance < 0.35 {
-            exposure += pow(2, (0.5 - averageLuminance))
-        }
-        
-        inputImage = inputImage.applyingFilter("CIExposureAdjust", parameters: ["inputEV": exposure])
-                               .applyingFilter("CILanczosScaleTransform", parameters: [kCIInputScaleKey: 2])
-                               .applyingFilter("LuminanceThresholdFilter", parameters: ["inputThreshold": threshold])
+        // Apply a threshold to further separate text from the background
+        let thresholdFilter = CIFilter(name: "CIColorMonochrome")
+        thresholdFilter?.setValue(inputImage, forKey: kCIInputImageKey)
+        thresholdFilter?.setValue(CIColor(red: 0.7, green: 0.7, blue: 0.7), forKey: "inputColor")
+        thresholdFilter?.setValue(0.5, forKey: "inputIntensity")
+        inputImage = thresholdFilter?.outputImage ?? inputImage
         
         return CIContext.shared.createCGImage(inputImage, from: inputImage.extent)!
     }
