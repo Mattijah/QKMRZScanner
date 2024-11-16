@@ -10,20 +10,8 @@ import CoreVideo
 
 extension CVImageBuffer {
     var cgImage: CGImage? {
-        CVPixelBufferLockBaseAddress(self, .readOnly)
-        
-        let baseAddress = CVPixelBufferGetBaseAddress(self)
-        let bytesPerRow = CVPixelBufferGetBytesPerRow(self)
-        let (width, height) = (CVPixelBufferGetWidth(self), CVPixelBufferGetHeight(self))
-        let bitmapInfo = CGBitmapInfo(rawValue: (CGBitmapInfo.byteOrder32Little.rawValue | CGImageAlphaInfo.premultipliedFirst.rawValue))
-        let context = CGContext.init(data: baseAddress, width: width, height: height, bitsPerComponent: 8, bytesPerRow: bytesPerRow, space: CGColorSpaceCreateDeviceRGB(), bitmapInfo: bitmapInfo.rawValue)
-        
-        guard let cgImage = context?.makeImage() else {
-            return nil
-        }
-        
-        CVPixelBufferUnlockBaseAddress(self, .readOnly)
-        
+        let ciImage = CIImage(cvPixelBuffer: self)
+        let cgImage = CIContext.shared.createCGImage(ciImage, from: ciImage.extent)
         return cgImage
     }
 }
