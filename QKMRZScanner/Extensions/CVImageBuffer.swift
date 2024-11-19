@@ -7,6 +7,7 @@
 
 import Foundation
 import CoreVideo
+import CoreImage
 
 extension CVImageBuffer {
     var cgImage: CGImage? {
